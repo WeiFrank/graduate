@@ -1,0 +1,79 @@
+/** dropdownlist */
+/** dropdownlist input后边的选择图片 <div><img></img></div> */
+.selectDiv{
+}
+.selectImg{
+}
+/** dropdownlist 点击选择图片后，弹出的DIV层，外层大框架的DIV */
+.rqDropDown{
+
+	}
+.rqDropDownList{
+	position: absolute;
+	background-color:#ffffff;
+	border:#A5B8EA solid thin;
+	z-index: 3;
+}
+/** dropdownlist 全选复选框图片+font 外层div */
+.rqChooseAllDiv{ 
+	padding-left:4px;
+	*padding-top:8px;
+	line-height:32px; 
+	overflow:hidden;
+	height:32px;
+	vertical-align:middle;
+	background-color:#E9EDF8;
+	border-bottom:#BBCAEF solid thin;
+	font-family:"宋体", Times, serif;
+	text-align:left;
+	font-size:12px;
+	position:relative; 
+}
+/** dropdownlist 全选复选框图片img */
+.rqChooseAllImg{
+
+}
+/** dropdownlist 全选文字 font */
+.rqChooseAllFont{
+
+}
+/** dropdownlist 数据列表外层div */
+.rqDataList{
+	overflow:scroll；
+	position:relative;
+}
+/** dropdownlist 数据列表每个数据，复选框+文字 外层div */
+.rqdataDiv{
+	height:20px;
+	line-height:20px;
+	position:relative;
+	
+}
+/** dropdownlist 数据列表每个数据文字font */
+.rqDataFont{
+	font-family:"宋体", Times, serif; 
+	font-size:12px;
+	text-align:left;
+
+}
+/** dropdownlist 总条目数+确定按钮+取消按钮 外层div */
+.funcDiv{ 
+	line-height:26px;
+	background-color:#F4F4F4;
+
+}
+/** dropdownlist 总条目数 font */
+.rqDropDownNum{
+	font-family:"宋体", Times, serif;
+	font-size:12px;
+	color:#5B5B5B;
+	padding-left:4px;
+}
+.OKButton{
+	margin-left:4px;
+}
+.CancelButton{
+	 margin-right:3px;
+	 margin-left:0px;
+
+}

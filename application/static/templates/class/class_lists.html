@@ -1,0 +1,115 @@
+<script type="text/javascript">
+$("#class_available_tb").jqGrid({
+       url: '/class/grid',
+       datatype: 'json',
+       mtype: 'GET',
+       colNames: ['id', '班级', '学生人数','操作'],
+       colModel: [{
+            name: 'id',
+            index: 'id',
+            width: 20,
+            align: 'left',
+            hidden:true,
+           },
+           {
+            name: 'name',
+            index: 'name',
+            width: 50,
+            align: 'left',
+           },
+           {
+            name: 'c_number',
+            index: 'c_number',
+            width: 50,
+            align: 'left',
+           },
+
+           {  name: 'service',
+            index: 'service',
+            width: 50,
+            align: 'left',
+            hidden: false,
+            detailHidden: true,
+            formatter: function(cell, option, row) {
+                var html = '';
+                row = row2object(row, option.gid);
+                html += '<button style="margin-left:10px;" title="编辑" class="btn btn-blue" onclick="class_update(' + row['id'] + ')">编辑</button>';
+                html += '<button style="margin-left:10px;" title="删除" class="btn btn-blue" onclick=class_delete_confirm(' + row['id'] + ',"' + row['name'] + '")>删除</button>';
+                 return html;
+                }
+       }],
+
+    page: 1,
+    rowNum: 2,
+    sortname: 'id',
+    sortorder: 'desc',
+    viewrecords: true,
+    multiselect: false,
+    multiboxonly:true,
+    multiselectWidth:'60px',
+    autowidth: true,
+    beforeSelectRow:function(rowid, e) {
+        if($(e.target).is('input')) {
+            return true;
+        }
+        return false;
+    },
+    gridComplete: function() {
+        var gridData = $(this).jqGrid('getRowData');
+        jqgrid_page($(this), gridData);
+        jqgrid_resize($(this));
+    }
+});
+
+$("#class_create_button").click(function() {
+
+    angular.element('#class_create_button').scope().open("/class/create");
+});
+
+function class_update(class_id) {
+    angular.element('#class_create_button').scope().open("/class/update?class_id=" + class_id);
+
+}
+
+function class_delete(class_id) {
+    $.post('/class/delete', {
+            'id': class_id
+        },
+        function(data) {
+            if (data.reply.is_success) {
+                $("#class_available_tb").trigger("reloadGrid");
+            } else {
+                error = data.reply.error;
+                SelfAlert(error);
+            }
+        });
+    $('#class_available_tb').trigger("reloadGrid");
+}
+
+function class_delete_confirm(class_id, class_name) {
+    msg = '确定删除（' + class_name + '）？';
+    SelfConfirm(msg, class_delete, class_id, "删除提示");
+}
+</script>
+
+<div class="panel panel-style">
+    <div class="panel-body">
+        <div class="title-tag">
+            <h3>课程信息</h3>
+            <p>课程信息</p>
+        </div>
+
+        <div class="grid-tools">
+            <div class="grid-operate pull-left">
+                <button class="btn btn-blue" type="button" id="class_create_button" ng-controller="ClassModalCtrl">创建</button>
+                <!-- <button class="btn btn-blue" type="button" id="pool_delete_button">删除</button> -->
+            </div>
+        </div>
+
+        <div id="grid_class_available" class='grid-body'>
+            <table id="class_available_tb"></table>
+        </div>
+         <div id="gridpager"></div>
+
+    </div>
+</div>

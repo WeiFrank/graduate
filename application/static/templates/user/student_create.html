@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student register</title>
+    <script type="text/javascript" src="../../static/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../static/js/jquery-2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="../../static/js/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../../static/js/angular/angular.js"></script>
+    <script type="text/javascript" src="../../static/js/angular/angular-sanitize.min.js"></script>
+        <script type="text/javascript" src="../../static/templates/user/user.js"></script>
+    <link type="text/css" href="../../static/css/login.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="../../static/templates/user/student.js"></script>
+    <script type="text/javascript" src="../../static/templates/user/teacher.js"></script>
+
+    <script>
+
+  $(document).ready(function() {
+    $("input[name=identity]:eq(1)").attr("checked",false);
+    $("div.teacher").hide()
+    $("#t").click(function(){
+      text=$(this).val()
+      console.log(text)
+       $("div.student").hide()
+       $("div.teacher").show()
+    })
+    $("#s").click(function(){
+       text=$(this).val()
+       console.log(text)
+       $("div.student").show()
+       $("div.teacher").hide()
+    });
+
+});
+ </script>
+
+</head>
+<body ng-app="Register"  >
+   <div class="flag">
+        <span>学生</span>
+       <input type="radio" checked="checked" name="identity" id="s" value="student" >
+        <span>老师</span>
+       <input type="radio" name="identity" id="t" value="teacher">
+ </div>
+   <div class="teacher regist" ng-controller="TeacherCtrl">
+      <div class="header">
+          <p class="t_r">教师注册</p>
+      </div>
+       <div class="rtn-tip"></div>
+      <div class="modal-body modal-body-height" id="teacher_register_modal">
+          <table class="logininfo">
+              <tr>
+                  <td>
+                      <label>用户名</label><a>*</a>
+                      <input id="login-teacher" name="teacher_username" placeholder="t_username" type="text">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <label>密码</label>
+                      <input id="teacher_password" name="teacher_password" placeholder="password" type="password">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <label>邮件</label>
+                      <input id="teacher_mail" name="teacher_mail" placeholder="e-mail" type="text">
+                  </td>
+              </tr>
+          </table>
+
+      </div>
+<div class="modal-footer">
+    <button class="btn btn-blue" ng-click="create()">创建</button>
+    <!--<button class="btn btn-white&lt;!&ndash;\&ndash;&gt;" ng-click="cancel()">取消</button>-->
+</div>
+
+</div>
+   <div class="student  regist" ng-controller="StudentCtrl" >
+     <div class="header">
+         <p class="s_r">学生注册</p>
+     </div>
+        <div class="rtn-tip"></div>
+       <div class="body body-height" id="student_register_modal">
+
+         <table class="logininfo">
+          <tr>
+              <td>
+                  <label>用户名</label><a>*</a>
+                  <input id="login-student" name="student_username" placeholder="student_username" type="text">
+              </td>
+          </tr>
+
+             <tr>
+              <td>
+                  <label>密码</label>
+                  <input id="student_password" name="student_password" placeholder="student_password" type="password">
+              </td>
+          </tr>
+              <tr>
+                <td>
+                  <label>邮件</label><a>*</a>
+                    <input id="student_mail" name="student_mail" type="text"/>
+                  <i class="fa fa-question-circle" itype="s_mail"></i>
+                </td>
+          </tr>
+		    <tr>
+              <td>
+                   <label>入学时间</label><a>*</a>
+                  <input id="student_time" name="student_time" type="text"/>
+                  <i class="fa fa-question-circle" itype="s_time></i>
+              </td>
+          </tr>
+         </table>
+       </div>
+<div class="footer">
+    <button class="btn btn-blue" ng-click="ok()">创建</button>
+    <!--<button class="btn btn-white" ng-click="cancel()">取消</button>-->
+</div>
+
+  </div>
+
+
+</body>
+</html>

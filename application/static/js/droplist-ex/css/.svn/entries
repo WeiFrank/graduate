@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="26236"
+   name=""
+   committed-date="2011-11-11T08:41:02.757345Z"
+   url="svn://192.168.0.7/code/component/RQLibrary/WebRoot/mis2/gezComponents/formstyle/css"
+   last-author="libo"
+   kind="dir"
+   uuid="5e504f78-2076-450e-8828-05cb259ddeba"
+   repos="svn://192.168.0.7/code"
+   revision="26719"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="25332"
+   name="form.css"
+   text-time="2011-11-09T02:48:07.390625Z"
+   committed-date="2011-10-17T07:53:20.845119Z"
+   checksum="104506499aea1ae114970c257542d066"
+   last-author="libo"
+   kind="file"
+   prop-time="2011-11-09T02:48:07.375000Z"/>
+</wc-entries>

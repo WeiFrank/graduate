@@ -1,0 +1,1336 @@
+*,
+body {
+  font-family: "Arial", "Microsoft YaHei"; }
+
+.panel-f-style {
+  padding: 20px 40px 0 20px;
+  background-color: #EBECF1; }
+
+.panel-body {
+  padding: 0;
+  background-color: #fff; }
+
+.title-tag {
+  padding: 19px 0 14px 20px;
+  margin: 0;
+  border-bottom: 1px #eee solid;
+  position: relative; }
+  .title-tag > h3 {
+    font-size: 30px;
+    color: #333;
+    line-height: 30px;
+    margin: 0; }
+  .title-tag > p {
+    font-size: 12px;
+    line-height: 12px;
+    color: #ccc;
+    margin-top: 8px;
+    margin-bottom: 0; }
+  .title-tag > ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: -1px;
+    left: 20px;
+    height: 39px;
+    z-index: 30; }
+    .title-tag > ul li {
+      list-style: none;
+      float: left;
+      height: 39px;
+      line-height: 45px;
+      padding: 0 5px;
+      color: #ccc;
+      margin-right: 25px;
+      cursor: pointer; }
+      .title-tag > ul li.active {
+        border-bottom: 3px solid #5485fe;
+        color: #333; }
+
+.btn-dark {
+  background: #3e4055;
+  border: 1px solid #3e4055;
+  color: #fff; }
+  .btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #3e4055;
+    color: #fff; }
+
+.btn-blue {
+  background: #5485fe;
+  border: none;
+  color: #fff; }
+  .btn-blue:hover, .btn-blue:focus, .btn-blue:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    outline: none; }
+  .btn-blue:hover {
+    background: #3c70f1;
+    position: relative; }
+  .btn-blue:active {
+    position: relative;
+    box-shadow: 0px 6px 9px #4d6cb9 inset;
+    -moz-box-shadow: 0px 6px 9px #4d6cb9 inset;
+    -webkit-box-shadow: 0px 6px 9px #4d6cb9 inset; }
+
+.btn-blue.active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #5485fe;
+  color: #fff; }
+
+.btn-white {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #666; }
+  .btn-white:hover, .btn-white:focus, .btn-white:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #e8e8e8;
+    color: #666;
+    outline: none; }
+  .btn-white:hover {
+    background: #e8e8e8;
+    position: relative; }
+  .btn-white:active {
+    position: relative;
+    box-shadow: 0px 6px 9px #d8d8d8 inset;
+    -moz-box-shadow: 0px 6px 9px #d8d8d8 inset;
+    -webkit-box-shadow: 0px 6px 9px #d8d8d8 inset; }
+
+.btn-red {
+  background: #fa575f;
+  border: none;
+  color: #fff; }
+  .btn-red:hover, .btn-red:focus, .btn-red:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    outline: none; }
+  .btn-red:hover {
+    background: #f12e2e;
+    position: relative; }
+  .btn-red:active {
+    position: relative;
+    box-shadow: 0px 6px 9px #d43b3b inset;
+    -moz-box-shadow: 0px 6px 9px #d43b3b inset;
+    -webkit-box-shadow: 0px 6px 9px #d43b3b inset; }
+
+.btn-grey-noborder {
+  background: #ccc;
+  border: none;
+  color: #fff; }
+  .btn-grey-noborder:hover, .btn-grey-noborder:focus, .btn-grey-noborder:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    outline: none; }
+  .btn-grey-noborder:hover {
+    background: #aaa;
+    position: relative; }
+  .btn-grey-noborder:active {
+    position: relative;
+    box-shadow: 0px 6px 9px #999 inset;
+    -moz-box-shadow: 0px 6px 9px #999 inset;
+    -webkit-box-shadow: 0px 6px 9px #999 inset; }
+
+.grid-search {
+  padding: 15px 0 20px 40px; }
+  .grid-search .node-select span {
+    font-size: 12px;
+    line-height: 32px;
+    color: #ccc; }
+  .grid-search .node-select .path {
+    margin-left: 30px; }
+  .grid-search .time-select {
+    margin: 15px 0; }
+    .grid-search .time-select span {
+      font-size: 12px;
+      line-height: 32px;
+      color: #ccc; }
+    .grid-search .time-select .split-line {
+      margin: 0 20px; }
+  .grid-search .type span:nth-child(1) {
+    font-size: 12px;
+    line-height: 32px;
+    color: #ccc; }
+  .grid-search .type .detail-type {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer; }
+  .grid-search .type .detail-type.active {
+    color: #fff;
+    background-color: #5485fe; }
+
+.grid-tools {
+  position: relative;
+  border-top: 1px #eee solid;
+  padding: 14px 20px 10px 20px;
+  margin-top: -1px;
+  margin-bottom: 15px;
+  height: 49px; }
+  .grid-tools:after {
+    clear: both; }
+  .grid-tools > .grid-operate > button {
+    margin-right: 9px; }
+  .grid-tools > .grid-operate .btn i {
+    margin-right: 8px; }
+  .grid-tools .grid-search-down-arrow,
+  .grid-tools .grid-search-up-arrow {
+    position: absolute;
+    width: 38px;
+    height: 8px;
+    background-color: #ddd;
+    left: 50%;
+    margin-left: -20px;
+    cursor: pointer;
+    border: 1px #ddd solid;
+    text-align: center;
+    color: #fff; }
+    .grid-tools .grid-search-down-arrow i,
+    .grid-tools .grid-search-up-arrow i {
+      line-height: 8px; }
+  .grid-tools .grid-search-down-arrow {
+    top: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
+    .grid-tools .grid-search-down-arrow:hover {
+      background-color: #90b0ff;
+      border-color: #90b0ff; }
+  .grid-tools .grid-search-up-arrow {
+    top: -9px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
+
+.grid-pager .btn-group {
+  margin-bottom: 0;
+  margin-top: -2px;
+  margin-left: 20px; }
+.grid-pager .btn {
+  padding: 5px 15px;
+  border-color: #ccc;
+  line-height: 21px; }
+  .grid-pager .btn i {
+    line-height: 21px; }
+.grid-pager .btn.disabled {
+  opacity: 1; }
+.grid-pager .not-available {
+  color: #ddd; }
+.grid-pager > span {
+  margin: 0 3px 0 15px;
+  line-height: 33px;
+  color: #333; }
+.grid-pager > input[type=text] {
+  border-radius: 3px;
+  background-color: #F9FAFB;
+  background-image: none;
+  color: #5C617B;
+  resize: none;
+  font-size: 12px;
+  padding: 6px 0;
+  text-align: center;
+  width: 33px;
+  height: 33px;
+  margin-right: 6px; }
+.grid-pager > .btn-turn {
+  width: 33px;
+  padding: 5px 0;
+  border-color: #aaa; }
+
+.f-select {
+  display: inline-block;
+  padding: 0 19px 0 12px;
+  font-size: 9px;
+  line-height: 9px;
+  border: 1px solid #ccc;
+  color: #000 !important;
+  text-align: center;
+  white-space: nowrap;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  outline: none;
+  background-color: white;
+  color: white;
+  height: 33px;
+  border-radius: 4px; }
+
+.grid-body {
+  margin: 0 20px 0 20px; }
+
+.ui-jqgrid .ui-jqgrid-btable {
+  table-layout: auto; }
+
+.ui-jqgrid .ui-jqgrid-btable tbody tr.jqgrow td {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.ui-jqgrid .ui-jqgrid-btable tbody tr.jqgrow td:nth-child(1) {
+  padding: 15px 0;
+  text-align: center; }
+
+.table thead > tr > th {
+  background-color: #303440;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-left: 1px #373d51 solid;
+  padding: 10px; }
+  .table thead > tr > th:nth-child(1) {
+    border-left: none;
+    padding: 10px 0;
+    text-align: center; }
+.table thead > tr > th.active {
+  background-color: #303440; }
+.table thead tr {
+  border: 1px solid #303440; }
+  .table thead tr:hover {
+    background-color: #ecf2ff; }
+.table tbody tr {
+  border: 1px solid #eee;
+  border-top: none; }
+  .table tbody tr:nth-last-child(1) {
+    border-bottom: none; }
+  .table tbody tr:nth-child(odd) {
+    background-color: #fbfbfb; }
+  .table tbody tr:nth-child(even) {
+    background-color: #fff; }
+
+.modal-header {
+  padding: 16px;
+  text-align: center;
+  background-color: #3e4055;
+  color: #fff;
+  border-bottom: none;
+  border-top: 1px #3e4055 solid;
+  border-left: 1px #3e4055 solid;
+  border-right: 1px #3e4055 solid;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+  .modal-header h3 {
+    margin: 0;
+    font-size: 18px; }
+  .modal-header button {
+    color: #fff;
+    opacity: 1; }
+    .modal-header button:hover, .modal-header button:active {
+      color: #fff;
+      opacity: 1; }
+
+@media screen and (max-height: 800px) {
+  .modal-body {
+    height: 400px; }
+    .modal-body .detail-content {
+      height: 310px; }
+    .modal-body .add-content {
+      height: 280px; } }
+@media screen and (min-height: 801px) {
+  .modal-body {
+    height: 520px; }
+    .modal-body .detail-content {
+      height: 430px; }
+    .modal-body .add-content {
+      height: 400px; } }
+.modal-body {
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+  background: #fff; }
+  .modal-body .icon-container {
+    text-align: center;
+    margin-top: 15px; }
+  .modal-body .tip-container {
+    text-align: center;
+    margin: 15px 0; }
+  .modal-body .modal-body-btn-container {
+    margin: 20px 0;
+    text-align: center; }
+    .modal-body .modal-body-btn-container .btn {
+      padding: 5px 20px;
+      font-size: 14px; }
+      .modal-body .modal-body-btn-container .btn:nth-child(1) {
+        margin-right: 10px; }
+      .modal-body .modal-body-btn-container .btn:nth-child(2) {
+        margin-left: 10px; }
+  .modal-body .add-host {
+    position: relative; }
+    .modal-body .add-host > .key-value {
+      height: 30px;
+      margin: 0 20px -1px 20px; }
+      .modal-body .add-host > .key-value .key {
+        float: left;
+        width: 50%;
+        height: 30px;
+        padding-left: 50px;
+        border: 1px #ddd solid;
+        background-color: #f0f0f0;
+        margin-bottom: -1px;
+        line-height: 30px; }
+      .modal-body .add-host > .key-value .value {
+        float: left;
+        height: 30px;
+        padding-left: 50px;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-left: none;
+        margin-bottom: -1px;
+        width: 50%;
+        line-height: 30px; }
+        .modal-body .add-host > .key-value .value:after {
+          clear: both; }
+    .modal-body .add-host > .content {
+      margin: 0 20px;
+      border: 1px #ddd solid;
+      overflow: auto; }
+      .modal-body .add-host > .content::-webkit-scrollbar {
+        width: 6px; }
+      .modal-body .add-host > .content::-webkit-scrollbar-thumb {
+        width: 4px;
+        border: 1px #e5e5e5 solid;
+        border-radius: 3px;
+        background-color: #e5e5e5; }
+        .modal-body .add-host > .content::-webkit-scrollbar-thumb:hover {
+          background-color: #999;
+          border: 1px #999 solid;
+          border-radius: 3px; }
+      .modal-body .add-host > .content .detail {
+        float: left;
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee; }
+        .modal-body .add-host > .content .detail:nth-child(even) {
+          background-color: #f7f7f7; }
+        .modal-body .add-host > .content .detail:nth-child(odd) {
+          background-color: #fff; }
+        .modal-body .add-host > .content .detail .detail-key,
+        .modal-body .add-host > .content .detail .detail-value {
+          float: left;
+          width: 50%;
+          padding-left: 50px; }
+          .modal-body .add-host > .content .detail .detail-key .input-box,
+          .modal-body .add-host > .content .detail .detail-value .input-box {
+            position: relative;
+            width: 230px;
+            border: 1px #ddd solid;
+            border-radius: 3px;
+            transition: border-color ease-in-out .2s;
+            -webkit-transition: border-color ease-in-out .2s;
+            -moz-transition: border-color ease-in-out .2s; }
+            .modal-body .add-host > .content .detail .detail-key .input-box input,
+            .modal-body .add-host > .content .detail .detail-value .input-box input {
+              padding: 10px;
+              border: none;
+              outline: medium;
+              width: 100%; }
+              .modal-body .add-host > .content .detail .detail-key .input-box input:focus,
+              .modal-body .add-host > .content .detail .detail-value .input-box input:focus {
+                background-color: #fff; }
+            .modal-body .add-host > .content .detail .detail-key .input-box i,
+            .modal-body .add-host > .content .detail .detail-value .input-box i {
+              color: #ccc;
+              position: absolute;
+              right: 10px;
+              top: 13px;
+              cursor: pointer; }
+            .modal-body .add-host > .content .detail .detail-key .input-box i.showpwd,
+            .modal-body .add-host > .content .detail .detail-value .input-box i.showpwd {
+              color: #000; }
+            .modal-body .add-host > .content .detail .detail-key .input-box a,
+            .modal-body .add-host > .content .detail .detail-value .input-box a {
+              position: absolute;
+              right: -40px;
+              top: 8px; }
+          .modal-body .add-host > .content .detail .detail-key .input-grp,
+          .modal-body .add-host > .content .detail .detail-value .input-grp {
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            width: 230px;
+            text-align: center;
+            transition: border-color ease-in-out .2s;
+            -webkit-transition: border-color ease-in-out .2s;
+            -moz-transition: border-color ease-in-out .2s; }
+            .modal-body .add-host > .content .detail .detail-key .input-grp .node-input,
+            .modal-body .add-host > .content .detail .detail-value .input-grp .node-input {
+              width: 50px;
+              padding: 10px;
+              outline: medium;
+              border: none; }
+              .modal-body .add-host > .content .detail .detail-key .input-grp .node-input:focus,
+              .modal-body .add-host > .content .detail .detail-value .input-grp .node-input:focus {
+                background-color: #fff; }
+      .modal-body .add-host > .content > .rtn-tip {
+        display: none;
+        padding: 3px 10px;
+        margin: 5px 20px;
+        border-radius: 3px !important;
+        color: #fff;
+        background-color: #ED7441;
+        font-size: 14px; }
+    .modal-body .add-host > .title {
+      padding: 15px 20px;
+      height: 50px; }
+      .modal-body .add-host > .title > p {
+        margin: 4px 0 0 0;
+        width: 13%;
+        float: left;
+        font-size: 12px; }
+      .modal-body .add-host > .title > .split-line {
+        height: 1px;
+        background-color: #ccc;
+        width: 75%;
+        float: left;
+        padding: 0 10px 0 0;
+        margin-top: 10px; }
+      .modal-body .add-host > .title > .operate-btn {
+        width: 12%;
+        float: left;
+        padding-left: 12px;
+        height: 100%; }
+        .modal-body .add-host > .title > .operate-btn:after {
+          clear: both; }
+  .modal-body .detail-box {
+    padding: 30px 20px; }
+    .modal-body .detail-box .detail-keyvalue {
+      height: 30px;
+      margin-bottom: -1px; }
+      .modal-body .detail-box .detail-keyvalue .detail-key {
+        float: left;
+        width: 125.4px;
+        padding-left: 30px;
+        text-align: center;
+        height: 100%;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        line-height: 28px;
+        margin-bottom: -1px; }
+      .modal-body .detail-box .detail-keyvalue .detail-value {
+        float: left;
+        width: 534.6px;
+        padding-left: 25px;
+        text-align: left;
+        height: 100%;
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        border-left: none;
+        font-size: 12px;
+        line-height: 28px;
+        margin-bottom: -1px; }
+    .modal-body .detail-box .detail-content {
+      overflow: auto;
+      padding: 15px 20px;
+      border: 1px #ddd solid; }
+      .modal-body .detail-box .detail-content::-webkit-scrollbar {
+        width: 6px; }
+      .modal-body .detail-box .detail-content::-webkit-scrollbar-thumb {
+        width: 4px;
+        border: 1px #e5e5e5 solid;
+        border-radius: 3px;
+        background-color: #e5e5e5; }
+        .modal-body .detail-box .detail-content::-webkit-scrollbar-thumb:hover {
+          background-color: #999;
+          border: 1px #999 solid;
+          border-radius: 3px; }
+      .modal-body .detail-box .detail-content .detail-title {
+        float: left;
+        width: 17%;
+        text-align: right;
+        padding-right: 15px;
+        margin: 15px 0;
+        font-size: 12px;
+        color: #333;
+        line-height: 12px;
+        height: 12px; }
+      .modal-body .detail-box .detail-content .detail-text {
+        width: 83%;
+        float: left;
+        text-align: left;
+        margin: 15px 0;
+        padding: 0 15px;
+        font-size: 12px;
+        color: #333;
+        line-height: 12px;
+        height: 12px; }
+
+.error-tip,
+.tip {
+  position: absolute;
+  max-width: 240px;
+  background-color: #fa575f;
+  border-radius: 3px;
+  padding: 5px 15px;
+  color: #fff; }
+  .error-tip p,
+  .tip p {
+    margin: 0;
+    padding: 0; }
+  .error-tip span,
+  .tip span {
+    position: absolute;
+    border-top: 15px solid #fa575f;
+    border-bottom: 15px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 0px solid transparent; }
+
+.error-tip {
+  top: -9999px;
+  left: -9999px; }
+  .error-tip span {
+    bottom: -30px;
+    left: 15px; }
+
+.tip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: -9999px;
+  right: -9999px; }
+  .tip span {
+    bottom: -10px;
+    left: 80%;
+    margin-left: -5px;
+    border-top: 5px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent; }
+
+.modal-body-height {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-content {
+  margin-top: 150px;
+  background: rgba(0, 0, 0, 0.5); }
+
+.modal-footer {
+  background-color: #f0f0f0;
+  text-align: left;
+  border: 1px #f0f0f0 solid;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+  .modal-footer button {
+    margin-right: 20px; }
+  .modal-footer .btn {
+    font-size: 14px;
+    padding: 5px 20px; }
+
+.access-control-create-box,
+.access-control-update-box {
+  padding: 20px; }
+  .access-control-create-box .rtn-tip,
+  .access-control-update-box .rtn-tip {
+    background-color: #ED7441;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px !important;
+    display: none;
+    padding: 3px 10px; }
+  .access-control-create-box .access-control-name label,
+  .access-control-update-box .access-control-name label {
+    font-size: 12px; }
+  .access-control-create-box .access-control-name span,
+  .access-control-update-box .access-control-name span {
+    color: red; }
+  .access-control-create-box .access-control-name input,
+  .access-control-update-box .access-control-name input {
+    width: 100%;
+    padding: 0; }
+  .access-control-create-box ul.tab-container,
+  .access-control-update-box ul.tab-container {
+    height: 30px;
+    margin: 20px 0 0 0;
+    padding: 0; }
+    .access-control-create-box ul.tab-container li,
+    .access-control-update-box ul.tab-container li {
+      list-style: none;
+      float: left;
+      position: relative;
+      display: block;
+      min-width: 100px;
+      text-align: center; }
+      .access-control-create-box ul.tab-container li a,
+      .access-control-update-box ul.tab-container li a {
+        line-height: 29px;
+        border: 1px solid #ccc;
+        margin-right: -1px;
+        display: block;
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: #f8f8f8;
+        color: #000; }
+      .access-control-create-box ul.tab-container li:nth-child(1) a,
+      .access-control-update-box ul.tab-container li:nth-child(1) a {
+        border-top-left-radius: 3px; }
+      .access-control-create-box ul.tab-container li:nth-child(1).active:before,
+      .access-control-update-box ul.tab-container li:nth-child(1).active:before {
+        position: absolute;
+        width: calc(100% + 1px);
+        height: 3px;
+        top: -3px;
+        left: 0;
+        z-index: 1;
+        border: 1px #ccc solid;
+        border-bottom: none;
+        border-radius: 3px 0 0 0;
+        content: ''; }
+      .access-control-create-box ul.tab-container li:nth-child(3) a,
+      .access-control-update-box ul.tab-container li:nth-child(3) a {
+        border-top-right-radius: 3px; }
+      .access-control-create-box ul.tab-container li:nth-child(2).active:before,
+      .access-control-update-box ul.tab-container li:nth-child(2).active:before {
+        position: absolute;
+        width: calc(100% + 1px);
+        height: 3px;
+        top: -3px;
+        left: 0;
+        z-index: 1;
+        border: 1px #ccc solid;
+        border-bottom: none;
+        content: ''; }
+    .access-control-create-box ul.tab-container li.active a,
+    .access-control-update-box ul.tab-container li.active a {
+      border: 1px #ccc solid;
+      background-color: #fff;
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      color: #636e7b;
+      border-radius: 0; }
+  .access-control-create-box .tab-content,
+  .access-control-update-box .tab-content {
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0 0 3px 3px; }
+    .access-control-create-box .tab-content .ip-input-container,
+    .access-control-create-box .tab-content .initiator-input-container,
+    .access-control-update-box .tab-content .ip-input-container,
+    .access-control-update-box .tab-content .initiator-input-container {
+      position: relative;
+      width: 40%; }
+      .access-control-create-box .tab-content .ip-input-container input,
+      .access-control-create-box .tab-content .initiator-input-container input,
+      .access-control-update-box .tab-content .ip-input-container input,
+      .access-control-update-box .tab-content .initiator-input-container input {
+        width: 100%; }
+      .access-control-create-box .tab-content .ip-input-container span,
+      .access-control-create-box .tab-content .initiator-input-container span,
+      .access-control-update-box .tab-content .ip-input-container span,
+      .access-control-update-box .tab-content .initiator-input-container span {
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        right: 16px;
+        cursor: pointer; }
+      .access-control-create-box .tab-content .ip-input-container i,
+      .access-control-create-box .tab-content .initiator-input-container i,
+      .access-control-update-box .tab-content .ip-input-container i,
+      .access-control-update-box .tab-content .initiator-input-container i {
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        margin-top: -8px;
+        right: -16px; }
+    .access-control-create-box .tab-content .ip-container,
+    .access-control-create-box .tab-content .initiator-container,
+    .access-control-update-box .tab-content .ip-container,
+    .access-control-update-box .tab-content .initiator-container {
+      width: 40%;
+      margin-bottom: 20px; }
+      .access-control-create-box .tab-content .ip-container ul,
+      .access-control-create-box .tab-content .initiator-container ul,
+      .access-control-update-box .tab-content .ip-container ul,
+      .access-control-update-box .tab-content .initiator-container ul {
+        border: 1px #ccc solid;
+        border-radius: 2px;
+        margin: 0;
+        padding: 0;
+        height: 180px;
+        overflow-y: auto; }
+        .access-control-create-box .tab-content .ip-container ul li,
+        .access-control-create-box .tab-content .initiator-container ul li,
+        .access-control-update-box .tab-content .ip-container ul li,
+        .access-control-update-box .tab-content .initiator-container ul li {
+          list-style: none;
+          margin: 3px 0;
+          padding: 0 5px 0 35px; }
+          .access-control-create-box .tab-content .ip-container ul li span,
+          .access-control-create-box .tab-content .initiator-container ul li span,
+          .access-control-update-box .tab-content .ip-container ul li span,
+          .access-control-update-box .tab-content .initiator-container ul li span {
+            float: right;
+            margin-right: 11px;
+            cursor: pointer; }
+        .access-control-create-box .tab-content .ip-container ul::-webkit-scrollbar,
+        .access-control-create-box .tab-content .initiator-container ul::-webkit-scrollbar,
+        .access-control-update-box .tab-content .ip-container ul::-webkit-scrollbar,
+        .access-control-update-box .tab-content .initiator-container ul::-webkit-scrollbar {
+          width: 6px; }
+        .access-control-create-box .tab-content .ip-container ul::-webkit-scrollbar-thumb,
+        .access-control-create-box .tab-content .initiator-container ul::-webkit-scrollbar-thumb,
+        .access-control-update-box .tab-content .ip-container ul::-webkit-scrollbar-thumb,
+        .access-control-update-box .tab-content .initiator-container ul::-webkit-scrollbar-thumb {
+          width: 4px;
+          border: 1px #e5e5e5 solid;
+          border-radius: 3px;
+          background-color: #e5e5e5; }
+          .access-control-create-box .tab-content .ip-container ul::-webkit-scrollbar-thumb:hover,
+          .access-control-create-box .tab-content .initiator-container ul::-webkit-scrollbar-thumb:hover,
+          .access-control-update-box .tab-content .ip-container ul::-webkit-scrollbar-thumb:hover,
+          .access-control-update-box .tab-content .initiator-container ul::-webkit-scrollbar-thumb:hover {
+            background-color: #999;
+            border: 1px #999 solid;
+            border-radius: 3px; }
+
+.pool-create-box,
+.pool-update-box,
+.volume-create-box,
+.volume-copy-box,
+.volume-update-box,
+.vgroup-create-box,
+.vgroup-update-box,
+.snapshot-create-box,
+.snapshot-clone-box,
+.cgsnapshot-create-box,
+.cgsnapshot-clone-box,
+.snapshot-policy-create-box,
+.qos-create-box,
+.qos-update-box,
+.sysconfig-update-box,
+.opconfig-update-box,
+.user-create-box,
+.user-update-box {
+  margin: 25px 15px;
+  padding: 30px 20px 40px 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+  .pool-create-box .rtn-tip,
+  .pool-update-box .rtn-tip,
+  .volume-create-box .rtn-tip,
+  .volume-copy-box .rtn-tip,
+  .volume-update-box .rtn-tip,
+  .vgroup-create-box .rtn-tip,
+  .vgroup-update-box .rtn-tip,
+  .snapshot-create-box .rtn-tip,
+  .snapshot-clone-box .rtn-tip,
+  .cgsnapshot-create-box .rtn-tip,
+  .cgsnapshot-clone-box .rtn-tip,
+  .snapshot-policy-create-box .rtn-tip,
+  .qos-create-box .rtn-tip,
+  .qos-update-box .rtn-tip,
+  .sysconfig-update-box .rtn-tip,
+  .opconfig-update-box .rtn-tip,
+  .user-create-box .rtn-tip,
+  .user-update-box .rtn-tip {
+    background-color: #ED7441;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px !important;
+    display: none;
+    padding: 3px 10px; }
+  .pool-create-box table,
+  .pool-update-box table,
+  .volume-create-box table,
+  .volume-copy-box table,
+  .volume-update-box table,
+  .vgroup-create-box table,
+  .vgroup-update-box table,
+  .snapshot-create-box table,
+  .snapshot-clone-box table,
+  .cgsnapshot-create-box table,
+  .cgsnapshot-clone-box table,
+  .snapshot-policy-create-box table,
+  .qos-create-box table,
+  .qos-update-box table,
+  .sysconfig-update-box table,
+  .opconfig-update-box table,
+  .user-create-box table,
+  .user-update-box table {
+    width: 100%; }
+    .pool-create-box table td,
+    .pool-update-box table td,
+    .volume-create-box table td,
+    .volume-copy-box table td,
+    .volume-update-box table td,
+    .vgroup-create-box table td,
+    .vgroup-update-box table td,
+    .snapshot-create-box table td,
+    .snapshot-clone-box table td,
+    .cgsnapshot-create-box table td,
+    .cgsnapshot-clone-box table td,
+    .snapshot-policy-create-box table td,
+    .qos-create-box table td,
+    .qos-update-box table td,
+    .sysconfig-update-box table td,
+    .opconfig-update-box table td,
+    .user-create-box table td,
+    .user-update-box table td {
+      position: relative;
+      padding: 5px; }
+      .pool-create-box table td input[type=text],
+      .pool-create-box table td input[type=password],
+      .pool-create-box table td input.rounded_dropdown,
+      .pool-update-box table td input[type=text],
+      .pool-update-box table td input[type=password],
+      .pool-update-box table td input.rounded_dropdown,
+      .volume-create-box table td input[type=text],
+      .volume-create-box table td input[type=password],
+      .volume-create-box table td input.rounded_dropdown,
+      .volume-copy-box table td input[type=text],
+      .volume-copy-box table td input[type=password],
+      .volume-copy-box table td input.rounded_dropdown,
+      .volume-update-box table td input[type=text],
+      .volume-update-box table td input[type=password],
+      .volume-update-box table td input.rounded_dropdown,
+      .vgroup-create-box table td input[type=text],
+      .vgroup-create-box table td input[type=password],
+      .vgroup-create-box table td input.rounded_dropdown,
+      .vgroup-update-box table td input[type=text],
+      .vgroup-update-box table td input[type=password],
+      .vgroup-update-box table td input.rounded_dropdown,
+      .snapshot-create-box table td input[type=text],
+      .snapshot-create-box table td input[type=password],
+      .snapshot-create-box table td input.rounded_dropdown,
+      .snapshot-clone-box table td input[type=text],
+      .snapshot-clone-box table td input[type=password],
+      .snapshot-clone-box table td input.rounded_dropdown,
+      .cgsnapshot-create-box table td input[type=text],
+      .cgsnapshot-create-box table td input[type=password],
+      .cgsnapshot-create-box table td input.rounded_dropdown,
+      .cgsnapshot-clone-box table td input[type=text],
+      .cgsnapshot-clone-box table td input[type=password],
+      .cgsnapshot-clone-box table td input.rounded_dropdown,
+      .snapshot-policy-create-box table td input[type=text],
+      .snapshot-policy-create-box table td input[type=password],
+      .snapshot-policy-create-box table td input.rounded_dropdown,
+      .qos-create-box table td input[type=text],
+      .qos-create-box table td input[type=password],
+      .qos-create-box table td input.rounded_dropdown,
+      .qos-update-box table td input[type=text],
+      .qos-update-box table td input[type=password],
+      .qos-update-box table td input.rounded_dropdown,
+      .sysconfig-update-box table td input[type=text],
+      .sysconfig-update-box table td input[type=password],
+      .sysconfig-update-box table td input.rounded_dropdown,
+      .opconfig-update-box table td input[type=text],
+      .opconfig-update-box table td input[type=password],
+      .opconfig-update-box table td input.rounded_dropdown,
+      .user-create-box table td input[type=text],
+      .user-create-box table td input[type=password],
+      .user-create-box table td input.rounded_dropdown,
+      .user-update-box table td input[type=text],
+      .user-update-box table td input[type=password],
+      .user-update-box table td input.rounded_dropdown {
+        width: 100%; }
+      .pool-create-box table td input[type=radio],
+      .pool-update-box table td input[type=radio],
+      .volume-create-box table td input[type=radio],
+      .volume-copy-box table td input[type=radio],
+      .volume-update-box table td input[type=radio],
+      .vgroup-create-box table td input[type=radio],
+      .vgroup-update-box table td input[type=radio],
+      .snapshot-create-box table td input[type=radio],
+      .snapshot-clone-box table td input[type=radio],
+      .cgsnapshot-create-box table td input[type=radio],
+      .cgsnapshot-clone-box table td input[type=radio],
+      .snapshot-policy-create-box table td input[type=radio],
+      .qos-create-box table td input[type=radio],
+      .qos-update-box table td input[type=radio],
+      .sysconfig-update-box table td input[type=radio],
+      .opconfig-update-box table td input[type=radio],
+      .user-create-box table td input[type=radio],
+      .user-update-box table td input[type=radio] {
+        margin: 0; }
+      .pool-create-box table td input.rounded_dropdown,
+      .pool-update-box table td input.rounded_dropdown,
+      .volume-create-box table td input.rounded_dropdown,
+      .volume-copy-box table td input.rounded_dropdown,
+      .volume-update-box table td input.rounded_dropdown,
+      .vgroup-create-box table td input.rounded_dropdown,
+      .vgroup-update-box table td input.rounded_dropdown,
+      .snapshot-create-box table td input.rounded_dropdown,
+      .snapshot-clone-box table td input.rounded_dropdown,
+      .cgsnapshot-create-box table td input.rounded_dropdown,
+      .cgsnapshot-clone-box table td input.rounded_dropdown,
+      .snapshot-policy-create-box table td input.rounded_dropdown,
+      .qos-create-box table td input.rounded_dropdown,
+      .qos-update-box table td input.rounded_dropdown,
+      .sysconfig-update-box table td input.rounded_dropdown,
+      .opconfig-update-box table td input.rounded_dropdown,
+      .user-create-box table td input.rounded_dropdown,
+      .user-update-box table td input.rounded_dropdown {
+        border-radius: 3px; }
+      .pool-create-box table td a,
+      .pool-update-box table td a,
+      .volume-create-box table td a,
+      .volume-copy-box table td a,
+      .volume-update-box table td a,
+      .vgroup-create-box table td a,
+      .vgroup-update-box table td a,
+      .snapshot-create-box table td a,
+      .snapshot-clone-box table td a,
+      .cgsnapshot-create-box table td a,
+      .cgsnapshot-clone-box table td a,
+      .snapshot-policy-create-box table td a,
+      .qos-create-box table td a,
+      .qos-update-box table td a,
+      .sysconfig-update-box table td a,
+      .opconfig-update-box table td a,
+      .user-create-box table td a,
+      .user-update-box table td a {
+        color: red; }
+      .pool-create-box table td span.unit,
+      .pool-update-box table td span.unit,
+      .volume-create-box table td span.unit,
+      .volume-copy-box table td span.unit,
+      .volume-update-box table td span.unit,
+      .vgroup-create-box table td span.unit,
+      .vgroup-update-box table td span.unit,
+      .snapshot-create-box table td span.unit,
+      .snapshot-clone-box table td span.unit,
+      .cgsnapshot-create-box table td span.unit,
+      .cgsnapshot-clone-box table td span.unit,
+      .snapshot-policy-create-box table td span.unit,
+      .qos-create-box table td span.unit,
+      .qos-update-box table td span.unit,
+      .sysconfig-update-box table td span.unit,
+      .opconfig-update-box table td span.unit,
+      .user-create-box table td span.unit,
+      .user-update-box table td span.unit {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        margin-top: -12px;
+        color: #ccc; }
+      .pool-create-box table td span.unit.fa,
+      .pool-update-box table td span.unit.fa,
+      .volume-create-box table td span.unit.fa,
+      .volume-copy-box table td span.unit.fa,
+      .volume-update-box table td span.unit.fa,
+      .vgroup-create-box table td span.unit.fa,
+      .vgroup-update-box table td span.unit.fa,
+      .snapshot-create-box table td span.unit.fa,
+      .snapshot-clone-box table td span.unit.fa,
+      .cgsnapshot-create-box table td span.unit.fa,
+      .cgsnapshot-clone-box table td span.unit.fa,
+      .snapshot-policy-create-box table td span.unit.fa,
+      .qos-create-box table td span.unit.fa,
+      .qos-update-box table td span.unit.fa,
+      .sysconfig-update-box table td span.unit.fa,
+      .opconfig-update-box table td span.unit.fa,
+      .user-create-box table td span.unit.fa,
+      .user-update-box table td span.unit.fa {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        margin-top: -7px;
+        color: #ccc; }
+      .pool-create-box table td span,
+      .pool-update-box table td span,
+      .volume-create-box table td span,
+      .volume-copy-box table td span,
+      .volume-update-box table td span,
+      .vgroup-create-box table td span,
+      .vgroup-update-box table td span,
+      .snapshot-create-box table td span,
+      .snapshot-clone-box table td span,
+      .cgsnapshot-create-box table td span,
+      .cgsnapshot-clone-box table td span,
+      .snapshot-policy-create-box table td span,
+      .qos-create-box table td span,
+      .qos-update-box table td span,
+      .sysconfig-update-box table td span,
+      .opconfig-update-box table td span,
+      .user-create-box table td span,
+      .user-update-box table td span {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        margin-top: -5px;
+        color: #ccc; }
+      .pool-create-box table td i,
+      .pool-update-box table td i,
+      .volume-create-box table td i,
+      .volume-copy-box table td i,
+      .volume-update-box table td i,
+      .vgroup-create-box table td i,
+      .vgroup-update-box table td i,
+      .snapshot-create-box table td i,
+      .snapshot-clone-box table td i,
+      .cgsnapshot-create-box table td i,
+      .cgsnapshot-clone-box table td i,
+      .snapshot-policy-create-box table td i,
+      .qos-create-box table td i,
+      .qos-update-box table td i,
+      .sysconfig-update-box table td i,
+      .opconfig-update-box table td i,
+      .user-create-box table td i,
+      .user-update-box table td i {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        margin-top: -8px;
+        color: #ccc;
+        cursor: pointer; }
+      .pool-create-box table td select,
+      .pool-update-box table td select,
+      .volume-create-box table td select,
+      .volume-copy-box table td select,
+      .volume-update-box table td select,
+      .vgroup-create-box table td select,
+      .vgroup-update-box table td select,
+      .snapshot-create-box table td select,
+      .snapshot-clone-box table td select,
+      .cgsnapshot-create-box table td select,
+      .cgsnapshot-clone-box table td select,
+      .snapshot-policy-create-box table td select,
+      .qos-create-box table td select,
+      .qos-update-box table td select,
+      .sysconfig-update-box table td select,
+      .opconfig-update-box table td select,
+      .user-create-box table td select,
+      .user-update-box table td select {
+        width: 100%; }
+  .pool-create-box .switch-info tr td:nth-child(1),
+  .pool-update-box .switch-info tr td:nth-child(1),
+  .volume-create-box .switch-info tr td:nth-child(1),
+  .volume-copy-box .switch-info tr td:nth-child(1),
+  .volume-update-box .switch-info tr td:nth-child(1),
+  .vgroup-create-box .switch-info tr td:nth-child(1),
+  .vgroup-update-box .switch-info tr td:nth-child(1),
+  .snapshot-create-box .switch-info tr td:nth-child(1),
+  .snapshot-clone-box .switch-info tr td:nth-child(1),
+  .cgsnapshot-create-box .switch-info tr td:nth-child(1),
+  .cgsnapshot-clone-box .switch-info tr td:nth-child(1),
+  .snapshot-policy-create-box .switch-info tr td:nth-child(1),
+  .qos-create-box .switch-info tr td:nth-child(1),
+  .qos-update-box .switch-info tr td:nth-child(1),
+  .sysconfig-update-box .switch-info tr td:nth-child(1),
+  .opconfig-update-box .switch-info tr td:nth-child(1),
+  .user-create-box .switch-info tr td:nth-child(1),
+  .user-update-box .switch-info tr td:nth-child(1) {
+    width: 20%; }
+  .pool-create-box .user-info,
+  .pool-create-box .super-info,
+  .pool-update-box .user-info,
+  .pool-update-box .super-info,
+  .volume-create-box .user-info,
+  .volume-create-box .super-info,
+  .volume-copy-box .user-info,
+  .volume-copy-box .super-info,
+  .volume-update-box .user-info,
+  .volume-update-box .super-info,
+  .vgroup-create-box .user-info,
+  .vgroup-create-box .super-info,
+  .vgroup-update-box .user-info,
+  .vgroup-update-box .super-info,
+  .snapshot-create-box .user-info,
+  .snapshot-create-box .super-info,
+  .snapshot-clone-box .user-info,
+  .snapshot-clone-box .super-info,
+  .cgsnapshot-create-box .user-info,
+  .cgsnapshot-create-box .super-info,
+  .cgsnapshot-clone-box .user-info,
+  .cgsnapshot-clone-box .super-info,
+  .snapshot-policy-create-box .user-info,
+  .snapshot-policy-create-box .super-info,
+  .qos-create-box .user-info,
+  .qos-create-box .super-info,
+  .qos-update-box .user-info,
+  .qos-update-box .super-info,
+  .sysconfig-update-box .user-info,
+  .sysconfig-update-box .super-info,
+  .opconfig-update-box .user-info,
+  .opconfig-update-box .super-info,
+  .user-create-box .user-info,
+  .user-create-box .super-info,
+  .user-update-box .user-info,
+  .user-update-box .super-info {
+    margin-top: 20px; }
+    .pool-create-box .user-info tr td:nth-child(odd),
+    .pool-create-box .super-info tr td:nth-child(odd),
+    .pool-update-box .user-info tr td:nth-child(odd),
+    .pool-update-box .super-info tr td:nth-child(odd),
+    .volume-create-box .user-info tr td:nth-child(odd),
+    .volume-create-box .super-info tr td:nth-child(odd),
+    .volume-copy-box .user-info tr td:nth-child(odd),
+    .volume-copy-box .super-info tr td:nth-child(odd),
+    .volume-update-box .user-info tr td:nth-child(odd),
+    .volume-update-box .super-info tr td:nth-child(odd),
+    .vgroup-create-box .user-info tr td:nth-child(odd),
+    .vgroup-create-box .super-info tr td:nth-child(odd),
+    .vgroup-update-box .user-info tr td:nth-child(odd),
+    .vgroup-update-box .super-info tr td:nth-child(odd),
+    .snapshot-create-box .user-info tr td:nth-child(odd),
+    .snapshot-create-box .super-info tr td:nth-child(odd),
+    .snapshot-clone-box .user-info tr td:nth-child(odd),
+    .snapshot-clone-box .super-info tr td:nth-child(odd),
+    .cgsnapshot-create-box .user-info tr td:nth-child(odd),
+    .cgsnapshot-create-box .super-info tr td:nth-child(odd),
+    .cgsnapshot-clone-box .user-info tr td:nth-child(odd),
+    .cgsnapshot-clone-box .super-info tr td:nth-child(odd),
+    .snapshot-policy-create-box .user-info tr td:nth-child(odd),
+    .snapshot-policy-create-box .super-info tr td:nth-child(odd),
+    .qos-create-box .user-info tr td:nth-child(odd),
+    .qos-create-box .super-info tr td:nth-child(odd),
+    .qos-update-box .user-info tr td:nth-child(odd),
+    .qos-update-box .super-info tr td:nth-child(odd),
+    .sysconfig-update-box .user-info tr td:nth-child(odd),
+    .sysconfig-update-box .super-info tr td:nth-child(odd),
+    .opconfig-update-box .user-info tr td:nth-child(odd),
+    .opconfig-update-box .super-info tr td:nth-child(odd),
+    .user-create-box .user-info tr td:nth-child(odd),
+    .user-create-box .super-info tr td:nth-child(odd),
+    .user-update-box .user-info tr td:nth-child(odd),
+    .user-update-box .super-info tr td:nth-child(odd) {
+      width: 12.5%; }
+    .pool-create-box .user-info tr td:nth-child(even),
+    .pool-create-box .super-info tr td:nth-child(even),
+    .pool-update-box .user-info tr td:nth-child(even),
+    .pool-update-box .super-info tr td:nth-child(even),
+    .volume-create-box .user-info tr td:nth-child(even),
+    .volume-create-box .super-info tr td:nth-child(even),
+    .volume-copy-box .user-info tr td:nth-child(even),
+    .volume-copy-box .super-info tr td:nth-child(even),
+    .volume-update-box .user-info tr td:nth-child(even),
+    .volume-update-box .super-info tr td:nth-child(even),
+    .vgroup-create-box .user-info tr td:nth-child(even),
+    .vgroup-create-box .super-info tr td:nth-child(even),
+    .vgroup-update-box .user-info tr td:nth-child(even),
+    .vgroup-update-box .super-info tr td:nth-child(even),
+    .snapshot-create-box .user-info tr td:nth-child(even),
+    .snapshot-create-box .super-info tr td:nth-child(even),
+    .snapshot-clone-box .user-info tr td:nth-child(even),
+    .snapshot-clone-box .super-info tr td:nth-child(even),
+    .cgsnapshot-create-box .user-info tr td:nth-child(even),
+    .cgsnapshot-create-box .super-info tr td:nth-child(even),
+    .cgsnapshot-clone-box .user-info tr td:nth-child(even),
+    .cgsnapshot-clone-box .super-info tr td:nth-child(even),
+    .snapshot-policy-create-box .user-info tr td:nth-child(even),
+    .snapshot-policy-create-box .super-info tr td:nth-child(even),
+    .qos-create-box .user-info tr td:nth-child(even),
+    .qos-create-box .super-info tr td:nth-child(even),
+    .qos-update-box .user-info tr td:nth-child(even),
+    .qos-update-box .super-info tr td:nth-child(even),
+    .sysconfig-update-box .user-info tr td:nth-child(even),
+    .sysconfig-update-box .super-info tr td:nth-child(even),
+    .opconfig-update-box .user-info tr td:nth-child(even),
+    .opconfig-update-box .super-info tr td:nth-child(even),
+    .user-create-box .user-info tr td:nth-child(even),
+    .user-create-box .super-info tr td:nth-child(even),
+    .user-update-box .user-info tr td:nth-child(even),
+    .user-update-box .super-info tr td:nth-child(even) {
+      padding-right: 50px;
+      width: 37.5%; }
+  .pool-create-box .base-info tr:nth-child(1) td,
+  .pool-update-box .base-info tr:nth-child(1) td,
+  .volume-create-box .base-info tr:nth-child(1) td,
+  .volume-copy-box .base-info tr:nth-child(1) td,
+  .volume-update-box .base-info tr:nth-child(1) td,
+  .vgroup-create-box .base-info tr:nth-child(1) td,
+  .vgroup-update-box .base-info tr:nth-child(1) td,
+  .snapshot-create-box .base-info tr:nth-child(1) td,
+  .snapshot-clone-box .base-info tr:nth-child(1) td,
+  .cgsnapshot-create-box .base-info tr:nth-child(1) td,
+  .cgsnapshot-clone-box .base-info tr:nth-child(1) td,
+  .snapshot-policy-create-box .base-info tr:nth-child(1) td,
+  .qos-create-box .base-info tr:nth-child(1) td,
+  .qos-update-box .base-info tr:nth-child(1) td,
+  .sysconfig-update-box .base-info tr:nth-child(1) td,
+  .opconfig-update-box .base-info tr:nth-child(1) td,
+  .user-create-box .base-info tr:nth-child(1) td,
+  .user-update-box .base-info tr:nth-child(1) td {
+    width: 12.5%; }
+    .pool-create-box .base-info tr:nth-child(1) td input[type=text],
+    .pool-update-box .base-info tr:nth-child(1) td input[type=text],
+    .volume-create-box .base-info tr:nth-child(1) td input[type=text],
+    .volume-copy-box .base-info tr:nth-child(1) td input[type=text],
+    .volume-update-box .base-info tr:nth-child(1) td input[type=text],
+    .vgroup-create-box .base-info tr:nth-child(1) td input[type=text],
+    .vgroup-update-box .base-info tr:nth-child(1) td input[type=text],
+    .snapshot-create-box .base-info tr:nth-child(1) td input[type=text],
+    .snapshot-clone-box .base-info tr:nth-child(1) td input[type=text],
+    .cgsnapshot-create-box .base-info tr:nth-child(1) td input[type=text],
+    .cgsnapshot-clone-box .base-info tr:nth-child(1) td input[type=text],
+    .snapshot-policy-create-box .base-info tr:nth-child(1) td input[type=text],
+    .qos-create-box .base-info tr:nth-child(1) td input[type=text],
+    .qos-update-box .base-info tr:nth-child(1) td input[type=text],
+    .sysconfig-update-box .base-info tr:nth-child(1) td input[type=text],
+    .opconfig-update-box .base-info tr:nth-child(1) td input[type=text],
+    .user-create-box .base-info tr:nth-child(1) td input[type=text],
+    .user-update-box .base-info tr:nth-child(1) td input[type=text] {
+      height: 25px; }
+    .pool-create-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .pool-update-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .volume-create-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .volume-copy-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .volume-update-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .vgroup-create-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .vgroup-update-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .snapshot-create-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .snapshot-clone-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .cgsnapshot-create-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .cgsnapshot-clone-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .snapshot-policy-create-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .qos-create-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .qos-update-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .sysconfig-update-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .opconfig-update-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .user-create-box .base-info tr:nth-child(1) td:nth-last-child(1),
+    .user-update-box .base-info tr:nth-child(1) td:nth-last-child(1) {
+      width: 87.5%;
+      padding-right: 50px; }
+  .pool-create-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .pool-update-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .volume-create-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .volume-copy-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .volume-update-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .vgroup-create-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .vgroup-update-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .snapshot-create-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .snapshot-clone-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .cgsnapshot-create-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .cgsnapshot-clone-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .snapshot-policy-create-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .qos-create-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .qos-update-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .sysconfig-update-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .opconfig-update-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .user-create-box .base-info tr:nth-child(2) td:nth-child(odd),
+  .user-update-box .base-info tr:nth-child(2) td:nth-child(odd) {
+    width: 12.5%; }
+  .pool-create-box .base-info tr:nth-child(2) td:nth-child(even),
+  .pool-update-box .base-info tr:nth-child(2) td:nth-child(even),
+  .volume-create-box .base-info tr:nth-child(2) td:nth-child(even),
+  .volume-copy-box .base-info tr:nth-child(2) td:nth-child(even),
+  .volume-update-box .base-info tr:nth-child(2) td:nth-child(even),
+  .vgroup-create-box .base-info tr:nth-child(2) td:nth-child(even),
+  .vgroup-update-box .base-info tr:nth-child(2) td:nth-child(even),
+  .snapshot-create-box .base-info tr:nth-child(2) td:nth-child(even),
+  .snapshot-clone-box .base-info tr:nth-child(2) td:nth-child(even),
+  .cgsnapshot-create-box .base-info tr:nth-child(2) td:nth-child(even),
+  .cgsnapshot-clone-box .base-info tr:nth-child(2) td:nth-child(even),
+  .snapshot-policy-create-box .base-info tr:nth-child(2) td:nth-child(even),
+  .qos-create-box .base-info tr:nth-child(2) td:nth-child(even),
+  .qos-update-box .base-info tr:nth-child(2) td:nth-child(even),
+  .sysconfig-update-box .base-info tr:nth-child(2) td:nth-child(even),
+  .opconfig-update-box .base-info tr:nth-child(2) td:nth-child(even),
+  .user-create-box .base-info tr:nth-child(2) td:nth-child(even),
+  .user-update-box .base-info tr:nth-child(2) td:nth-child(even) {
+    padding-right: 50px;
+    width: 37.5%; }
+
+/*# sourceMappingURL=style.zgn.scss.css.map */

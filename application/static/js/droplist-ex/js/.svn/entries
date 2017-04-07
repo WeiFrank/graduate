@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="26531"
+   name=""
+   committed-date="2011-11-21T06:55:59.627716Z"
+   url="svn://192.168.0.7/code/component/RQLibrary/WebRoot/mis2/gezComponents/formstyle/js"
+   last-author="xiebaoping"
+   kind="dir"
+   uuid="5e504f78-2076-450e-8828-05cb259ddeba"
+   repos="svn://192.168.0.7/code"
+   revision="26719"/>
+<entry
+   committed-rev="26531"
+   name="form.js"
+   text-time="2011-11-21T07:10:12.312500Z"
+   committed-date="2011-11-21T06:55:59.627716Z"
+   checksum="adfaf61b4dce6370c25820a5d4254408"
+   last-author="xiebaoping"
+   kind="file"
+   prop-time="2011-11-21T02:22:15.609375Z"/>
+</wc-entries>

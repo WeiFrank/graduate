@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<form action="" method="post" enctype="multipart/form-data">
+<label>choice picture</label>
+<a href="javascript:addimg()">ad pic</a>
+    
+    <div class="mdiv" id="mdiv">
+    
+<div class="iptdiv" >
+<input type="file" name="img[]" class="ipt"/>
+    <a href="#" name="rmlink">X</a>
+</div>
+    
+</div>
+<input type="submit" name="submit" value="upload"/>
+</form>
+<script type="text/javascript">
+$(document).ready(function(){
+bindListener();
+});
+
+function bindListener(){
+$("a[name=rmlink]").unbind().click(function(){
+$(this).parent().remove();
+})
+}
+function addimg(){
+$("#mdiv").append('<div class="iptdiv"><input type="file" name="img[]" class="ipt" /><a href="#" name="rmlink"> X </a></div>');
+
+bindListener();
+}
+</script>
+</body>
+</html>

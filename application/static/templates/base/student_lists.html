@@ -1,0 +1,137 @@
+<script type="text/javascript">
+$("#student_available_tb").jqGrid({
+       url: '/student/grid',
+       datatype: 'json',
+       mtype: 'GET',
+       colNames: ['id', '学号', '姓名','性别', '身份证', '手机号','政治面貌', '操作'],
+       colModel: [{
+            name: 'id',
+            index: 'id',
+            width: 20,
+            align: 'center',
+            hidden:true,
+           },
+           {
+           name: 's_number',
+            index: 's_number',
+            width: 60,
+            align: 'center',
+           },
+           {
+             name: 's_name',
+            index: 's_name',
+            width: 30,
+            align: 'center',
+           },
+            {
+            name: 's_sex',
+            index: 's_sex',
+            width: 30,
+            align: 'center',
+           },
+            {
+            name: 's_id',
+            index: 's_id',
+            width: 40,
+            align: 'center',
+           },
+            {
+            name: 's_telphone',
+            index: 's_telphone',
+            width: 40,
+            align: 'center',
+           },
+            {
+            name: 's_political',
+            index: 's_political',
+            width: 40,
+            align: 'center',
+           },
+           {  name: 'service',
+            index: 'service',
+            width: 70,
+            align: 'center',
+            hidden: false,
+            detailHidden: true,
+            formatter: function(cell, option, row) {
+                var html = '';
+                row = row2object(row, option.gid);
+                html += '<button style="margin-left:10px;" title="编辑" class="btn btn-blue" onclick="student_update(' + row['id'] + ')">编辑</button>';
+                html += '<button style="margin-left:10px;" title="删除" class="btn btn-blue" onclick=student_delete_confirm(' + row['id'] + ',"' + row['s_name'] + '")>删除</button>';
+                 return html;
+                }
+       }],
+
+    page: 1,
+    rowNum: 2,
+    sortname: 'id',
+    sortorder: 'desc',
+    viewrecords: true,
+    multiselect: false,
+    multiboxonly:true,
+    multiselectWidth:'60px',
+    autowidth: true,
+    beforeSelectRow:function(rowid, e) {
+        if($(e.target).is('input')) {
+            return true;
+        }
+        return false;
+    },
+    gridComplete: function() {
+        var gridData = $(this).jqGrid('getRowData');
+        jqgrid_page($(this), gridData);
+        jqgrid_resize($(this));
+    }
+});
+
+$("#student_create_button").click(function() {
+
+    angular.element('#student_create_button').scope().open("/student/create?");
+});
+
+function student_update(student_id) {
+    angular.element('#student_create_button').scope().open("/student/update?student_id=" + student_id);
+
+}
+
+function student_delete(student_id) {
+    $.post('/student/delete', {
+            'id': student_id
+        },
+        function(data) {
+            if (data.reply.is_success) {
+                $("#student_available_tb").trigger("reloadGrid");
+            } else {
+                error = data.reply.error;
+                SelfAlert(error);
+            }
+        });
+    $('#student_available_tb').trigger("reloadGrid");
+}
+
+function student_delete_confirm(student_id, student_name) {
+    msg = '确定删除（' + student_name + '）？';
+    SelfConfirm(msg, student_delete, student_id, "删除提示");
+}
+</script>
+
+<div class="panel panel-style">
+    <div class="panel-body">
+        <div class="title-tag">
+            <h3>基本信息</h3>
+            <p>基本信息</p>
+        </div>
+
+        <div class="grid-tools">
+            <div class="grid-operate pull-left">
+                <button class="btn btn-blue" type="button" id="student_create_button" ng-controller="StudentModalCtrl">创建</button>
+                <!-- <button class="btn btn-blue" type="button" id="pool_delete_button">删除</button> -->
+            </div>
+        </div>
+
+        <div id="grid_student_available" class='grid-body'>
+            <table id="student_available_tb"></table>
+        </div>
+
+    </div>
+</div>

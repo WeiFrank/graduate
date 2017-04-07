@@ -1,0 +1,18 @@
+
+<div class="confirm_modal">
+    <div class="modal-header">
+        <h3 ng-bind="item.title"></h3>
+    </div>
+    <div class="modal-body modal-body-height">
+
+        <div class="tip-container" ng-bind-html="item.msg">
+        </div>
+
+        <div class="modal-body-btn-container">
+            <button class="btn btn-red" ng-click="ok()" ng-show="!item.is_redirect && item.isShowOK">OK</button>
+            <button class="btn btn-grey-noborder" ng-click="cancel()" ng-show="!item.is_redirect && !item.is_show_close">cancel</button>
+            <button class="btn btn-grey-noborder" ng-click="cancel()" ng-show="!item.is_redirect && item.is_show_close">关闭</button>
+            <!--<button class="btn btn-blue" ng-click="redirect()" ng-show="item.is_redirect">跳转</button>-->
+        </div>
+    </div>
+</div>

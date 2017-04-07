@@ -1,0 +1,162 @@
+
+
+.rightpanel {
+    right: -240px;
+}
+
+.headermenu > li {
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+.leftpanel {
+    position: relative;
+    float:left;
+    bottom: 0;
+    top: 0;
+    left: 0;
+
+     width:100px;
+
+   background-color:#303440;
+   margin-top:0px;
+   margin-left:2px;
+   font-size:10px;
+}
+.grid-body {
+  margin: 0 20px 0 20px;
+}
+
+.panel-body {
+    right:81px;
+    padding-left:81px;
+}
+.contentpanel::after {
+    clear: both;
+    display: block;
+    content: '';
+    margin-left:80px;
+}
+.title-tag {
+
+ margin: 0;
+ font-size:15px;
+ border-bottom: 1px #eee solid;
+ position: relative;
+ }
+
+.title-tag >h3 {
+
+  margin: 0;
+ font-size:15px;
+ padding-left:10px;
+
+ }
+.title-tag > p {
+ font-size: 12px;
+ line-height: 12px;
+  color: #ccc;
+  margin-top: 8px;
+margin-bottom: 0;
+padding-left:10px;
+}
+
+
+.header {
+   margin-left:80px;
+
+   text-align: center;
+   margin-top:4px;
+   padding:6px;
+
+   color:black;
+}
+.grid-body {
+  margin-top:2px;
+}
+.grid-tools {
+  position: relative;
+  border-top: 1px #eee solid;
+  padding: 14px 20px 10px 20px;
+  margin-top: 1px;
+  margin-bottom:3px;
+  height: 35px;
+
+ }
+ .grid-tools > .grid-operate >button{
+     height:18px;
+    width:30px;
+    font-size:8px;
+
+    margin-right: 9px;
+    margin-bottom:3px;
+    padding:3px;
+
+ }
+.grid-tools > .grid-operate {
+   padding-bottom:2px;
+   margin-bottom:2px;
+
+ }
+
+
+
+
+.btn-blue {
+  background: #5485fe;
+  border: none;
+  color: #fff; }
+
+.btn-blue:hover, .btn-blue:focus, .btn-blue:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    outline: none;
+ }
+  .btn-blue:hover {
+    background: #3c70f1;
+    position: relative; }
+  .btn-blue:active {
+    position: relative;
+    box-shadow: 0px 6px 9px #4d6cb9 inset;
+    -moz-box-shadow: 0px 6px 9px #4d6cb9 inset;
+    -webkit-box-shadow: 0px 6px 9px #4d6cb9 inset; }
+
+.btn-blue.active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #5485fe;
+  color: #fff;
+ }
+
+ .grid-tools:after {
+    clear: both;
+ }
+
+
+
+#jqgh_course_available_tb_c_name,#jqgh_course_available_tb_c_score,
+#jqgh_course_available_tb_c_number,#jqgh_course_available_tb_c_service{
+ {
+
+    text-align: center;
+    padding: 2px;
+    margin: 1px;
+    line-height: 9px;
+}
+
+.ui-jqgrid-htable {
+    height:30px;
+
+}
+.jqgrow {
+   width:700px;
+}
+           * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+             <!--$('#queryall').attr('')-->

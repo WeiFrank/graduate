@@ -1,0 +1,158 @@
+<script type="text/javascript">
+
+      var enable_submit=true;
+      function submit_student_update(){
+     var bValid = true;
+     var s_name=$("#student_name_id")
+     var s_num=$("#student_create_modal").find("#student_num_id")
+     var s_telphone=$("#student_create_modal").find("#student_telphone_id")
+     var s_e_mail=$("#student_create_modal").find("#student_email_id")
+     var s_sex=$("#student_create_modal").find("#student_sex_id")
+     var s_pol=$("#student_create_modal").find("#pol")
+     var c_id=$("#class_name option:selected" ).val();
+     console.log(c_id)
+
+     if(bValid){
+         if(enable_submit) {
+            enable_submit = false;
+            var $submitBtn = $('.modal-footer').find('.btn-blue');
+            $submitBtn.html('<i class="fa fa-spinner fa-spin" style="margin:3px 6px;"></i>');
+             $('.rtn-tip').slideUp('fast');
+              $.post("/student/update",{
+                  "id": "{{student.id}}",
+                  "s_name":$.trim(s_name.val()),
+                  "s_telphone":$.trim(s_telphone.val()),
+                  "s_number":$.trim(s_num.val()),
+                  "s_sex":$.trim(s_sex.val()),
+                  "s_e_mail":$.trim(s_e_mail.val()),
+                  "s_political":$.trim(s_pol.val()),
+                  "class_id":$.trim(c_id),
+              },function(data){
+                  var data=eval("("+data+")");
+                     if (data.reply.is_success){
+                       angular.element('#student_create_button').scope().close();
+                       <!--$('#student_available_tb').trigger("reloadGrid");-->
+                       enable_submit = true;
+                   }else{
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+                     $submitBtn.html('ok');
+                     enable_submit = true;
+                   }
+                 });
+                 $('#student_available_tb').trigger("reloadGrid");
+                 }
+              }
+            }
+
+</script>
+
+<div class="modal-header">
+    <h3>创建课程</h3>
+</div>
+
+<div class="modal-body modal-body-height" id="student_create_modal">
+    <div class="student-create-box">
+    <div class="rtn-tip"></div>
+        <table class="base-info">
+            <tr>
+               <td>
+                <label>姓名</label><a>*</a>
+               </td>
+
+                <td colspan="1">
+                  <input id="student_name_id" name="student_name" size="25" value="{{student.s_name}}" type="text"/>
+                  <i class="fa fa-question-circle" itype="student_name"></i>
+                </td>
+
+                <td>
+                  <label>性别</label><a>*</a>
+                </td>
+
+                <td colspan="1">
+                  <input id="student_sex_id" name="student_sex" size="25"  value="{{student.s_sex}}" type="text"/>
+                  <i class="fa fa-question-circle" itype="student_sex"></i>
+                </td>
+             </tr>
+
+             <tr>
+                 <td>
+                  <label>学号</label><a>*</a>
+                 </td>
+
+                 <td>
+                   <input id="student_num_id" name="student_num" size="25" value="{{student.s_number}}" type="text"/>
+                   <i class="fa fa-question-circle" itype="student_num"></i>
+                  </td>
+
+                 <td>
+                  <label>班级</label><a>*</a>
+                  </td>
+                  <td>
+                  <select id="class_name">
+                      {% for c in classes %}
+                      <option value="{{c.id}}">{{c.name}}</option>
+                      {% endfor %}
+                  </select>
+                  <i class="fa fa-question-circle" itype="student_class"></i>
+               </td>
+            </tr>
+                 <tr>
+                <td>
+                <label>身份证</label><a>*</a>
+               </td>
+               <td >
+                  <input id="student_id_num" name="student_idnum" size="25" value="{{student.s_id}}" type="text"/>
+                 <i class="fa fa-question-circle" itype="student_idnum"></i>
+               </td>
+            </tr>
+             <tr>
+               <td>
+                <label>邮件</label><a>*</a>
+               </td>
+               <td >
+                  <input id="student_email_id" name="student_email" size="25" max="10000" min="1" type="text"/>
+                 <i class="fa fa-question-circle" itype="student_email"></i>
+               </td>
+                 <td>
+                <label>手机号</label><a>*</a>
+               </td>
+               <td >
+                  <input id="student_telphone_id" name="student_telphone" size="25" max="10000" min="1" type="text"/>
+                 <i class="fa fa-question-circle" itype="student_telphone"></i>
+               </td>
+            </tr>
+             <tr>
+               <td>
+                <label>政治面貌</label><a>*</a>
+               </td>
+               <td >
+                 <select id="pol">
+                      <option>党员</option>
+                      <option>预备党员</option>
+                      <option>团员</option>
+                      <option>群众</option>
+                 </select>
+                 <i class="fa fa-question-circle" itype="student_pol"></i>
+               </td>
+                  <td>
+                <label>职务(班级/校)</label><a>*</a>
+               </td>
+               <td >
+                  <input id="student_job_id" name="student_job" size="25"  type="text"/>
+                 <i class="fa fa-question-circle" itype="student_pol"></i>
+               </td>
+            </tr>
+        </table>
+    </div>
+        <div class="error-tip">
+           <p></p><span></span>
+        </div>
+        <div class="tip">
+           <p></p><span></span>
+        </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-blue" ng-click="update()">ok</button>
+    <button class="btn btn-white" ng-click="cancel()">cancel</button>
+</div>

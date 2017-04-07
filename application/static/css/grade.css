@@ -1,0 +1,8 @@
+.gn, .gm, .gs, .detail-number, .detail-name,.detail-score{
+    float:left;
+    width:33%;
+    margin-top:3px;
+}
+.detail-number,.detail-name,.detail-score {
+    margin-top:2px;
+}

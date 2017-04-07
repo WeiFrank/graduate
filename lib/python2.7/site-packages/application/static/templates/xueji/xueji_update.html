@@ -1,0 +1,87 @@
+<script type="text/javascript">
+      var enable_submit=true;
+      function submit_xueji_update(){
+     var bValid = true;
+     var c_name=$("#xueji_create_modal").find("#xueji_name_id")
+     var c_num=$("#xueji_create_modal").find("#xueji_num_id")
+     console.log(c_name.val())
+     var c_score=$("#xueji_create_modal").find("#xueji_score_id")
+
+     if(bValid){
+         if(enable_submit) {
+            enable_submit = false;
+            var $submitBtn = $('.modal-footer').find('.btn-blue');
+            $submitBtn.html('<i class="fa fa-spinner fa-spin" style="margin:3px 6px;"></i>');
+             $('.rtn-tip').slideUp('fast');
+              $.post("/xueji/update",{
+                  "id": "{{xueji.id}}",
+                  "s_name":$.trim(c_name.val()),
+                  "c_score":$.trim(c_score.val()),
+                  "c_number":$.trim(c_num.val()),
+              },function(data){
+                  var data=eval("("+data+")");
+                     if (data.reply.is_success){
+                       angular.element('#xueji_create_button').scope().close();
+                       <!--$('#xueji_available_tb').trigger("reloadGrid");-->
+                       enable_submit = true;
+                   }else{
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+                     $submitBtn.html('ok');
+                     enable_submit = true;
+                   }
+                 });
+                 }
+              }
+            }
+
+</script>
+
+<div class="modal-header">
+    <h3>创建课程</h3>
+</div>
+
+<div class="modal-body modal-body-height" id="xueji_create_modal">
+    <div class="xueji-create-box">
+    <div class="rtn-tip"></div>
+        <table class="base-info">
+            <tr>
+               <td>
+                <label>课程名</label><a>*</a>
+               </td>
+               <td colspan="3">
+                  <input id="xueji_name_id" name="xueji_name" size="25" max="10000" min="1" value="{{xueji.c_name}}" type="text"/>
+                 <i class="fa fa-question-circle" itype="xueji_name"></i>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                <label>课程号</label><a>*</a>
+               </td>
+               <td >
+                  <input id="xueji_num_id" name="xueji_num" size="25" max="10000" min="1" value="{{xueji.c_number}}" type="text"/>
+                 <i class="fa fa-question-circle" itype="xueji_num"></i>
+               </td>
+            </tr>
+             <tr>
+               <td>
+                <label>学分</label><a>*</a>
+               </td>
+               <td >
+                  <input id="xueji_score_id" name="xueji_score" size="25" max="10000" min="1" value="{{xueji.c_score}}" type="text"/>
+                 <i class="fa fa-question-circle" itype="xueji_score"></i>
+               </td>
+            </tr>
+        </table>
+    </div>
+        <div class="error-tip">
+           <p></p><span></span>
+        </div>
+        <div class="tip">
+           <p></p><span></span>
+        </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-blue" ng-click="update()">ok</button>
+    <button class="btn btn-white" ng-click="cancel()">cancel</button>
+</div>

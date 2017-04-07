@@ -1,0 +1,8 @@
+[mysql]
+host = 0.0.0.0
+host = 127.0.0.1
+user = root
+password = root
+server = mysql
+port = 3306
+database = st

@@ -1,0 +1,71 @@
+<script type="text/javascript">
+      var enable_submit=true;
+      function submit_class_create(){
+     var bValid = true;
+     var name=$("#class_name_id")
+
+
+     if(bValid){
+         if(enable_submit) {
+            enable_submit = false;
+            var $submitBtn = $('.modal-footer').find('.btn-blue');
+            $submitBtn.html('<i class="fa fa-spinner fa-spin" style="margin:3px 6px;"></i>');
+             $('.rtn-tip').slideUp('fast');
+              $.post("/class/create",{
+                  "name":$.trim(name.val()),
+
+              },function(data){
+                  var data=eval("("+data+")");;
+                  console.log(typeof(data));
+                  console.log(data);
+                     if (data.reply.is_success){
+                       angular.element('#class_create_button').scope().close();
+                       <!--$('#class_available_tb').trigger("reloadGrid");-->
+                       enable_submit = true;
+                   }else{
+                   console.log(typeof(data));
+                    console.log(data);
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+                     $submitBtn.html('ok');
+                     enable_submit = true;
+                   }
+
+                 });
+                 $('#class_available_tb').trigger("reloadGrid");
+                 }
+              }
+            }
+
+</script>
+
+<div class="modal-header">
+    <h3>班级信息</h3>
+</div>
+
+<div class="modal-body modal-body-height" id="class_create_modal">
+    <div class="class-create-box">
+    <div class="rtn-tip"></div>
+        <table class="base-info">
+            <tr>
+               <td>
+                <label>班级</label><a>*</a>
+               </td>
+               <td colspan="3">
+                  <input id="class_name_id" name="class_name" size="25" max="10000" min="1" type="text"/>
+                 <i class="fa fa-question-circle" itype="class_name"></i>
+               </td>
+            </tr>
+        </table>
+    </div>
+        <div class="error-tip">
+           <p></p><span></span>
+        </div>
+        <div class="tip">
+           <p></p><span></span>
+        </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-blue" ng-click="ok()">ok</button>
+    <button class="btn btn-white" ng-click="cancel()">cancel</button>
+</div>
