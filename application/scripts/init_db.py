@@ -4,12 +4,6 @@ from application.db.session import init_db_session
 import argparse
 import textwrap
 from application.utils.exec_cmd import _exec_pipe
-teacher_dict = {
-       'name': 'professor',
-       'number': 10,
-}
-
-
 class InitDbShell(object):
     def __init__(self):
         # self.install_path = utils.install_path
@@ -110,11 +104,13 @@ def register_models():
         #user = models.User('ZHUWEI', 'eee@11.com')
         #db.session.add(user)
         init_db_session(db)
-        values = {'score':100}
-        s = models.Grade(values).save()
-        #
+        values = {'user_admin':'teacher'}
+        s = models.Role(values).save()
+        val = {'user_admin':'student'}
+        s = models.Role(val).save()
+        
         # c = models.Student(values).save()
-        v = {'student_num':'2013131018', 'change_num':12}
+        # v = {'student_num':'2013131018', 'change_num':12}
         #sub = models.Xuejichange(v).save()
 
 

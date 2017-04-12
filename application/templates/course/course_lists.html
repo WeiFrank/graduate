@@ -3,13 +3,13 @@ $("#course_available_tb").jqGrid({
        url: '/course/grid',
        datatype: 'json',
        mtype: 'GET',
-       colNames: ['id', '课程名', '课程号', '学分','操作'],
+   colNames: ['id', '课程名',  '学分', '课程类型','学年', '任课教师', '操作'],
        colModel: [{
             name: 'id',
             index: 'id',
             width: 20,
             align: 'left',
-            hidden:true,
+
            },
            {
             name: 'c_name',
@@ -17,30 +17,45 @@ $("#course_available_tb").jqGrid({
             width: 50,
             align: 'left',
            },
-           {
-            name: 'c_number',
-            index: 'c_number',
-            width: 50,
-            align: 'left',
-           },
+
             {
             name: 'c_score',
             index: 'c_score',
             width: 60,
             align: 'left',
            },
+            {
+            name: 'c_type',
+            index: 'c_type',
+            width: 60,
+            align: 'left',
+           },
+            {
+            name: 'semester',
+            index: 'semester',
+            width: 60,
+            align: 'left',
+           },
+           {
+            name: 'c_owner',
+            index: 'c_owner',
+            width: 60,
+            align: 'left',
+           },
            {  name: 'service',
             index: 'service',
-            width: 50,
+            width: 66,
             align: 'left',
             hidden: false,
             detailHidden: true,
             formatter: function(cell, option, row) {
                 var html = '';
                 row = row2object(row, option.gid);
+                html += '<button style="margin-left:10px;" title="成绩录入" class="btn btn-blue" onclick="grade_input(' + row['id'] + ')">成绩录入</button>';
                 html += '<button style="margin-left:10px;" title="编辑" class="btn btn-blue" onclick="course_update(' + row['id'] + ')">编辑</button>';
                 html += '<button style="margin-left:10px;" title="删除" class="btn btn-blue" onclick=course_delete_confirm(' + row['id'] + ',"' + row['c_name'] + '")>删除</button>';
-                 return html;
+               return html;
+
                 }
        }],
 
@@ -73,6 +88,10 @@ $("#course_create_button").click(function() {
 
 function course_update(course_id) {
     angular.element('#course_create_button').scope().open("/course/update?course_id=" + course_id);
+
+}
+function grade_input(course_id) {
+    angular.element('#course_create_button').scope().open("/course/input?course_id=" + course_id);
 
 }
 

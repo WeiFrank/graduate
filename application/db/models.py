@@ -4,12 +4,16 @@ import  traceback
 from application.apps import db
 from sqlalchemy.exc import IntegrityError
 from session import get_session
+from datetime import datetime
 
+def get_current_time():
+    return datetime.now()
 class ORMMethodBase(object):
 
     def __init__(self, kw_dict={}, *arg, **kw):
         print  'kkkkkkkkkkkkk', kw_dict
         for name, value in kw_dict.iteritems():
+            print name, value
             setattr(self, name, value)
 
     def update(self, values, session=None):
@@ -55,117 +59,96 @@ class Base(ORMMethodBase):
     deleted = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime)
 
-class BaseA:
-    __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
-    __table_initialized__ = False
-    admission_time = db.Column(db.DateTime)
-    semester = db.Column(db.DateTime)
+# class BaseA:
+#     __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
+#     __table_initialized__ = False
+#     # admission_time = db.Column(db.DateTime)
+#     semester = db.Column(db.DateTime)
 
 
-
-class Root(Base, db.Model):
-    __tablename__ = "root"
-    __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
-
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255))
-    password = db.Column(db.String(255))
-
-# class School(Base, db.Model):
-#     __tablename__ = "school"
 #
-#     __table_args__ = (db.UniqueConstraint("name", ),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+# class Root(Base, db.Model):
+#     __tablename__ = "root"
+#     __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
 #
 #     id = db.Column(db.Integer, primary_key=True)
 #     name = db.Column(db.String(255))
-#     school_id = db.Column(db.Integer, db.ForeignKey('school.id'))
-
-#
-# class College(Base, db.Model):
-#     __tablename__ = "college"
-#
-#     __table_args__ = (db.UniqueConstraint("name", ),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-#     name = db.Column(db.String(255))
-#     id = db.Column(db.Integer, primary_key=True)
-#
-# class Subject(Base, db.Model):
-#     __tablename__ = "subject"
-#
-#     __table_args__ = (db.UniqueConstraint("name", ),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-#     name = db.Column(db.String(255))
-#     id = db.Column(db.Integer, primary_key=True)
-#     college_id = db.Column(db.Integer, db.ForeignKey('college.id'))
-
-
-class Class(Base, db.Model):
-    __tablename__ = "class"
-    __table_args__ = (db.UniqueConstraint("name", ),
-                      {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255))
-    students = db.relationship('Student', backref=db.backref('class', order_by=id),
-                        primaryjoin='and_(Class.id == Student.class_id,)')
-
-    @property
-    def students_num(self):
-        return len(self.students)
-
-class Teacher(Base, db.Model):
-    __tablename__ = "teacher"
-    __table_args__ = (db.UniqueConstraint("teacher_number", ),
-                      {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-    id = db.Column(db.Integer, primary_key=True)
-    teacher_number = db.Column(db.String(255))
-    password = db.Column(db.String(255))
-    e_mail = db.Column(db.String(255))
-    name = db.Column(db.String(255))
-    identity = db.Column(db.String(255))
-    telphone = db.Column(db.String(255))
-    college = db.Column(db.String(255))
-    subject = db.Column(db.String(255))
-
-
-# class UserStudent(BaseA, Base, db.Model):
-#     __tablename__ = "user_student"
-#     __table_args__ = (db.UniqueConstraint("student_number", ),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-#     id = db.Column(db.Integer, primary_key=True)
-#     student_number = db.Column(db.String(255))
-#     e_mail = db.Column(db.String(255))
 #     password = db.Column(db.String(255))
 
 
 
-class Student(Base, BaseA, db.Model):
+
+# class Class(Base, db.Model):
+#     __tablename__ = "class"
+#     __table_args__ = (db.UniqueConstraint("name", ),
+#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(255))
+#     # class_ = db.Column(db.String(255))
+#     students = db.relationship('Student', backref=db.backref('class', order_by=id),
+#                         primaryjoin='and_(Class.id == User.class_id,)')
+
+    # @property
+    # def students_num(self):
+    #     return len(self.students)
+class SchoolInfo:
+    __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
+    __table_initialized__ = False
+    college = db.Column(db.String(255))
+    subject = db.Column(db.String(255))
+    e_mail = db.Column(db.String(255))
+    telphone = db.Column(db.String(255))
+    sex = db.Column(db.String(255))
+    name = db.Column(db.String(255))
+    password = db.Column(db.String(255))
+    role = db.Column(db.Integer)
+#
+# class Teacher(Base,SchoolInfo, BaseA, db.Model):
+#     __tablename__ = "teacher"
+#     __table_args__ = (db.UniqueConstraint("teacher_number", ),
+#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+#     id = db.Column(db.Integer, primary_key=True)
+#     teacher_number = db.Column(db.String(255))
+#     identity = db.Column(db.String(255))
+#
+#
+class Student(Base, SchoolInfo, db.Model):
     __tablename__ = "student"
     __table_args__ = (db.UniqueConstraint("student_number", ),
                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
     id = db.Column(db.Integer, primary_key=True)
-    student_name = db.Column(db.String(255))
-    # school_id = db.Column(db.Integer, db.ForeignKey('school.id'), nullable=True)
-    # college_id = db.Column(db.Integer, db.ForeignKey('college.id'), nullable=True)
-    # subject_id = db.Column(db.Integer, db.ForeignKey('subject.id'), nullable=True)
-    class_id = db.Column(db.Integer, db.ForeignKey('class.id'), nullable=True)
+    # class_id = db.Column(db.Integer, db.ForeignKey('class.id'), nullable=True)
     xuejichange_id = db.Column(db.Integer, db.ForeignKey('xuejichange.id'), nullable=True)
-    # s_password = db.Column(db.String(255))
-    # s_number = db.Column(db.String(255))
-    # s_e_mail = db.Column(db.String(255))
-    telphone = db.Column(db.String(255))
-    political = db.Column(db.String(255))
-    sex = db.Column(db.String(255))
-    job = db.Column(db.String(255))
-    # s_id = db.Column(db.String(255))
+    political_info = db.Column(db.String(255))
+    student_job = db.Column(db.String(255))
     student_number = db.Column(db.String(255))
-    e_mail = db.Column(db.String(255))
+    class_ = db.Column(db.String(255))
+
+class Role(Base, db.Model):
+    __tablename__ = "role"
+    __table_args__ = (
+        {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    # users = db.relationship('User', backref=db.backref('role', order_by=id),
+    #                     primaryjoin='and_(Role.id == User.role_id,)')
+    user_admin = db.Column(db.String(255))
+
+class User(Base, db.Model):
+    __tablename__ = "users"
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.String(100), primary_key=True)
+    name = db.Column(db.String(255))
     password = db.Column(db.String(255))
-    college = db.Column(db.String(255))
+    class_ = db.Column(db.String(255))
+    admission = db.Column(db.String(255))
     subject = db.Column(db.String(255))
+    college = db.Column(db.String(255))
+    role_id = db.Column(db.Integer, db.ForeignKey('role.id'))
+    semester = db.Column(db.String(255))
+    mail = db.Column(db.String(255))
 
 
-class XueJiChange(Base, BaseA, db.Model):
+class XueJiChange(Base, db.Model):
     __tablename__ = "xuejichange"
     __table_args__ = (db.UniqueConstraint("student_num", ),
                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
@@ -181,40 +164,96 @@ class XueJiChange(Base, BaseA, db.Model):
     s_class = db.Column(db.String(255))
     s_plan = db.Column(db.String(255))
 
-class Course(Base, BaseA, db.Model):
+# gc = db.Table('gc',
+#     db.Column('c_id', db.Integer, db.ForeignKey('course.id')),
+#     db.Column('g_id', db.Integer, db.ForeignKey('grade.id'))
+#     )
+
+class Course(Base, db.Model):
     __tablename__ = "course"
     __table_args__ = (db.UniqueConstraint("c_name", ),
                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(40), primary_key=True)
     c_name = db.Column(db.String(255))
     c_score = db.Column(db.Integer)
-    c_number = db.Column(db.String(255))
+    owner = db.Column(db.String(255))
+    c_semester = db.Column(db.String(255))
+    c_type = db.Column(db.String(255))
+    grades = db.relationship("Grade", backref=db.backref('course', order_by=id),
+            primaryjoin='and_(Course.id == Grade.course_id,)')
 
-class Grade(Base, BaseA, db.Model):
+
+class Grade(Base,  db.Model):
     __tablename__ = "grade"
+    __table_args__ = (
+                     {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    sex = db.Column(db.String(255))
+    name = db.Column(db.String(255))
+    score = db.Column(db.String(255))
+    class_ = db.Column(db.String(255))
+    owner = db.Column(db.String(255))
+    course_id = db.Column(db.ForeignKey('course.id'))
+
+
+class GradeUser(Base, db.Model):
+    __tablename__ = "grade_user"
     __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
     id = db.Column(db.Integer, primary_key=True)
-    college = db.Column(db.String(255))
-    subject = db.Column(db.String(255))
-    student_class = db.Column(db.String(255))
     student_name = db.Column(db.String(255))
     studnet_number = db.Column(db.String(255))
-    current_date = db.Column(db.Integer)
-    courses = db.relationship('GradeCourse', backref=db.backref('grade', order_by=id),
-                               primaryjoin='and_(Grade.id == GradeCourse.grade_id,)')
+    college = db.Column(db.String(255))
+    subject = db.Column(db.String(255))
+
+    student_class = db.Column(db.String(255))
 
 
-class GradeCourse(db.Model):
+class GradeCourse(Base, db.Model):
     __tablename__ = "grade_course"
-    __table_args__ = (db.UniqueConstraint("c_name", ),
-                      {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
     id = db.Column(db.Integer, primary_key=True)
     student_c_name = db.Column(db.String(255))
     student_c_score = db.Column(db.Integer)
     student_c_number = db.Column(db.String(255))
     student_c_result = db.Column(db.Integer)
-    grade_id = db.Column(db.Integer, db.ForeignKey('grade.id'), nullable=True)
+    number = db.Column(db.String(255))
+    semester = db.Column(db.Integer)
+    college = db.Column(db.String(255))
+    subject = db.Column(db.String(255))
+    student_class = db.Column(db.String(255))
 
+class Honer(Base, db.Model):
+    __tablename__ = "honer"
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    upload_owner = db.Column(db.String(255))
+    get_date = db.Column(db.DateTime)
+    description = db.Column(db.Text)
+    people = db.Column(db.String(255))
+
+class Competition(Base,db.Model):
+    __tablename__ = "competition"
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    team_leader = db.Column(db.String(255))
+    team_member_one = db.Column(db.String(255))
+    team_member_two = db.Column(db.String(255))
+    competition_type = db.Column(db.String(255))
+    source_date = db.Column(db.DateTime)
+    desent_date = db.Column(db.DateTime)
+    upload_owner = db.Column(db.String(255))
+
+class Hanging(Base,db.Model):
+    __tablename__ = "hanging"
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    number = db.Column(db.String(255))
+    name = db.Column(db.String(255))
+    class_ = db.Column(db.String(255))
+    course = db.Column(db.String(255))
+    status = db.Column(db.String(255))
+    description = db.Column(db.String(255))
+    uploader = db.Column(db.String(255))
 
 class LeaveApply(Base, db.Model):
     __tablename__ = "leaveapply"
@@ -225,92 +264,70 @@ class LeaveApply(Base, db.Model):
     end_date = db.Column(db.DateTime)
     description = db.Column(db.Text)
     status = db.Column(db.String(255))
+    apply_people = db.Column(db.String(255))
 
-# class Grade(Base, db.Model):
-#     __tablename__ = "grade"
-#     __table_args__ =  (db.UniqueConstraint("name", ),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
 
-# class AuthRole(Base, db.Model):
-#     __tablename__ = "auth_role"
-#
-#     __table_args__ = (db.UniqueConstraint("name"),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(255))
-#     students = db.relationship("Student", backref=db.backref('auth_roles', order_by=id),
-#                                primaryjoin='and_(Student.auth_role_id == AuthRole.id,)')
-#     teachers = db.relationship("Teacher", backref=db.backref('teacher_roles', order_by=id),
-#                                primaryjoin='and_(Teacher.auth_role_id == AuthRole.id,)')
-#
-# teacher_and_student = db.Table("teacher_and_student",
-#        db.Column("teacher_id", db.Integer, db.ForeignKey("student.id")),
-#        db.Column("student_id", db.Integer, db.ForeignKey("teacher.id")),
-#                                )
-#
-# class Teacher(Base, db.Model):
-#     __tablename__ = "teacher"
-#
-#     __table_args__ = (db.UniqueConstraint('name',),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-#
-#     id = db.Column(db.Integer, primary_key=True)
-#
-#     normal_person = db.Column(db.Integer)
-#     current_person = db.Column(db.Integer)
-#     left_person = db.Column(db.Integer)
-#     over_person = db.Column(db.Integer)
-#     identity_role_id = db.Column(db.Integer, db.ForeignKey('identity_role.id'), nullable=True)
-#     auth_role_id = db.Column(db.Integer, db.ForeignKey('auth_role.id'), nullable=True)
-#
-#     name = db.Column(db.String(255))
-#     description = db.Column(db.String(255))
-#     students = db.relationship("Student", backref=db.backref("teachers", lazy='dynamic'),
-#                                secondary=teacher_and_student
-#                                )
-#     @property
-#     def normal(self):
-#         return  "%s" % self.normal_person
-#     @property
-#     def left(self):
-#         return "%s" % self.left_person
-#     @property
-#     def over(self):
-#         return "%s" % self.over_person
-#     @property
-#     def current(self):
-#         return "%s" % self.current_person
-#
-# class Student(Base, db.Model):
-#     __tablename__ = "student"
-#
-#     __table_args__ = (db.UniqueConstraint("name",),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-#
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(255))
-#     description = db.Column(db.String(255))
-#     auth_role_id = db.Column(db.Integer, db.ForeignKey('auth_role.id'), nullable=True)
-#
-# class IdentityRole(Base, db.Model):
-#     __tablename__ = "identity_role"
-#
-#     __table_args__ = (db.UniqueConstraint("name",),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(255))
-#     number = db.Column(db.Integer)
 
-    #teachers = db.relationship("Teacher", backref=db.backref('teacher_roles', order_by=id),
-                             # primaryjoin='and_(Teacher.identity_role_id == IdentityRole.id,'
-                             #             'IdentityRole.deleted == False)')
-#
-#
+
+class Question(Base, db.Model):
+
+    __tablename__ = 'questions'
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128), nullable=False)
+    content = db.Column(db.Text(1024))
+    answers_count = db.Column(db.Integer, default=0)
+    create_time = db.Column(db.DateTime,default=get_current_time)
+
+    author_id = db.Column(db.String(100), db.ForeignKey("users.id", ondelete="CASCADE"))
+    author = db.relationship("User", backref=db.backref(
+                            "questions", lazy="dynamic"), uselist=False)
+
+
+class Answer(Base, db.Model):
+
+    __tablename__ = 'answers'
+    __table_args__ = (
+        {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text(1024))
+    comments_count = db.Column(db.Integer, default=0)
+    create_time = db.Column(db.DateTime,default=get_current_time)
+
+    author_id = db.Column(db.String(100), db.ForeignKey("users.id", ondelete="CASCADE"))
+    author = db.relationship("User", backref=db.backref(
+                            "answers", lazy="dynamic"), uselist=False)
+
+    question_id = db.Column(db.Integer, db.ForeignKey("questions.id"))
+    question = db.relationship("Question", backref=db.backref(
+                            "answers", lazy="dynamic"), uselist=False)
+
+
+class Comment(Base, db.Model):
+
+    __tablename__ = 'comments'
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text(1024))
+    create_time = db.Column(db.DateTime,default=get_current_time)
+
+    author_id = db.Column(db.String(100), db.ForeignKey("users.id", ondelete="CASCADE"))
+    author = db.relationship("User", uselist=False)
+
+    answer_id = db.Column(db.Integer, db.ForeignKey("answers.id"))
+    answer = db.relationship("Answer", backref=db.backref(
+                            "comments", lazy="dynamic"), uselist=False)
+
+    # question_id = Column(db.Integer, db.ForeignKey("answers.id"))
+    # question = db.relationship("Question", backref=db.backref(
+    #     "comments", lazy="dynamic"), uselist=False)
+
 
 DB_TABLE_MAP = {
     'course':Course,
+    'user':User,
     'student':Student,
-    'class':Class,
+    'grade':Grade,
 }
 
 

@@ -76,14 +76,7 @@ font-size: 8px;
  .table thead tr:hover {
     background-color: #ecf2ff;
  }
- .ui-jqgrid .ui-jqgrid-bdiv {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    text-align: left;
 
-}
 
 
 

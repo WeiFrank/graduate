@@ -7,7 +7,7 @@ $(document).ready(function () {
 var mainpanelHeight = parseInt($(window).height()) - 315;
 
 if (mainpanelHeight < 300) {
-    mainpanelHeight = 500;
+    mainpanelHeight = 300;
 }
 
 function jqgrid_resize($el) {
@@ -17,12 +17,19 @@ function jqgrid_resize($el) {
     if($el.length == 0) {
         return;
     }
+//    console.log('elele')
+//    console.log($el)
     var $gridBody = $el.parent('.ui-jqgrid-view');
+//    console.log('body')
+//    console.log($el.parent())
     var $grid = $el;
     var height = 47 * $grid.getGridParam('rowNum') + 1 < mainpanelHeight ? mainpanelHeight : 47 * $grid.getGridParam('rowNum') + 300;
+//    console.log('lllllllllllllllllllllllll')
+//    console.log($grid.getGridParam('rowNum'))
     $grid.setGridHeight(height);
     var outerwidth = $gridBody.width();
-    $grid.setGridWidth(outerwidth);
+//    console.log(outerwidth)
+    $grid.setGridWidth(700);
 }
 
 var pre_window_height = $(window).height();

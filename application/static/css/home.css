@@ -1,9 +1,23 @@
 
 
-.rightpanel {
-    right: -240px;
+    li .active {
+     background-color:#0066ff;
+     color: #94989d;
+    }
+     .nav {  padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+        list-style-type: none;
+        list-style-image: none;
+        list-style-position: outside;
 }
 
+.rightpanel {
+    left: 100px;
+    position: absolute;
+    margin-left: 5px;
+    padding-left: 10px;
+    }
 .headermenu > li {
     display: inline-block;
     float: left;
@@ -23,13 +37,14 @@
    margin-left:2px;
    font-size:10px;
 }
-.grid-body {
-  margin: 0 20px 0 20px;
+.panel-style {
+    padding: 0px;
 }
+
 
 .panel-body {
     right:81px;
-    padding-left:81px;
+    padding-left:0px;
 }
 .contentpanel::after {
     clear: both;
@@ -50,6 +65,8 @@
   margin: 0;
  font-size:15px;
  padding-left:10px;
+ width: 870px;
+}
 
  }
 .title-tag > p {
@@ -71,28 +88,27 @@ padding-left:10px;
 
    color:black;
 }
+
 .grid-body {
-  margin-top:2px;
+    margin-top: 25px;
+    position: absolute;
 }
 .grid-tools {
-  position: relative;
-  border-top: 1px #eee solid;
-  padding: 14px 20px 10px 20px;
-  margin-top: 1px;
-  margin-bottom:3px;
-  height: 35px;
-
- }
- .grid-tools > .grid-operate >button{
-     height:18px;
-    width:30px;
-    font-size:8px;
-
+    position: relative;
+    border-top: 1px #eee solid;
+    padding: 14px 20px 10px 20px;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    height: 35px;
+}
+.grid-tools > .grid-operate >button {
+    height: 18px;
+    width: 30px;
+    font-size: 8px;
     margin-right: 9px;
-    margin-bottom:3px;
-    padding:3px;
-
- }
+    margin-bottom: 3px;
+    padding: 3px;
+}
 .grid-tools > .grid-operate {
    padding-bottom:2px;
    margin-bottom:2px;
@@ -137,15 +153,7 @@ padding-left:10px;
 
 
 
-#jqgh_course_available_tb_c_name,#jqgh_course_available_tb_c_score,
-#jqgh_course_available_tb_c_number,#jqgh_course_available_tb_c_service{
- {
 
-    text-align: center;
-    padding: 2px;
-    margin: 1px;
-    line-height: 9px;
-}
 
 .ui-jqgrid-htable {
     height:30px;
@@ -159,4 +167,35 @@ padding-left:10px;
        -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-             <!--$('#queryall').attr('')-->
+
+.modal-header {
+  padding: 16px;
+  text-align: center;
+  background-color: #3e4055;
+  color: #fff;
+  border-bottom: none;
+  border-top: 1px #3e4055 solid;
+  border-left: 1px #3e4055 solid;
+  border-right: 1px #3e4055 solid;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  }
+  .modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    }
+  .modal-header button {
+    color: #fff;
+    opacity: 1;
+    }
+    .modal-header button:hover, .modal-header button:active {
+      color: #fff;
+      opacity:
+  }
+
+.picture {
+
+  background-color:#303440
+}
+
+

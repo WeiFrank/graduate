@@ -37,11 +37,15 @@ var CourseModalInstanceCtrl = function($scope, $modalInstance, item) {
     $scope.ok = function() {
         submit_course_create();
     };
+     $scope.grade = function() {
+        submit_grade_input();
+    };
     $scope.update = function() {
         submit_course_update();
     };
     $scope.cancel = function() {
         $modalInstance.dismiss('cancel');
     };
+
 };
 

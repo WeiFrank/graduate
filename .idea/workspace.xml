@@ -1,7 +1,574 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c162e24-539b-4231-ae86-10e4e7a9182e" name="Default" comment="" />
+    <list default="true" id="1c162e24-539b-4231-ae86-10e4e7a9182e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/templates/grade/grade_lists.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/templates/user/student.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/webapps/qas.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-bootstrap-prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-bootstrap-prettify.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-cookies.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-cookies.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-loader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-loader.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular-scenario.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/app.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/appcache-offline.manifest" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/appcache.manifest" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/css/doc_widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/css/docs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/docs-keywords.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/docs-scenario.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/docs-scenario.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/font/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/font/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/font/fontawesome-webfont.svgz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/font/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/font/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/AngularJS-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/One_Way_Data_Binding.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/Two_Way_Data_Binding.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/angular_parts.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/bullet.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/form_data_flow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/about_model_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/about_view_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/concepts-controller.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/concepts-directive.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/concepts-model.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/concepts-module-injector.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/concepts-runtime.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/concepts-scope.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/concepts-startup.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/concepts-view.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/di_sequence_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/dom_scope_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/hashbang_vs_regular_url.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/scenario_runner.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/guide/simple_scope_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/helloworld.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/helloworld_2way.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/catalog_screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/tutorial_00.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/tutorial_00_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/tutorial_02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/tutorial_03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/tutorial_04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/tutorial_07_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/tutorial_08-09_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/tutorial_10-11_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/img/tutorial/xhr_service_final.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/index-debug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/index-jq-debug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/index-jq-nocache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/index-jq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/index-nocache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/index.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/js/docs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/main.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/offline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/AUTO.$injector.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/AUTO.$provide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/AUTO.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.IModule.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.bind.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.bootstrap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.copy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.element.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.equals.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.extend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.forEach.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.fromJson.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.identity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.injector.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isArray.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isDate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isDefined.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isElement.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isFunction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isNumber.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isObject.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isString.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.isUndefined.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.lowercase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.mock.TzDate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.mock.debug.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.mock.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.mock.inject.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.mock.module.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.module.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.noop.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.toJson.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.uppercase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/angular.version.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$anchorScroll.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$cacheFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$compile.directive.Attributes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$compile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$compileProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$controller.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$controllerProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$document.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$exceptionHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$filter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$filterProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$http.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$httpBackend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$interpolate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$interpolateProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$locale.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$location.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$locationProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$log.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$parse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$q.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$rootElement.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$rootScope.Scope.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$rootScope.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$rootScopeProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$route.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$routeParams.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$routeProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$templateCache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$timeout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.$window.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:form.FormController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:input.checkbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:input.email.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:input.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:input.number.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:input.radio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:input.text.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:input.url.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngApp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngBind.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngBindHtmlUnsafe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngBindTemplate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngChange.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngChecked.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngClass.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngClassEven.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngClassOdd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngClick.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngCloak.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngCsp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngDblclick.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngDisabled.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngForm.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngHide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngHref.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngInclude.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngInit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngList.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngModel.NgModelController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngModel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngMousedown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngMouseenter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngMouseleave.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngMousemove.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngMouseover.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngMouseup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngMultiple.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngNonBindable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngPluralize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngReadonly.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngRepeat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngSelected.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngShow.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngSrc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngStyle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngSubmit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngSwitch.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngTransclude.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:ngView.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:script.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:select.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.directive:textarea.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:currency.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:date.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:filter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:json.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:limitTo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:lowercase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:number.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:orderBy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.filter:uppercase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ng.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngCookies.$cookieStore.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngCookies.$cookies.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngCookies.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngMock.$exceptionHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngMock.$exceptionHandlerProvider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngMock.$httpBackend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngMock.$log.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngMock.$timeout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngMock.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngMockE2E.$httpBackend.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngMockE2E.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngResource.$resource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngResource.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngSanitize.$sanitize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngSanitize.directive:ngBindHtml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngSanitize.filter:linky.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/api/ngSanitize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/cookbook/advancedform.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/cookbook/buzz.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/cookbook/deeplinking.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/cookbook/form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/cookbook/helloworld.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/cookbook/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/cookbook/mvc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/bootstrap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/compiler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/concepts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.e2e-testing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.mvc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.mvc.understanding_controller.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.mvc.understanding_model.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.mvc.understanding_view.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.services.$location.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.services.creating_services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.services.injecting_controllers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.services.managing_dependencies.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.services.testing_services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.services.understanding_services.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.templates.css-styling.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.templates.databinding.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.templates.filters.creating_filters.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.templates.filters.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.templates.filters.using_filters.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.templates.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/dev_guide.unit-testing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/di.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/directive.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/expression.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/forms.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/i18n.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/ie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/introduction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/module.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/overview.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/scope.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/guide/type.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/misc/contribute.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/misc/downloading.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/misc/faq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/misc/started.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_00.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_01.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_02.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_03.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_04.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_05.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_06.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_07.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_08.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_09.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_10.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/step_11.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/partials/tutorial/the_end.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/docs/sitemap.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_am-et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_am.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ar-eg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_bg-bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_bn-bd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_bn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ca-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_cs-cz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_da-dk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_de-at.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_de-be.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_de-de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_de-lu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_el-gr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_el-polyton.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-as.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-au.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-dsrt-us.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-dsrt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-ie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-iso.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-mh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-mp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-sg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-um.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-us.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-za.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en-zz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_es-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_et-ee.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_eu-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fa-ir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fi-fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fil-ph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fil.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr-bl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr-fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr-gp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr-mc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr-mf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr-mq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr-re.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_gl-es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_gsw-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_gsw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_gu-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_he-il.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_hi-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_hr-hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_hu-hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_id-id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_is-is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_it-it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_iw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ja-jp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_kn-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_kn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ko-kr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ln-cd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ln.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_lt-lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_lv-lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ml-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_mo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_mr-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_mr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ms-my.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_mt-mt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_mt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_nl-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_or-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_or.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_pl-pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_pt-pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ro-ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ru-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sk-sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sl-si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sq-al.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sr-cyrl-rs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sr-latn-rs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sr-rs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sv-se.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sw-tz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_sw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ta-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ta.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_te-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_te.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_th-th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_tl-ph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_tl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_tr-tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_uk-ua.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ur-pk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_ur.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_vi-vn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_zh-hans-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_zh-hans.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_zh-hk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_zh-tw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/i18n/angular-locale_zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/jstd-scenario-adapter-config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/angular-1.1.0/jstd-scenario-adapter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/templates/grade/grade_lists.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/static/templates/user/student.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/webapps/teacher.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery-2.1.4.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery-2.1.4/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery-2.1.4/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery-2.1.4/jquery插件库.url" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery-2.1.4/www.jq22.com.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/json.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/DESCRIPTION.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/INSTALLER" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/METADATA" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/RECORD" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/WHEEL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/entry_points.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/metadata.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/Jinja2-2.9.5.dist-info/top_level.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/asyncfilters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/asyncsupport.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/idtracking.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/app.js" afterPath="$PROJECT_DIR$/application/templates/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/base/student.js" afterPath="$PROJECT_DIR$/application/templates/base/student.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/base/student_create.html" afterPath="$PROJECT_DIR$/application/templates/base/student_create.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/base/student_lists.html" afterPath="$PROJECT_DIR$/application/templates/base/student_lists.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/base/student_update.html" afterPath="$PROJECT_DIR$/application/templates/base/student_update.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/class/class.js" afterPath="$PROJECT_DIR$/application/templates/class/class.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/class/class_create.html" afterPath="$PROJECT_DIR$/application/templates/class/class_create.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/class/class_lists.html" afterPath="$PROJECT_DIR$/application/templates/class/class_lists.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/class/class_update.html" afterPath="$PROJECT_DIR$/application/templates/class/class_update.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/courage/courage_lists.html" afterPath="$PROJECT_DIR$/application/templates/courage/courage_lists.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/course/course.js" afterPath="$PROJECT_DIR$/application/templates/course/course.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/course/course_create.html" afterPath="$PROJECT_DIR$/application/templates/course/course_create.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/course/course_lists.html" afterPath="$PROJECT_DIR$/application/templates/course/course_lists.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/course/course_update.html" afterPath="$PROJECT_DIR$/application/templates/course/course_update.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/grade/grade.js" afterPath="$PROJECT_DIR$/application/templates/grade/grade.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/grade/grade_input.html" afterPath="$PROJECT_DIR$/application/templates/grade/back.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/home.html" afterPath="$PROJECT_DIR$/application/templates/home.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/modal/modal.html" afterPath="$PROJECT_DIR$/application/templates/modal/modal.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/modal/modal.js" afterPath="$PROJECT_DIR$/application/templates/modal/modal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/score/score_create.html" afterPath="$PROJECT_DIR$/application/templates/score/score_create.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/user/student_create.html" afterPath="$PROJECT_DIR$/application/templates/user/user_create.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/user/teacher.js" afterPath="$PROJECT_DIR$/application/templates/user/teacher.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/user/user.js" afterPath="$PROJECT_DIR$/application/templates/user/user.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/user/user_lists.html" afterPath="$PROJECT_DIR$/application/templates/user/user_lists.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/user_login.html" afterPath="$PROJECT_DIR$/application/templates/user_login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/xueji/xueji.js" afterPath="$PROJECT_DIR$/application/templates/xueji/xueji.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/xueji/xueji_create.html" afterPath="$PROJECT_DIR$/application/templates/xueji/xueji_create.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/xueji/xueji_lists.html" afterPath="$PROJECT_DIR$/application/templates/xueji/xueji_lists.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/static/templates/xueji/xueji_update.html" afterPath="$PROJECT_DIR$/application/templates/xueji/xueji_update.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/apps.py" afterPath="$PROJECT_DIR$/application/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/db/models.py" afterPath="$PROJECT_DIR$/application/db/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/scripts/init_db.py" afterPath="$PROJECT_DIR$/application/scripts/init_db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/css/grade.css" afterPath="$PROJECT_DIR$/application/static/css/grade.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/css/home.css" afterPath="$PROJECT_DIR$/application/static/css/home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/css/panel.css" afterPath="$PROJECT_DIR$/application/static/css/panel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/static/js/utils.js" afterPath="$PROJECT_DIR$/application/static/js/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/utils/query.py" afterPath="$PROJECT_DIR$/application/utils/query.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/webapps/course.py" afterPath="$PROJECT_DIR$/application/views/webapps/course.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/webapps/grade.py" afterPath="$PROJECT_DIR$/application/views/webapps/grade.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/webapps/index.py" afterPath="$PROJECT_DIR$/application/views/webapps/index.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/webapps/leaveapply.py" afterPath="$PROJECT_DIR$/application/views/webapps/leaveapply.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/webapps/student.py" afterPath="$PROJECT_DIR$/application/views/webapps/student.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/webapps/user.py" afterPath="$PROJECT_DIR$/application/views/webapps/user.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/apps.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/db/models.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/db/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/scripts/init_db.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/scripts/init_db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/css/grade.css" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/css/grade.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/css/home.css" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/css/home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/css/panel.css" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/css/panel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/js/utils.js" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/js/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/app.js" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/class/class_lists.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/class/class_lists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/course/course.js" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/course/course.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/course/course_create.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/course/course_create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/course/course_lists.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/course/course_lists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/course/course_update.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/course/course_update.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/grade/grade_input.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/grade/grade_input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/grade/grade_lists.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/grade/grade_lists.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/home.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user/student.js" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user/student.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user/student_create.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user/student_create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user/teacher.js" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user/teacher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user/user_create.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user/user_create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user_login.html" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/static/templates/user_login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/utils/query.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/utils/query.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/course.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/course.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/grade.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/grade.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/index.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/index.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/leaveapply.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/leaveapply.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/student.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/student.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/user.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/application/views/webapps/user.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/_compat.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/_compat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/_stringdefs.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/_stringdefs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/bccache.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/bccache.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/compiler.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/compiler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/constants.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/debug.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/debug.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/defaults.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/defaults.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/environment.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/environment.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/exceptions.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/exceptions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/ext.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/ext.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/filters.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/filters.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/lexer.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/lexer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/loaders.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/loaders.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/meta.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/meta.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/nodes.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/nodes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/optimizer.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/optimizer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/parser.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/runtime.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/runtime.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/sandbox.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/sandbox.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/tests.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/utils.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/visitor.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/jinja2/visitor.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,106 +582,110 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="grade_lists.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/static/templates/grade/grade_lists.html">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/db/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grade.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/static/templates/grade/grade.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grade_input.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/static/templates/grade/grade_input.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="course_lists.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/static/templates/course/course_lists.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-560">
-              <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grade.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/webapps/grade.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="280">
+              <caret line="289" column="22" lean-forward="false" selection-start-line="289" selection-start-column="22" selection-end-line="289" selection-end-column="22" />
               <folding>
-                <element signature="e#47#101#0" expanded="true" />
+                <marker date="1492007174146" expanded="true" signature="6632:7049" ph="..." />
+                <marker date="1492007174146" expanded="true" signature="9787:12009" ph="..." />
+                <marker date="1492007174146" expanded="true" signature="10493:10553" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/db/models.py">
+      <file leaf-file-name="question_lists.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/qa/question_lists.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="201" column="16" lean-forward="true" selection-start-line="201" selection-start-column="4" selection-end-line="201" selection-end-column="16" />
+            <state relative-caret-position="112">
+              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/static/js/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="868">
+              <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question_add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/qa/question_add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qas.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/webapps/qas.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+              <folding>
+                <element signature="e#48#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/qa/question_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/static/templates/home.html">
+        <entry file="file://$PROJECT_DIR$/application/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="80" column="7" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+            <state relative-caret-position="728">
+              <caret line="26" column="66" lean-forward="true" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/static/css/login.css">
+      <file leaf-file-name="comment.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/static/js/comment.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/static/css/home.css">
+      <file leaf-file-name="answer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/static/js/answer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="71" column="14" lean-forward="false" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/webapps/classes.py">
+      <file leaf-file-name="qa.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/templates/qa/qa.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="196">
+              <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,22 +702,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gri</find>
-      <find>grid-operate</find>
-      <find>mainpanel</find>
-      <find>ui.jq</find>
-      <find>ui-jqgrid-htable</find>
-      <find>ui-jqgrid</find>
-      <find>ui-jqgrid-hdiv</find>
-      <find>course_name_id</find>
-      <find>$el</find>
-      <find>global_confirm_modal</find>
-      <find>self</find>
-      <find>tb_event_mng</find>
-      <find>student</find>
-      <find>class</find>
-      <find>course</find>
-      <find>mdiv</find>
       <find>course_create_modal</find>
       <find>course_num_id</find>
       <find>identity</find>
@@ -160,7 +715,23 @@
       <find>grade_numbers</find>
       <find>&lt;</find>
       <find>grid-tools</find>
+      <find>grid-bo</find>
+      <find>course_result_inputs</find>
+      <find>student-name</find>
+      <find>grid-body</find>
+      <find>grid</find>
+      <find>panel</find>
+      <find>left</find>
+      <find>grade.</find>
+      <find>course_type</find>
+      <find>c_number</find>
+      <find>grade_course_type</find>
       <find>course_create_button</find>
+      <find>grade_input</find>
+      <find>h3</find>
+      <find>student_job</find>
+      <find>ans</find>
+      <find>comment-reply</find>
     </findStrings>
     <replaceStrings>
       <replace>XueJi</replace>
@@ -172,60 +743,63 @@
       <replace>target_page</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/static/templates/course/course_listbaks.html" />
-        <option value="$PROJECT_DIR$/application/static/css/panel.css" />
-        <option value="$PROJECT_DIR$/application/static/templates/modal/modal.html" />
-        <option value="$PROJECT_DIR$/application/static/templates/modal/modal.js" />
-        <option value="$PROJECT_DIR$/application/views/webapps/modal.py" />
-        <option value="$PROJECT_DIR$/application/views/webapps/base.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/base/student.js" />
-        <option value="$PROJECT_DIR$/application/static/templates/xueji/xueji.js" />
-        <option value="$PROJECT_DIR$/application/static/templates/xueji/xueji_create.html" />
-        <option value="$PROJECT_DIR$/application/static/templates/class/class.js" />
-        <option value="$PROJECT_DIR$/application/static/templates/class/class_create.html" />
-        <option value="$PROJECT_DIR$/application/static/templates/course/course_lists.html" />
-        <option value="$PROJECT_DIR$/application/views/webapps/class.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/class/class_update.html" />
-        <option value="$PROJECT_DIR$/application/static/templates/course/course_update.html" />
-        <option value="$PROJECT_DIR$/application/views/webapps/course.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/base/student_update.html" />
-        <option value="$PROJECT_DIR$/application/views/webapps/student.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/base/student_create.html" />
-        <option value="$PROJECT_DIR$/application/static/templates/xueji/xueji_update.html" />
-        <option value="$PROJECT_DIR$/application/static/templates/xueji/xueji_lists.html" />
-        <option value="$PROJECT_DIR$/application/views/webapps/courage.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/courage_lists.html" />
-        <option value="$PROJECT_DIR$/application/views/webapps/xueji.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/courage/courage_lists.html" />
-        <option value="$PROJECT_DIR$/application/static/templates/course/course.js" />
-        <option value="$PROJECT_DIR$/application/static/css/login.css" />
-        <option value="$PROJECT_DIR$/application/static/templates/user/user.js" />
-        <option value="$PROJECT_DIR$/application/static/templates/user/teacher.js" />
-        <option value="$PROJECT_DIR$/application/static/templates/user/student_create.html" />
-        <option value="$PROJECT_DIR$/application/static/templates/user/student.js" />
-        <option value="$PROJECT_DIR$/application/views/webapps/user.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/user_login.html" />
-        <option value="$PROJECT_DIR$/application/views/webapps/index.py" />
-        <option value="$PROJECT_DIR$/application/views/webapps/leaveapply.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/base/student_lists.html" />
-        <option value="$PROJECT_DIR$/application/views/webapps/classes.py" />
-        <option value="$PROJECT_DIR$/application/utils/query.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/class/class_lists.html" />
-        <option value="$PROJECT_DIR$/application/static/js/utils.js" />
         <option value="$PROJECT_DIR$/application/static/templates/grade/grade.js" />
-        <option value="$PROJECT_DIR$/application/apps.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/app.js" />
-        <option value="$PROJECT_DIR$/application/static/templates/grade/grade_lists.html" />
+        <option value="$PROJECT_DIR$/application/static/js/cityData.min.json" />
+        <option value="$PROJECT_DIR$/application/views/webapps/role.py" />
+        <option value="$PROJECT_DIR$/application/views/webapps/student.py" />
+        <option value="$PROJECT_DIR$/application/static/templates/user/student_create.html" />
         <option value="$PROJECT_DIR$/application/static/css/grade.css" />
         <option value="$PROJECT_DIR$/application/static/templates/grade/grade_input.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/course/course_update.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/honer/honer-add.html" />
+        <option value="$PROJECT_DIR$/application/views/webapps/honer.py" />
+        <option value="$PROJECT_DIR$/application/static/templates/honer/honer_add.html" />
+        <option value="$PROJECT_DIR$/application/views/webapps/leaveapply.py" />
         <option value="$PROJECT_DIR$/application/static/templates/course/course_create.html" />
-        <option value="$PROJECT_DIR$/application/db/models.py" />
-        <option value="$PROJECT_DIR$/application/views/webapps/grade.py" />
-        <option value="$PROJECT_DIR$/application/static/templates/home.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/course/course.js" />
+        <option value="$PROJECT_DIR$/application/static/templates/course/grade_input.html" />
         <option value="$PROJECT_DIR$/application/static/css/home.css" />
+        <option value="$PROJECT_DIR$/application/static/css/panel.css" />
+        <option value="$PROJECT_DIR$/application/static/templates/class/class_lists.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/course/course_lists.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/grade/grade_lists.html" />
+        <option value="$PROJECT_DIR$/application/views/webapps/grade.py" />
+        <option value="$PROJECT_DIR$/application/views/webapps/course.py" />
+        <option value="$PROJECT_DIR$/application/db/qam.py" />
+        <option value="$PROJECT_DIR$/application/static/templates/user_login.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/user/user_create.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/user/student.js" />
+        <option value="$PROJECT_DIR$/application/static/templates/user/teacher.js" />
+        <option value="$PROJECT_DIR$/application/views/webapps/user.py" />
+        <option value="$PROJECT_DIR$/application/views/webapps/index.py" />
+        <option value="$PROJECT_DIR$/application/views/webapps/qa.py" />
+        <option value="$PROJECT_DIR$/application/static/templates/qa/question_detail.html" />
+        <option value="$PROJECT_DIR$/application/utils/query.py" />
+        <option value="$PROJECT_DIR$/application/static/templates/qa/qa.js" />
+        <option value="$PROJECT_DIR$/application/static/templates/qa/questiuon_add.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/app.js" />
+        <option value="$PROJECT_DIR$/application/static/templates/qa/question_list..html" />
+        <option value="$PROJECT_DIR$/application/apps.py" />
+        <option value="$PROJECT_DIR$/application/static/templates/home.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/qa/question_add.html" />
+        <option value="$PROJECT_DIR$/application/static/templates/qa/question_lists.html" />
+        <option value="$PROJECT_DIR$/application/templates/home.html" />
+        <option value="$PROJECT_DIR$/application/templates/qa/question_add.html" />
+        <option value="$PROJECT_DIR$/application/templates/question_lists.html" />
+        <option value="$PROJECT_DIR$/application/templates/qa/question_lists.html" />
+        <option value="$PROJECT_DIR$/application/static/js/utils.js" />
+        <option value="$PROJECT_DIR$/application/templates/qa/answer.js" />
+        <option value="$PROJECT_DIR$/application/templates/qa/comment.js" />
+        <option value="$PROJECT_DIR$/application/static/js/comment.js" />
+        <option value="$PROJECT_DIR$/application/views/webapps/qas.py" />
+        <option value="$PROJECT_DIR$/application/templates/qa/question_detail.html" />
+        <option value="$PROJECT_DIR$/application/db/models.py" />
       </list>
     </option>
   </component>
@@ -234,6 +808,9 @@
     <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -273,38 +850,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python2.7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -320,86 +865,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -421,15 +886,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
+              <option name="myItemId" value="qa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -444,88 +905,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="score" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grade" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -552,66 +931,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="courage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="class" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -651,64 +970,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entry" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentinfomanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -725,15 +986,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/static/templates/course" />
       <recent name="$PROJECT_DIR$/application/static/templates/grade" />
       <recent name="$PROJECT_DIR$/application/static/templates/class" />
       <recent name="$PROJECT_DIR$/application/static/templates/xueji" />
       <recent name="$PROJECT_DIR$/application/static/templates/base" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/static/js" />
+      <recent name="$PROJECT_DIR$/application/templates/qa" />
+      <recent name="$PROJECT_DIR$/application" />
+      <recent name="$PROJECT_DIR$/application/static/templates" />
       <recent name="$PROJECT_DIR$/application/static/templates/user" />
-      <recent name="$PROJECT_DIR$/application/static/templates/user/student" />
-      <recent name="$PROJECT_DIR$/application/static/templates/courage" />
     </key>
   </component>
   <component name="RunManager">
@@ -875,6 +1139,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1c162e24-539b-4231-ae86-10e4e7a9182e" name="Default" comment="" />
@@ -889,10 +1156,10 @@
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13681783" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13912375" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -916,399 +1183,375 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/modal.py">
+    <entry file="file://$PROJECT_DIR$/local/lib/python2.7/site-packages/werkzeug/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        <state relative-caret-position="10164">
+          <caret line="366" column="14" lean-forward="false" selection-start-line="366" selection-start-column="14" selection-end-line="366" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/modal/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="91" column="37" lean-forward="true" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/student.py">
+    <entry file="file://$PROJECT_DIR$/application/static/css/gloab.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/xueji/xueji_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="44" column="12" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/class/class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/base/student.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/class/class_update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/course/course_update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/class/class_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/base/student_update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="95" column="27" lean-forward="false" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/base/student_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="96" column="43" lean-forward="true" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/student.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="44" column="44" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/xueji/xueji_update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1394">
-          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/xueji/xueji_lists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="114" column="51" lean-forward="false" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/xueji/xueji.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/courage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/xueji.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/courage/courage_lists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/css/panel.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1009">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/user/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/course/course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/user/teacher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/user/student_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1791">
-          <caret line="83" column="35" lean-forward="false" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/user/student.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/js/form_validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/user_login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1652">
-          <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/leaveapply.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="e#47#101#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="65" />
-          <folding>
-            <element signature="e#47#101#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/user/user_lists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/modal/modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/class/class_lists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="110" column="14" lean-forward="true" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/js/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/base/student_lists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="74" column="18" lean-forward="false" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/utils/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2361">
-          <caret line="62" column="36" lean-forward="false" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/course.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="83" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="50" column="32" lean-forward="false" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/static/css/grade.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="280">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/base/student_lists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="118" column="28" lean-forward="true" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/course/course_update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1988">
+          <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/honer/honer_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="120" column="21" lean-forward="false" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/webapps/leaveapply.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="22" column="77" lean-forward="false" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="228" column="34" lean-forward="false" selection-start-line="228" selection-start-column="34" selection-end-line="228" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/grade/grade.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/grade/grade_lists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/grade/grade_input.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/course/course_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/classes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/course/course_lists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-560">
-          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/db/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="201" column="16" lean-forward="true" selection-start-line="201" selection-start-column="4" selection-end-line="201" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/utils/exec_cmd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/webapps/grade.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#47#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="80" column="7" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/static/css/login.css">
+    <entry file="file://$PROJECT_DIR$/application/templates/class/class_create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/base/student_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/grade/back.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/grade/grade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/course/grade_input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="65" column="46" lean-forward="false" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/static/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="71" column="14" lean-forward="false" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+        <state relative-caret-position="1876">
+          <caret line="67" column="1" lean-forward="false" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/css/panel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/grade/grade_lists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/webapps/grade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/db/qam.py" />
+    <entry file="file://$PROJECT_DIR$/application/views/webapps/student.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/user_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="62" column="41" lean-forward="true" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/user/user_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2408">
+          <caret line="86" column="76" lean-forward="false" selection-start-line="86" selection-start-column="76" selection-end-line="86" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/user/teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/user/student.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/webapps/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/webapps/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/class/class_lists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="103" column="33" lean-forward="true" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configure_file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/entry/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/scripts/init_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/webapps/honer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/webapps/course.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/utils/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2016">
+          <caret line="74" column="42" lean-forward="false" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/course/course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/lib/python2.7/site-packages/flask/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6804">
+          <caret line="252" column="51" lean-forward="false" selection-start-line="252" selection-start-column="51" selection-end-line="252" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/lib/python2.7/site-packages/flask/templating.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="133" column="36" lean-forward="true" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/qa/question_lists_bak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/qa/qa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/course/course_lists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="103" column="50" lean-forward="false" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/course/course_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/qa/question_lists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/qa/question_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/js/answer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="26" column="66" lean-forward="true" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/static/js/comment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/webapps/qas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+          <folding>
+            <element signature="e#48#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/templates/qa/question_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/db/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="289" column="22" lean-forward="false" selection-start-line="289" selection-start-column="22" selection-end-line="289" selection-end-column="22" />
+          <folding>
+            <marker date="1492007174146" expanded="true" signature="6632:7049" ph="..." />
+            <marker date="1492007174146" expanded="true" signature="9787:12009" ph="..." />
+            <marker date="1492007174146" expanded="true" signature="10493:10553" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -8,29 +8,45 @@
         }
 
      var course_number_inputs = $("#grade_input_modal").find("input[itype=grade_course_number]");
-     console.log(course_number_inputs)
      var course_name_inputs = $("#grade_input_modal").find("input[itype=grade_course_name]");
      var course_score_inputs = $("#grade_input_modal").find("input[itype=grade_course_score]");
-     var student_number = $("#grade_input_modal").find("input[value=student_number]");
-     var student_name = $("#grade_input_modal").find("input[value=student_name]");
-     var grade_numbers = '';
-     var grade_names = '';
-     var grade_scores = '';
+     var course_result_inputs = $("#grade_input_modal").find("input[itype=grade_course_result]");
+
+     var name=$("#grade_input_modal").find("#student-name");
+     var number=$("#grade_input_modal").find("#student-number");
+     var college=$(".header").find(".q-college");
+     var subject=$(".header").find(".q-subject");
+     var class_ =$(".grade_input_modal").find("#student-class");
+     var semester = $(".grade_input_modal").find("#student-semester");
+ console.log(class_.val())
+  <!--console.log(number.val())-->
+     var course_numbers = '';
+     var course_names = '';
+     var course_scores = '';
+     var course_results = '';
+
      for (var i = 0; i<course_number_inputs.length; i++) {
           var $course_number_input = $(course_number_inputs[i]);
            var numberVal = $.trim($course_number_input.val());
-          grade_numbers += numberVal + ',';
+          course_numbers += numberVal+',';
+
           };
 
       for (var i = 0; i < course_name_inputs.length; i++) {
           var $course_name_input = $(course_name_inputs[i]);
            var nameVal = $.trim($course_name_input.val());
-          grade_names += nameVal + ',';
+          course_names += nameVal +',' ;
+
           };
        for (var i = 0; i < course_score_inputs.length; i++) {
           var $course_score_input = $(course_score_inputs[i]);
            var scoreVal = $.trim($course_score_input.val());
-          grade_scores += scoreVal + ',';
+          course_scores += scoreVal+',';
+          };
+        for (var i = 0; i < course_result_inputs.length; i++) {
+          var $course_result_input = $(course_result_inputs[i]);
+           var resultVal = $.trim($course_result_input.val());
+          course_results += scoreVal+',';
           };
 
          if(enable_submit) {
@@ -39,11 +55,16 @@
             $submitBtn.html('<i class="fa fa-spinner fa-spin" style="margin:3px 6px;"></i>');
              $('.rtn-tip').slideUp('fast');
               $.post("/grade/input",{
-                  "student_number":$.trim(student_number.val()),
-                  "student_name":$.trim(student_name.val()),
-                  "student_c_name":grade_names,
-                  "student_c_numbers":grade_numbers,
-                  "student_c_scores":grade_scores
+                  "student_number":$.trim(number.val()),
+                  "student_name":$.trim(name.val()),
+                  "college":$.trim(college.val()),
+                  "subject":$.trim(subject.val()),
+                  "student_class":$.trim(class_.val()),
+                  "semester":$.trim(semester.val()),
+                  "course_scores":course_scores,
+                  "course_names":course_names,
+                  "course_numbers":course_numbers,
+                  "course_results":course_results
               },function(data){
                   var data=eval("("+data+")");
                      if (data.reply.is_success){
@@ -80,7 +101,12 @@ $(function() {
          '</div>',
          '<div class="detail-score">',
          '<div class="input-box">',
-         '<input type="password" itype="grade_course_score" />',
+         '<input type="text" itype="grade_course_score">',
+         '</div>',
+         '</div>',
+         '<div class="detail-result">',
+         '<div class="input-box">',
+         '<input type="password" itype="grade_course_result" />',
          '<a href="javascript:void(0)">删除</a>',
          '</div>',
          '</div>',
@@ -106,23 +132,34 @@ $(function() {
     <div class="rtn-tip"></div>
             <div class="grader">
                 <div class="grade_number">
-                     <input type="text" value="student_number" name="学号">
+                    <label>学号</label>
+                     <input id="student-number" type="text" name="sm" >
                 </div>
                <div class="grade_name">
-                     <input type="text" value="student_name" name="姓名">
+                   <label>姓名</label>
+                     <input  id="student-name" type="text"  name="sn" >
+                </div>
+                <div class="grade_class">
+                   <label>班级</label>
+                     <input  id="student-class" type="text"  name="sc" >
+                </div>
+                <div class="grade_semester">
+                   <label>当前学期</label>
+                     <input  id="student-semester" type="text"  name="ss" >
                 </div>
             </div>
 
         <div class="split-line"></div>
 
         <div class="operate-btn">
-           <button type="button" class="btn btn-blue btn-xs" id="grade_add_btn"><i class="fa fa-plus"></i>添加课程</button>
+           <button type="button" class="btn btn-blue btn-xs" id="grade_add_btn"><i class="fa fa-plus"></i>添加同学</button>
         </div>
 
         <div class="key-value">
            <div class="gn">课程号</div>
             <div class="gm">课程名</div>
             <div class="gs">学分</div>
+            <div class="gg">成绩</div>
         </div>
 
         <div class="content">
@@ -137,13 +174,17 @@ $(function() {
 
                 <div class="detail-name">
                   <div class="input-box">
-                    <input type="text" itype="grade_course_number">
+                    <input type="text" itype="grade_course_name">
                   </div>
                 </div>
-
-                <div class="detail-score">
+                 <div class="detail-score">
+                    <div class="input-box">
+                     <input type="text" itype="grade_course_score">
+                        </div>
+                </div>
+                <div class="detail-result">
                      <div class="input-box">
-                     <input type="password" itype="grade_course_score" />
+                     <input type="text" itype="grade_course_result" />
                          <a href="javascript:void(0)">删除</a>
                      </div>
                 </div>

@@ -8,44 +8,51 @@ from application.utils.query import Pager, success2json,exception2json,\
 #login_manager = LoginManager()
 render = render_jinja('static/templates/user', encoding='utf-8',)
 
-class UserStudentCreate(BaseManager):
+class UserCreate(BaseManager):
 
     def get(self):
-        return render.student_create()
+        return render.user_create()
 
     def post(self):
-        values = {}
+
         params = request.form
-        check_exist = models.UserStudent.query.filter_by(student_number=params.get('student_number')).first()
-        if check_exist:
-            print check_exist.student_number
-            return  exception2json('用户已经存在')
-        values = {
-            'student_number': params.get('student_number'),
-            'password': params.get('password'),
-            'e_mail':params.get('e_mail')
-        }
-        print "sssssssssssss", values
-        user_student = models.UserStudent(values).save()
-        return  success2json(user_student)
-class UserTeacherCreate(BaseManager):
-    def __init__(self):
-        pass
-    def get(self):
-        return  render.teacher_create()
-    def post(self):
-        params = request.form
-        check_exist = models.UserTeacher.query.filter_by(teacher_number=params.get('teacher_number')).first()
-        if check_exist:
-            return exception2json("用户已经存在")
-        values = {
-            "teacher_number":params.get('teacher_number'),
-            "password":params.get('password'),
-            "e_mail":params.get('e_mail')
-        }
-        print "tttttttttt", values
-        user_teacher = models.UserTeacher(values).save()
-        return success2json(user_teacher)
+        identity = params.get('identity')
+        print "((((((((((((", identity
+        if identity == 's':
+            check_exist = models.User.query.filter_by(id=params.get('student_number')).first()
+            if check_exist:
+                print check_exist.id
+                return  exception2json('用户已经存在')
+            values = {
+                'id': params.get('student_number'),
+                'name': params.get('student_name'),
+                'password': params.get('student_password'),
+                'mail': params.get('student_mail'),
+                'college': params.get('student_college'),
+                'subject': params.get('student_subject'),
+                'class_': params.get('student_class'),
+                'semester': params.get('student_time'),
+                'role_id': params.get('student_role')
+            }
+            print "sssssssssssss", values
+            models.User(values).save()
+            return  success2json("用户注册成功")
+        else:
+            check_exist = models.User.query.filter_by(id=params.get('teacher_number')).first()
+            if check_exist:
+                return exception2json("用户已经存在")
+            values = {
+                "id":params.get('teacher_number'),
+                "password":params.get('teacher_password'),
+                "mail":params.get('teacher_mail'),
+                "name": params.get('teacher_name'),
+                "college": params.get('teacher_college'),
+                "subject": params.get('teacher_subject'),
+                "role_id": params.get('teacher_role'),
+            }
+            print "tttttttttt", values
+            models.User(values).save()
+            return success2json("用户注册成功")
 
 
 class UserDelete(BaseManager):
@@ -61,17 +68,17 @@ class Login:
         password = parmes.get('password', '')
         identity = parmes.get('identity', '')
         if identity == 'student':
-            print "----------",identity
-            check_user = models.UserStudent.query.filter_by(student_number=username).first()
-            check_password = models.UserStudent.query.filter_by(password=password).first()
+            print "----------", identity
+            check_user = models.User.query.filter_by(id=username).first()
+            check_password = models.User.query.filter_by(password=password).first()
             if check_user:
                 if check_password:
                     return redirect('/home')
             else:
                 return exception2json("user not exist")
         elif identity == 'teacher':
-            check_user = models.UserTeacher.query.filter_by(teacher_number=username).first()
-            check_password = models.UserTeacher.query.filter_by(password=password).first()
+            check_user = models.User.query.filter_by(id=username).first()
+            check_password = models.User.query.filter_by(password=password).first()
             if check_user:
                 if check_password:
                     return redirect('/home')
@@ -85,5 +92,5 @@ class Login:
 
 
 app = Blueprint('usercreate', __name__, template_folder='templates')
-app.add_url_rule('/student/create', view_func=UserStudentCreate.as_view('student_create'))
-app.add_url_rule('/teacher/create', view_func=UserTeacherCreate.as_view('teacher_create'))
+app.add_url_rule('/create', view_func=UserCreate.as_view('user_create'))
+# app.add_url_rule('/teacher/create', view_func=UserTeacherCreate.as_view('teacher_create'))

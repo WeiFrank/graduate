@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 #-*- coding: utf-8 -*-
-from flask import Blueprint, request
+from flask import Blueprint, request,session
 from application.base import BaseManager, render_jinja
 import json
 from application.db import  models
@@ -22,7 +22,7 @@ class GridCourse(BaseManager):
         filters = {}
         panger = Pager()
         page, total_paper, records, rows = panger.grid_rows_query(params=params, table='course', mode='count')
-        cells = ['id', 'c_name', 'c_number', 'c_score']
+        cells = ['id', 'c_name', 'c_score', 'c_type', 'c_semester', 'owner']
         rows_json = grid_json(page, total_paper, records, rows, 'id', cells)
         return rows_json
         # return json.dumps({'r':[{'c':['id']}]})
@@ -34,18 +34,21 @@ class CourseCreate(BaseManager):
         return  render.course_create()
     def post(self):
         params = request.form
-
+        current_user = session.get('username', None)
         values = {
-            "c_name": params.get('c_name'),
-            "c_score":params.get('c_score'),
-            "c_number":params.get('c_number'),
+            'c_name': params.get('c_name'),
+            'id': params.get('c_number'),
+            'c_score': params.get('c_score'),
+            'owner': current_user,
+            'c_type': params.get('c_type'),
+            'c_semester': params.get('c_semester')
         }
-
-        check_exist = models.Course.query.filter_by(c_name=params.get('c_name')).first()
+        print "*************", values
+        check_exist = models.Course.query.filter_by(id=params.get('c_number')).first()
         if check_exist is not None:
             return exception2json("name exist")
         course = models.Course(values).save()
-        return success2json(course)
+        return success2json("create course success")
 
 class CourseUpdate(BaseManager):
     def get(self):
@@ -62,9 +65,13 @@ class CourseUpdate(BaseManager):
             return exception2json("course is not exist")
         values = {
             'c_name': params.get('c_name'),
-            'c_number':params.get('c_number'),
-            'c_score':params.get('c_score')
+            'id':params.get('c_number'),
+            'c_score':params.get('c_score'),
+            'c_type': params.get('c_type'),
+            'c_teac': params.get('c_teacher'),
+            'c_semester': params.get('c_semester')
         }
+
         # update_values(values, 'c_name', params.get('c_name'))
         # update_values(values, 'c_number', params.get('c_number'))
         # update_values(values, 'c_score', params.get('c_score'))
@@ -79,10 +86,48 @@ class CourseDelete(BaseManager):
             return exception2json("course is not exist")
         course.hard_delete()
         return success2json(course)
+
+class GradeInput(BaseManager):
+    def get(self):
+        c_owner = session.get('username', None)
+        c_id = request.args.get('course_id')
+
+        courses = models.Course.query.filter_by(id=c_id).first()
+
+        return render.grade_input(courses=courses)
+    def post(self):
+        params = request.form
+        owner = session.get('username',None)
+        g_number = params.get("numbers").split(',')
+        sex = params.get("sexs").split(',')
+        name = params.get("names").split(',')
+        score = params.get("scores").split(',')
+        cnumber = params.get("cnumber")
+        class_ = params.get("class_")
+        for index, value in enumerate(g_number):
+            print "********", index,value
+            if value:
+                values ={
+                "id":g_number[index],
+                "sex": sex[index],
+                "name":name[index],
+                "score" :score[index],
+                "course_id":cnumber,
+                "class_":class_,
+                "owner":owner
+                }
+                print "------------" ,values
+                models.Grade(values).save()
+                # course = models.Course.query.filter_by(id=cnumber).first()
+
+
+
+        return success2json("grade success")
 app = Blueprint('course_app', __name__, template_folder='templates')
 app.add_url_rule('/lists', view_func=CourseList.as_view('course_lists'))
 app.add_url_rule('/create', view_func=CourseCreate.as_view('course_create'))
 app.add_url_rule('/update', view_func=CourseUpdate.as_view('course_update'))
 app.add_url_rule('/delete', view_func=CourseDelete.as_view('course_delete'))
+app.add_url_rule('/input', view_func=GradeInput.as_view('grade_input'))
 
 app.add_url_rule('/grid', view_func=GridCourse.as_view('course_grid'))

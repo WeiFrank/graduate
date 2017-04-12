@@ -33,9 +33,9 @@
 </head>
 <body class="page">
      <div class="login_join">
-         <form action="/home" method="POST" autocomplete="off"><!-- ngIf: error --><!-- ngIf: timeout -->
-             {% if tip %}
-                <div class="zs-alert-toast form-group has-error ng-binding ng-scope" style="margin-bottom:15px">{{ tip }}</div>
+         <form action="/login" method="POST" autocomplete="off"><!-- ngIf: error --><!-- ngIf: timeout -->
+              {% if tip %}
+                <div class="username_error">{{ tip }}</div>
              {% endif %}
                 <p class="join_title">登录</p>
             <div class="form-group ">
@@ -60,7 +60,7 @@
                   <input class="login_button" type="submit" value="登录" />
              </div>
              <div>
-                 <a href="/user/student/create" class="register">注册</a>"
+                 <a href="/user/create" class="register">注册</a>"
              </div>
 
          </form>

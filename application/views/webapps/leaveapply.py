@@ -20,7 +20,7 @@ class GridLeave(BaseManager):
         filters = {}
         panger = Pager()
         page, total_paper, records, rows = panger.grid_rows_query(params=params, table='course', mode='count')
-        cells = ['id', 'c_name', 'c_number', 'c_score']
+        cells = ['id', 'name', 'start_date', 'end_date','description','status']
         rows_json = grid_json(page, total_paper, records, rows, 'id', cells)
         return rows_json
         # return json.dumps({'r':[{'c':['id']}]})

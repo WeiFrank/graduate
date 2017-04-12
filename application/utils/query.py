@@ -4,7 +4,7 @@ import json
 from application.db import models
 import  math
 course = 'course'
-
+from flask import session
 
 def sqlalchemy_obj_to_dict(obj, is_sql_obj=True):
     # TODO
@@ -71,21 +71,30 @@ class Pager:
     def grid_rows_query(self, table, params, filter_by={}, filter_={}, read_deleted='no', filter_not_equal={}, mode=None):
         #params = {'table': table, 'filter_by': filters, 'mode': 'count'}
         model_object = models.DB_TABLE_MAP.get(table)
+        user_id = session.get('username', None)
+        print 'qqqqqqqqqqqq', model_object
         records = model_object.query.count()
-        # print  'records-------------', records
+        if table in ['course', 'grade']:
+            records = model_object.query.filter_by(owner=user_id).count()
+        # if table in ['grade']:
+
+        print  'records-------------', records
         limit = int(params.get('rows'))  # 每页显示行。
         sord = params.get('sord')  # 升序还是降序
         sidx = params.get('sidx')  # 排序关键字
         page = int(params.get('page')) # 申请的第几页
 
-        print "ppppppppppppppp",page
+
         offset = limit * (page - 1)
         print "offfff",offset
         total = math.ceil(records / float(limit))
         total = int(total)
         order_by = '%s %s' % (sidx, sord.lower())
-        # query = self.get_query(limit, sord, sidx, page, offset, filter_by, filter_)
         query = model_object.query
+        # query = self.get_query(limit, sord, sidx, page, offset, filter_by, filter_)
+        if table in ['course','grade']:
+            query = model_object.query.filter_by(owner=user_id)
+
 
         if filter_by:
             query = model_object.query.filter_by(**filter_by)
@@ -114,7 +123,7 @@ class Pager:
             if limit:
                 query = query.limit(limit)
             dbresult = query.all()
-        return dbresult
+            return dbresult
         # if relationships:
         #     dbresult = getattr(dbresult, str(relationships))
 
@@ -137,20 +146,20 @@ def update_values(values, k, v, is_list=False):
     return values
 
 
-def success2json(records):
+def success2json(msg):
     # print "rrrrrrrrrrr",records
     # records = object2dict(records)
 
-    if isinstance(records, list):
-        count = len(records)
-    else:
-        count = 1
+    # if isinstance(records, list):
+    #     count = len(records)
+    # else:
+    #     count = 1
 
     data = {
         "reply": {
             "is_success": True,
             "error":"",
-            'count': count,
+            "success_msg" : msg,
         },
 
     }

@@ -11,6 +11,8 @@ class StudentList(BaseManager):
     def __init__(self):
         pass
     def get(self):
+        params = request.args
+        print 'rrrrrrrrrrrrrrr', params.get('subject')
         return render.student_lists()
 
 class GridStudent(BaseManager):
