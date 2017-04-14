@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wenti</title>
+      <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/comment.js"></script>
+    <script type="text/javascript" src="/static/js/answer.js"></script>
+<script>
+    $(document).ready(function(){
+$(".comment-reply").click(function(){
+       console.log('rrrrrrrrr')
+           $("#reply-answer").toggle();
+
+});
+
+})
+
+    </script>
+</head>
+<body>
+<div class="question-show">
+   <div class="title">wenti{{ question.name}}</div>
+   <div class="content">neirong{{ question.content}}</div>
+   <div class="title">{{ question.author.name}}</div>
+  <div class="create_time">创建于{{ question.create_time}}</div>
+    <div class="qid" id="{{question.id}}" style="disply=none"></div>
+    </div>
+  <div class="answer-show">
+      <div class="answer-counts">daan {{ question.answers_count }}</div>
+      <ol class="answer-list">
+      <li class="comment">
+          {% for answer in question.answers %}
+              <div class="answer-author">{{ answer.author.name }}</div>
+              <div class="answer">{{ answer.content }}</div>
+              <div class="answer-create">{{ answer.create_time }}</div>
+          <a class="comment-reply" href="#respond" ans-id="{{ answer.id }}" ><i class="icon-reply"></i>回复</a>
+          <div id="reply-answer">
+              <label class="answer-comment">pionglun</label>
+              <textarea id="comment-write" aria-required="true" cols="58" rows="8"></textarea>
+             <button class="comment-apply btn-blue" onclick="submit_comment()">提交comment</button>
+          </div>
+          <ul class="children">
+              {% for cm in answer.comments%}
+
+                <div class="comment-author"><a href="#">{{ cm.author.name }}</a></div>
+                <div class="comment-meta">
+                    <div class="date"><i class="icon-time"></i>{{ cm.create_time}}</div>
+                </div>
+
+            <div class="text">
+                <p> {{ cm.content }}</p>
+            </div>
+              {% endfor %}
+          </ul>
+          </li>
+            {% endfor %}
+          </ol>
+  </div>
+<div clas="rtn-tip"></div>
+<div class="reply-question">
+      <label class="question-answer">answer</label>
+      <textarea id="answer-write" aria-required="true" cols="58" rows="8"></textarea>
+</div>
+     <button class="btn-crerate btn-blue" onclick="reply_answer()">提交问题</button>
+    <!--<button class="btn btn-white">取消提交</button>-->
+</body>
+</html>

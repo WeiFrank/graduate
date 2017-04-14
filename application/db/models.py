@@ -222,25 +222,27 @@ class GradeCourse(Base, db.Model):
     subject = db.Column(db.String(255))
     student_class = db.Column(db.String(255))
 
-class Honer(Base, db.Model):
-    __tablename__ = "honer"
-    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-    id = db.Column(db.Integer, primary_key=True)
-    upload_owner = db.Column(db.String(255))
-    get_date = db.Column(db.DateTime)
-    description = db.Column(db.Text)
-    people = db.Column(db.String(255))
+# class Honer(Base, db.Model):
+#     __tablename__ = "honer"
+#     __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+#     id = db.Column(db.String(100), primary_key=True)
+#     mane = db.Column(db.String(255))
+#     start_date = db.Column(db.DateTime)
+#     description = db.Column(db.Text)
+#     people = db.Column(db.String(255))
 
 class Competition(Base,db.Model):
     __tablename__ = "competition"
     __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(100), primary_key=True)
     team_leader = db.Column(db.String(255))
     team_member_one = db.Column(db.String(255))
     team_member_two = db.Column(db.String(255))
+    title = db.Column(db.String(255))
     competition_type = db.Column(db.String(255))
+    level = db.Column(db.String(255))
     source_date = db.Column(db.DateTime)
-    desent_date = db.Column(db.DateTime)
+    ent_date = db.Column(db.DateTime)
     upload_owner = db.Column(db.String(255))
 
 class Hanging(Base,db.Model):
@@ -321,6 +323,15 @@ class Comment(Base, db.Model):
     # question_id = Column(db.Integer, db.ForeignKey("answers.id"))
     # question = db.relationship("Question", backref=db.backref(
     #     "comments", lazy="dynamic"), uselist=False)
+class Message(Base, db.Model):
+    __tablename__ = 'message'
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    publish_people = db.Column(db.String(128))
+    create_date = db.Column(db.DateTime,default=get_current_time)
+    title = db.Column(db.String(255))
+    content = db.Column(db.Text)
+
 
 
 DB_TABLE_MAP = {

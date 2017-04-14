@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>LuoQA</title>
+    <meta name="author" content="liusong">
+<script>
+     <!--var enable_submit=true;-->
+     <!--function submit_question_add(){-->
+        <!--var bValid = true;-->
+
+     <!--}-->
+<!--function question_add_() {-->
+    <!--angular.element('.ask').scope().open($(".ask").attr("ask_url"));-->
+
+<!--}-->
+</script>
+</head>
+<body>
+<div class="panel panel-style">
+    <div class="panel-body">
+        <div class="title-tag">
+            <h3>课程信息</h3>
+            <p>课程信息</p>
+        </div>
+    </div>
+    <div class="user-info">
+        <div class="user-name">{{ current_user }}</div>
+        <!--<div class="question-counts">{{ q_counts}}</div>-->
+        <!--<div class="answer-counts">{{ a_counts}}</div>-->
+        <!--<div class="comment-counts">{{ c_counts}}</div>-->
+        <div id="reply-info" rtype="1" rid="" qs-url="{{url_for('qa.add_answer', question_id=1)}}"></div>
+        <!--<a href="{{url_for('qa.add_question') }}">tiwen</a>-->
+    </div>
+    <div class="question-lists">
+    <!--<div class="views"></div>-->
+    <!--{% for qs in questions %}-->
+    <!--<div class="answer-count">{{ qs.answers_count }}</div>-->
+    <!--<div class="answer-count">{{ qs.create_time}}</div>-->
+    <!--<div class="answer-count">{{ qs.author}}</div>-->
+    <!--<div class="q-title"><a href="{{ url_for('qa.question_detail', qs_id=qs.id) }}">{{ qs.name }}</a></div>-->
+    <!--{% endfor %}-->
+    </div>
+</div>
+</body>

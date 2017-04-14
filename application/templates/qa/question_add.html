@@ -1,0 +1,67 @@
+<script>
+     var enable_submit=true;
+     function submit_question_add(){
+        var bValid = true;
+
+        var title = $("#question-title").val();
+        var content = $("#question-details").val();
+        console.log(title)
+        console.log(content)
+         if(bValid){
+         if(enable_submit) {
+            enable_submit = false;
+            var $submitBtn = $('.modal-footer').find('.btn-blue');
+            $submitBtn.html('<i class="fa fa-spinner fa-spin" style="margin:3px 6px;"></i>');
+             $('.rtn-tip').slideUp('fast');
+              $.post("/qa/question/add",{
+                "title":title,
+                "content":content,
+              },function(data){
+                  var data=eval("("+data+")");
+                   if (data.reply.is_success){
+                       angular.element('.btn').scope().close();
+                       enable_submit = true;
+                   }else{
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+                     $submitBtn.html('ok');
+                     enable_submit = true;
+                   }
+              });
+          }
+       }
+     }
+
+</script>
+<div class="modal-header">
+    <h3>提问</h3>
+</div>
+
+<div class="modal-body modal-body-height" id="course_create_modal">
+    <div class="course-create-box">
+    <div class="rtn-tip"></div>
+         <div class="form-inputs clearfix">
+            <p>
+                <label class="required">问题标题<span>*</span></label>
+                <input type="text" id="question-title">
+                <span class="form-description">标题</span>
+            </p>
+        </div>
+        <div id="form-textarea">
+            <p>
+                <label class="required">问题详细<span>*</span></label>
+                <textarea id="question-details" aria-required="true" cols="58" rows="8"></textarea>
+                <span class="form-description">问题的详细描述</span>
+            </p>
+        </div>
+
+    </div>
+        <div class="rtn-tip">
+           <p></p><span></span>
+        </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-blue" ng-click="ok()">提交问题</button>
+    <button class="btn btn-white" ng-click="cancel()">取消提交</button>
+</div>
