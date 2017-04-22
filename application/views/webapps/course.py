@@ -22,7 +22,7 @@ class GridCourse(BaseManager):
         filters = {}
         panger = Pager()
         page, total_paper, records, rows = panger.grid_rows_query(params=params, table='course', mode='count')
-        cells = ['id', 'c_name', 'c_score', 'c_type', 'c_semester', 'owner']
+        cells = ['id', 'c_name', 'c_score', 'c_type', 'owner']
         rows_json = grid_json(page, total_paper, records, rows, 'id', cells)
         return rows_json
         # return json.dumps({'r':[{'c':['id']}]})
@@ -40,8 +40,7 @@ class CourseCreate(BaseManager):
             'id': params.get('c_number'),
             'c_score': params.get('c_score'),
             'owner': current_user,
-            'c_type': params.get('c_type'),
-            'c_semester': params.get('c_semester')
+
         }
         print "*************", values
         check_exist = models.Course.query.filter_by(id=params.get('c_number')).first()
@@ -65,19 +64,15 @@ class CourseUpdate(BaseManager):
             return exception2json("course is not exist")
         values = {
             'c_name': params.get('c_name'),
-            'id':params.get('c_number'),
-            'c_score':params.get('c_score'),
-            'c_type': params.get('c_type'),
-            'c_teac': params.get('c_teacher'),
-            'c_semester': params.get('c_semester')
+            'c_id':params.get('c_number'),
+            'c_score':params.get('c_score')
+
         }
 
-        # update_values(values, 'c_name', params.get('c_name'))
-        # update_values(values, 'c_number', params.get('c_number'))
-        # update_values(values, 'c_score', params.get('c_score'))
+
         course.update(values)
 
-        return success2json(course)
+        return success2json("ooo")
 class CourseDelete(BaseManager):
     def post(self):
         params = request.form
@@ -85,7 +80,7 @@ class CourseDelete(BaseManager):
         if not course:
             return exception2json("course is not exist")
         course.hard_delete()
-        return success2json(course)
+        return success2json("ok")
 
 class GradeInput(BaseManager):
     def get(self):
@@ -104,17 +99,20 @@ class GradeInput(BaseManager):
         score = params.get("scores").split(',')
         cnumber = params.get("cnumber")
         class_ = params.get("class_")
+        semester = params.get("semester")
+        c_type = params.get('c_type'),
         for index, value in enumerate(g_number):
             print "********", index,value
             if value:
                 values ={
-                "id":g_number[index],
+                "number":g_number[index],
                 "sex": sex[index],
                 "name":name[index],
                 "score" :score[index],
                 "course_id":cnumber,
                 "class_":class_,
-                "owner":owner
+                "owner":owner,
+                "semester":semester
                 }
                 print "------------" ,values
                 models.Grade(values).save()

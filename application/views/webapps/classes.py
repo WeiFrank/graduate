@@ -2,6 +2,7 @@ from flask import Blueprint, request
 from application.base import BaseManager, render_jinja
 import json
 from application.db import  models
+from sqlalchemy.sql import and_, or_
 from application.utils import exception
 from application.utils.query import Pager, success2json,exception2json,\
     grid_json,data2json,update_values
@@ -24,10 +25,6 @@ class GridClass(BaseManager):
         cells = ['id', 'name', 'students_num']
         rows_json = grid_json(page, total_paper, records, rows, 'id', cells)
         return rows_json
-
-
-
-
 class ClassCreate(BaseManager):
     def get(self):
         params = request.args
@@ -74,8 +71,21 @@ class ClassUpdate(BaseManager):
         classes.update(values)
 
         return success2json(classes)
+
+class ClassGrade(BaseManager):
+    def get(self):
+        params = request.args
+        # class_ =  params.get("key_class")
+        # semester = params.get("key_semester")
+        # if class_ and semester:
+        c_obj = models.Grade.query.filter(and_(models.Grade.class_ == '131', models.Grade.semester == '2013-2014'))
+        for key in c_obj:
+            c = json.loads(key.detail)
+            print "-----------",c
+        return  "ok"
+
 app = Blueprint('class_app', __name__, template_folder='templates')
-app.add_url_rule('/lists', view_func=ClassList.as_view('class_lists'))
+app.add_url_rule('/look', view_func=ClassGrade.as_view('class_lists'))
 app.add_url_rule('/create', view_func=ClassCreate.as_view('class_create'))
 app.add_url_rule('/update', view_func=ClassUpdate.as_view('class_update'))
 app.add_url_rule('/delete', view_func=ClassDelete.as_view('class_delete'))

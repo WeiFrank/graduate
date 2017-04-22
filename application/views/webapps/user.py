@@ -17,12 +17,12 @@ class UserCreate(BaseManager):
 
         params = request.form
         identity = params.get('identity')
-        print "((((((((((((", identity
+
         if identity == 's':
             check_exist = models.User.query.filter_by(id=params.get('student_number')).first()
             if check_exist:
-                print check_exist.id
-                return  exception2json('用户已经存在')
+                print '-------------', check_exist.id
+                return  exception2json("user already exists")
             values = {
                 'id': params.get('student_number'),
                 'name': params.get('student_name'),

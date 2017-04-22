@@ -45,9 +45,9 @@ class Login(BaseManager):
                     # session['role'] = check_user.role
                     return redirect('/home')
                 else:
-                    return render.user_login(tip=json.dumps("password wrong"))
+                    return render.user_login(tip=json.dumps("密码错误"))
             else:
-                return render.user_login(tip=json.dumps("user not exist"))
+                return render.user_login(tip=json.dumps("用户不存在"))
         elif identity == 'teacher':
             check_user = models.User.query.filter_by(id=username).first()
             check_password = models.User.query.filter_by(password=password).first()
@@ -58,9 +58,9 @@ class Login(BaseManager):
                     # session['subject'] = check_user.subject
                     return redirect('/home')
                 else:
-                    return render.user_login(tip=json.dumps("password wrong"))
+                    return render.user_login(tip=json.dumps("密码错误"))
             else:
-                return render.user_login(tip=json.dumps("user not exist"))
+                return render.user_login(tip=json.dumps("u'用户不存在'"))
         else:
             return render.user_login(tip=json.dumps("erong"))
 
