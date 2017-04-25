@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wenti</title>
+      <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/answer.js"></script>
+        <!--<script type="text/javascript" src="/static/js/bootstrap/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="/static/js/bootstrap/css/bootstrap.css"></script>
+    <script type="text/javascript" src="/static/js/bootstrap/css/bootstrap.min.css"></script>
+      <link rel="stylesheet" href="/static/css/grade.css"/>
+
+</head>
+<body>
+<div class="question-show">
+   <div class="title">问题:{{ question.name}}</div>
+   <div class="content">详细描述:{{ question.content}}</div>
+   <div class="people">提问人:{{ question.author.name}}</div>
+  <div class="create_time">创建于{{ question.create_time}}</div>
+  <div class="qid" style="display:none">{{ question.id}}</div>
+
+    </div>
+  <div class="answer-show">
+      <div class="answer-counts">{{ question.answers_count }}个答案</div>
+
+      <li class="comment">
+          {% for answer in question.answers %}
+           <ol class="answer-list">
+              <div class="answer-author">回答者{{ answer.author.name }}</div>
+              <div class="answer">{{ answer.content }}</div>
+              <div class="answer-create">回答时间{{ answer.create_time }}</div>
+          <div>
+             <i class="fa fa-reply" aria-hidden="true"></i><input type="button"  value="回复" ans-id="{{answer.id}}" id="reply-answer">
+          </div>
+              <ul class="children">
+              {% for cm in answer.comments%}
+
+                <div class="comment-author"><a href="#">{{ cm.author.name }}</a></div>
+                <div class="comment-meta">
+                    <div class="date"><i class="icon-time"></i>{{ cm.create_time}}</div>
+                </div>
+
+            <div class="text">
+                <p> {{ cm.content }}</p>
+            </div>
+              {% endfor %}
+          </ul>
+                </ol>
+          </li>
+            {% endfor %}
+
+  </div>
+<div clas="rtn-tip"></div>
+<div id="reply-info" rtype="1" rid="">
+      <label class="question-answer">答案/回复</label>
+      <textarea id="answer-write" aria-required="true" cols="58" rows="8"></textarea>
+</div>
+   <p class="form-submit">
+       <input name="submit" type="button" id="submit" value="提交" class="button small color">
+   </p>
+    <!--<button class="btn btn-white">取消提交</button>-->
+</body>
+
+</html>

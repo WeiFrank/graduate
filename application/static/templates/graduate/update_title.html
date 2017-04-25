@@ -1,0 +1,81 @@
+<script>
+var enable_submit=true;
+      function submit_title_update(){
+     var bValid = true;
+     var t_name=$("#title_create_modal").find(".name")
+     var t_status=$("#title_create_modal").find(".status")
+     var t_type=$("#title_create_modal").find(".type")
+
+      if(bValid){
+         if(enable_submit) {
+            enable_submit = false;
+            var $submitBtn = $('.modal-footer').find('.btn-blue');
+            $submitBtn.html('<i class="fa fa-spinner fa-spin" style="margin:3px 6px;"></i>');
+             $('.rtn-tip').slideUp('fast');
+              $.post("/title/update",{
+                  "id":{{title.id}},
+                  "t_name":$.trim(t_name.val()),
+                  "t_status":$.trim(t_status.val()),
+                  "t_type":$.trim(t_type.val()),
+
+              },function(data){
+                  var data=eval("("+data+")");
+                  console.log(typeof(data));
+                  console.log(data);
+                     if (data.reply.is_success){
+                       angular.element('#title_create_button').scope().close();
+
+                       enable_submit = true;
+                   }else{
+                   console.log(typeof(data));
+                    console.log(data);
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+                     $submitBtn.html('ok');
+                     enable_submit = true;
+                   }
+
+                 });
+                 $('#title_available_tb').trigger("reloadGrid");
+                 }
+              }
+            }
+
+</script>
+<div class="modal-body modal-body-height" id="title_create_modal">
+    <div class="title-create-box">
+    <div class="rtn-tip"></div>
+
+    <table>
+        <tr>
+            <td>
+                <label>课题名称</label>
+            </td>
+            <td>
+                <input type="text" class="name" value="{{title.title_}}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>课题类型</label>
+            </td>
+            <td>
+                <input type="text" class="type" value="{{title.type}}">
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <label>课程状态</label>
+            </td>
+            <td>
+                <input type="text" class="status" value="{{title.status}}">
+            </td>
+        </tr>
+    </table>
+
+ </div>
+</div>
+    <div class="modal-footer">
+    <button class="btn btn-blue" ng-click="update()">ok</button>
+    <button class="btn btn-white" ng-click="cancel()">cancel</button>
+</div>

@@ -1,9 +1,10 @@
+ .active {
 
-
-    li .active {
-     background-color:#0066ff;
-     color: #94989d;
+     color: #a8a3c8;
     }
+ .navMenu > a:focus, a:hover {
+    color: #a8a3c8;
+}
      .nav {  padding-left: 0;
     margin-bottom: 0;
     list-style: none;
@@ -11,9 +12,12 @@
         list-style-image: none;
         list-style-position: outside;
 }
+.current-user {
+    margin-left: 460px;
+}
 
 .rightpanel {
-    left: 100px;
+    left: 130px;
     position: absolute;
     margin-left: 5px;
     padding-left: 10px;
@@ -30,12 +34,46 @@
     top: 0;
     left: 0;
 
-     width:100px;
+     width:130px;
 
    background-color:#303440;
    margin-top:0px;
    margin-left:2px;
-   font-size:10px;
+   font-size:12px;
+}
+.leftpanel > li>ul>li{
+padding-left:10px;
+}
+.flag {
+   background-color:white;
+}
+.leftpanel > li>ul {
+   list-style-type:none;
+     text-align:left;
+   padding-left:0;
+   padding-top:14px
+}
+.leftpanel >ul > li {
+list-style-type: none;
+padding-top:11px
+}
+.navMenu {
+
+     text-align:left;
+     position: relative;
+display: block;
+
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+}
+.navMenu >li {
+padding-left:9px;
+}
+.nav-parent >ul{
+  padding-left:10px;
+  text-align:left;
 }
 .panel-style {
     padding: 0px;
@@ -199,3 +237,32 @@ padding-left:10px;
 }
 
 
+.user-info {
+    font-size: 11px;
+    float:right;
+    margin-right: 150px;
+padding-right: 30px;
+}
+.user-info button {
+background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.new_list {
+
+ width:300px;
+ margin-left: 300px;
+padding-left: 100px;
+}
+.lastest {
+  float:left;
+}
+.search_news {
+  font-size:12px;
+}

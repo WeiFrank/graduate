@@ -1,0 +1,121 @@
+<script>
+
+    $(".search_button").click(function(){
+              var key_name = $(".key_word_name").val()
+              <!--var key_level = $(".key_word_level").val()-->
+              <!--var key_class = $(".key_class_").val()-->
+              $.get("/title/choice",{
+                       "key_name":key_name,
+
+              }, function(data){
+                 $(".contentpanel").html(data)
+});
+ });
+
+  $(".choice").click(function(){
+      var id = $(this).attr("id")
+      $.post("/title/change",{
+          "id":id,
+          },function(data){
+             var data=eval("("+data+")");
+              if (data.reply.is_success){
+               $('.rtn-tip').text(data.reply.success_msg).slideDown('fast');
+              }
+              else{
+                   console.log(typeof(data));
+                    console.log(data);
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+
+                   }
+          })
+ });
+ $(".auto_btn").click(function(){
+      <!--var id = $(this).attr("id")-->
+      var name = $(".auto_name").val()
+      var type = $(".auto_type").val()
+      var t_from = $(".auto_from").val()
+      var author_id = $(".author_id").val()
+      $.post("/title/create",{
+          "flag":"auto",
+          "title_":name,
+          "type":type,
+          "t_from":t_from,
+          "author_id":author_id,
+          },function(data){
+             var data=eval("("+data+")");
+              if (data.reply.is_success){
+               $('.rtn-tip').text(data.reply.success_msg).slideDown('fast');
+              }
+              else{
+                   console.log(typeof(data));
+                    console.log(data);
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+
+                   }
+          })
+ });
+
+
+
+
+</script>
+
+<div class="search_from">
+    <!--<input class="key_class_" type="text" placeholder="class_">-->
+    <input class="key_word_name" type="text" placeholder="导师姓名">
+    <!--<input class="key_word_level" type="text" placeholder="level">-->
+    <button class="btn btn-blue search_button"><i class="fa fa-search" aria-hidden="true"></i>搜索导师</button>
+     <div class="rtn-tip"></div>
+    <div class="receicve">
+         {% if teacher %}
+        <table class="grade_table">
+        <tr>
+            <td>课题名称</td>
+            <td>课题类型</td>
+            <td>课题状态</td>
+            <td>操作</td>
+
+        </tr>
+
+              {% for t in teacher %}
+
+             <tr>
+
+                 <td>{{t.title_}}</td>
+                 <td>{{t.type}}</td>
+                 {% if t.status == '可选' %}
+                    <td><input type="radio" class="choice_radio"></td>
+                    <td><button class="choice" id="{{t.id}}">选择</button></td>
+                 {% endif %}
+
+             </tr>
+    {% endfor %}
+
+        </table>
+        <h3>自拟课题</h3>
+        <div class="auto_create">
+            <div>
+            <label>课题名字</label>
+            <input type="text" class="auto_name" max="10000" min="1">
+                  </div>
+              <div>
+            <label>课题类型</label>
+            <input type="text" class="auto_type" max="10000" min="1">
+              </div>
+            <div>
+            <label>题目来源</label>
+            <input type="text" class="auto_from" value="自拟" readonly="readonly">
+            </div>
+            <div>
+             <label>指导教师</label>
+            <input type="text" class="author_id" max="10000" min="1">
+            </div>
+            <div>
+                <button class="auto_btn">提交</button>
+            </div>
+        </div>
+   {% endif %}
+
+</div>

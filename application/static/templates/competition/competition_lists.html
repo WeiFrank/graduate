@@ -1,0 +1,149 @@
+<script type="text/javascript">
+$("#competition_available_tb").jqGrid({
+       url: '/competition/grid',
+       datatype: 'json',
+       mtype: 'GET',
+   colNames: ['id', '姓名', '班级', '题目', '参赛成员', '获奖时间','级别','类型','操作'],
+       colModel: [{
+            name: 'id',
+            index: 'id',
+            width: 20,
+            align: 'left',
+             hidden:true,
+           },
+
+           {
+            name: 'name',
+            index: 'name',
+            width: 30,
+            align: 'left',
+           },
+
+           {
+            name: 'class_',
+            index: 'class_',
+            width: 30,
+            align: 'left',
+           },
+           {
+            name: 'title',
+            index: 'title',
+            width: 50,
+            align: 'left',
+           },
+
+            {
+            name: 'members',
+            index: 'members',
+            width: 50,
+            align: 'left',
+           },
+            {
+            name: 'time',
+            index: 'time',
+            width: 40,
+            align: 'left',
+           },
+            {
+            name: 'level',
+            index: 'level',
+            width: 35,
+            align: 'left',
+           },
+           {
+            name: 'type',
+            index: 'type',
+            width: 35,
+            align: 'left',
+           },
+           {
+            name: 'service',
+            index: 'service',
+            width: 66,
+            align: 'left',
+            hidden: false,
+            detailHidden: true,
+            formatter: function(cell, option, row) {
+                var html = '';
+                row = row2object(row, option.gid);
+
+                html += '<button style="margin-left:10px;" title="编辑" class="btn btn-blue" onclick="competition_update(' + row['id'] + ')">编辑</button>';
+                html += '<button style="margin-left:10px;" title="删除" class="btn btn-blue" onclick=competition_delete_confirm(' + row['id'] + ',"' + row['title'] + '")>删除</button>';
+               return html;
+
+                }
+       }],
+
+    page: 1,
+    rowNum: 2,
+    sortname: 'id',
+    sortorder: 'desc',
+    viewrecords: true,
+    multiselect: false,
+    multiboxonly:true,
+    multiselectWidth:'60px',
+    autowidth: true,
+    beforeSelectRow:function(rowid, e) {
+        if($(e.target).is('input')) {
+            return true;
+        }
+        return false;
+    },
+    gridComplete: function() {
+        var gridData = $(this).jqGrid('getRowData');
+        jqgrid_page($(this), gridData);
+        jqgrid_resize($(this));
+    }
+});
+
+$("#competition_add_button").click(function() {
+    angular.element('#competition_add_button').scope().open("/competition/add");
+});
+
+function competition_update(competition_id) {
+    angular.element('#competition_add_button').scope().open("/competition/update?competition_id=" + competition_id);
+
+};
+
+
+function competition_delete(competition_id) {
+    $.post('/competition/delete', {
+            'id': competition_id,
+        },
+        function(data) {
+            if (data.reply.is_success) {
+                $("#competition_available_tb").trigger("reloadGrid");
+            } else {
+                error = data.reply.error;
+                SelfAlert(error);
+            }
+        });
+    $('#competition_available_tb').trigger("reloadGrid");
+};
+
+function competition_delete_confirm(competition_id, competition_name) {
+    msg = '确定删除（' + competition_name + '）？';
+    SelfConfirm(msg, competition_delete, competition_id, "删除提示");
+};
+</script>
+
+<div class="panel panel-style">
+    <div class="panel-body">
+        <div class="title-tag">
+            <h3>获奖信息</h3>
+            <p>获奖信息</p>
+        </div>
+
+        <div class="grid-tools">
+            <div class="grid-operate pull-left">
+                <button class="btn btn-blue" type="button" id="competition_add_button" ng-controller="CompetitionModalCtrl">创建</button>
+                <!-- <button class="btn btn-blue" type="button" id="pool_delete_button">删除</button> -->
+            </div>
+        </div>
+
+        <div id="grid_competition_available" class='grid-body'>
+            <table id="competition_available_tb"></table>
+        </div>
+
+    </div>
+</div>

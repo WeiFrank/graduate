@@ -63,7 +63,7 @@ function showRowNum(list_target_page, records) {
 function jqgrid_page(el, data) {
 //     console.log(el)
     var $target_page = el.parent().parent().parent().parent().parent().siblings('.grid-tools');
-    var $target_page = el.parent().parent().parent().parent().parent().siblings('#gridpager');
+//    var $target_page = el.parent().parent().parent().parent().parent().siblings('#gridpager');
     console.log($target_page)
     $target_page.find('.grid-pager').remove();
     var page = el[0].p.page;

@@ -1,0 +1,45 @@
+<script>
+  $(".search_button").click(function(){
+
+              var key_semester = $(".key_word_semester").val()
+              var key_class = $(".key_class_").val()
+              console.log(key_semester)
+              console.log(key_class)
+              $.get("/cal/lists",{
+                        "class_":key_class,
+                       "semester":key_semester,
+              }, function(data){
+                 $(".contentpanel").html(data);
+                 });
+});
+</script>
+
+<div class="result-body">
+    <div class="form-input">
+    <input class="key_class_" type="text" placeholder="班级">
+    <input class="key_word_semester" type="text" placeholder="学期">
+        <button class="btn btn-blue search_button">search</button>
+    </div>
+        <div class="resuly-list">
+            {% if class_ %}
+            班级:{{ class_}}
+            学期:{{semester}}
+            <table>
+    <tr>
+        <td>姓名</td>
+        <td>绩点</td>
+    </tr>
+
+        {% for obj in results %}
+
+           <tr>
+               <td>{{obj.name}}</td>
+               <td>{{obj.point}}</td>
+           </tr>
+
+            {% endfor %}
+                </table>
+            {% endif %}
+    </div>
+
+</div>

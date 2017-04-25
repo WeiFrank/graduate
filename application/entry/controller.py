@@ -6,14 +6,16 @@ from flask_script import Manager, Server, Shell
 def main(port=27000):
     app, db = create_app()
     init_db_session(db)
-    #migrate = Migrate(app, db)
-    #manager = Manager(app)
+    migrate = Migrate(app, db)
+    manager = Manager(app)
+    manager.add_command('db', MigrateCommand)
     #print "Listening http://0.0.0.0:%s/" % port
     # if is_log:
     #     app.wsgi_app = MyWsgiLog(app.wsgi_app)
 
-    app.run(host="0.0.0.0", port=port)
-
+    # app.run(host="0.0.0.0", port=port)
+    manager.add_command("runserver", Server(host="0.0.0.0", port=27000, use_debugger=True, use_reloader=True))
+    manager.run()
 def debug():
 
     app, db = create_app()
@@ -29,7 +31,7 @@ def debug():
 
     manager.add_command('db', MigrateCommand)
     manager.add_command("shell", Shell(make_context=make_shell_context))
-    manager.add_command("runserver", Server(host="0.0.0.0", port=27000, use_debugger=True, use_reloader=True))
+    manager.add_command("runserver", Server(host="0.0.0.0", port=27000,  use_reloader=True))
 
     manager.run()
 if __name__ == '__main__':

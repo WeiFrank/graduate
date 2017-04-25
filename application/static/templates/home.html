@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" ng-app="InformationApp" ng-controller="HomeCtrl">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.form.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui-1.11.4.custom/jquery-ui.min.js" ></script>
+
+    <script type="text/javascript" src="/static/js/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/static/js/angular/angular.js"></script>
+    <script type="text/javascript" src="/static/js/angular/angular-sanitize.min.js"></script>
+    <link  href="/static/js/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/static/js/jqGrid-5.1.0/jqGrid.js"></script>
+    <script type="text/javascript" src="/static/js/jqGrid-5.1.0/js/jquery.jqGrid.js"></script>
+    <link type="text/css" href="/static/js/jqGrid-5.1.0/css/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+    <script type="text/javascript" src="/static/js/jqGrid-5.1.0/js/jquery.jqGrid.min.js"></script>
+    <script type="text/javascript" src="/static/js/jqGrid-5.1.0/js/i18n/grid.locale-en.js"></script>
+
+    <script type="text/javascript" src="/static/js/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap/css/bootstrap.css"></script>
+    <script type="text/javascript" src="/static/js/bootstrap/css/bootstrap.min.css"></script>
+
+
+    <script type="text/javascript" src="/static/js/bootstrap/js/bootstrap.js"></script>
+    <link  href="/static/js/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link  href="/static/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+
+    <!--<script type="text/javascript" src="/static/js/angular-bootstrap/ui-bootstrap.js"></script>-->
+    <script type="text/javascript" src="/static/js/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="/static/js/utils.js"></script>
+
+    <!--<script type="text/javascript" src="/static/js/angular-bootstrap/ui-bootstrap.min.js"></script>-->
+
+
+
+    <script type="text/javascript" src="/static/js/toggles.min.js"></script>
+
+    <script type="text/javascript" src="/static/js/custom.js"></script>
+    <script type="text/javascript" src="/static/templates/course/course.js"></script>
+    <script type="text/javascript" src="/static/templates/modal/modal.js"></script>
+    <script type="text/javascript" src="/static/templates/base/student.js"></script>
+    <script type="text/javascript" src="/static/templates/class/class.js"></script>
+    <script type="text/javascript" src="/static/templates/grade/grade.js"></script>
+    <script type="text/javascript" src="/static/templates/competition/competition.js"></script>
+    <script type="text/javascript" src="/static/templates/graduate/title.js"></script>
+
+    <link rel="stylesheet" href="static/css/panel.css"/>
+    <link rel="stylesheet" href="static/css/home.css"/>
+    <link rel="stylesheet" href="static/css/grade.css"/>
+    <!--<script src="jquery.js"></script>-->
+    <script src="/static/js/jquery.cxselect.js"></script>
+    <script type="text/javascript" src="/static/templates/app.js"></script>
+        <script type="text/javascript" src="/static/templates/qa/qa.js"></script>
+        <script type="text/javascript" src="/static/templates/qa/action.js"></script>
+
+    <title>Title</title>
+<script>
+    $(document).ready(function() {
+      $('.navMenu a').each(function(){
+            $(this).click(function(){
+                if ( !$(this).parent().hasClass('nav-parent')){
+                    $('.active').removeClass('active');
+                    $(this).parent().addClass('active');
+                }
+            });
+      });
+
+      $(".navMenu a").click(function(){
+           $(this).parent().children("ul").toggle()
+      });
+
+
+});
+
+
+</script>
+
+
+</head>
+
+<body >
+
+   <section>
+
+     <div class="leftpanel">
+           <div class="picture">
+               <!--<i class="fa fa-wifi flag fa-4x"></i>-->
+
+
+           <img src="/static/img/images/left/qiqi.png"  height="50" width="110">
+       </div>
+         <ul class=" navMenu nav-bracket" style="list-style-type:none">
+             <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/summary/show" id="summary"><i class="fa fa-bar-chart" aria-hidden="true"></i><span>概览</span></a></li>
+             <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/news/look" id="newsl"><i class="fa fa-bell" aria-hidden="true"></i><span>消息通知</span></a></li>
+             {% if user.role_id ==1 %}
+             <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/class/lists" id="class"><i class="fa fa-desktop"></i><span>学生基本信息</span></a></li>
+             {% endif %}
+             <!--<li class="active"><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/student/lists" id="base"><i class="fs-circle"></i><span>基本信息</span></a></li>-->
+
+
+
+             <!--<li><a href="/score/list" id="score_list"><i class="score_create"></i><span>成绩</span></a></li>-->
+              <!--<li class="nav-parent">-->
+                 <!--<a href  ng-click="openSubMenu($event)"  id="奖惩">-->
+                <!--<i class="fa fa-server"></i><span>奖惩信息</span>-->
+                <!--<span class="glyphicon fs-sidebar-item-caret" ng-class="{'glyphicon-menu-down': '奖惩信息查询'!=showSubMenu, 'glyphicon-menu-up': '奖惩信息查询'==showSubMenu}" ></span>-->
+            <!--</a>-->
+             <!--<ul class="children nav-bracket" style="display:none" >-->
+                 <!--&lt;!&ndash;<li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/courage/lists" id="courage"><i class="fs-circle"></i><span>获奖信息查看</span></a></li>&ndash;&gt;-->
+                 <!--&lt;!&ndash;<li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/punish" id="punish"><i class="fs-circle"></i><span>惩罚信息</span></a></li>&ndash;&gt;-->
+             <!--</ul>-->
+             <!--</li>-->
+
+              <li class="nav-parent">
+                 <a href  ng-click="openSubMenu($event)"  id="成绩信息综合管理">
+                <i class="fa fa-server"></i><span>成绩综合管理</span><span class="glyphicon fs-sidebar-item-caret" ng-class="{'glyphicon-menu-down': '成绩综合管理'!=showSubMenu, 'glyphicon-menu-up': '成绩综合管理'==showSubMenu}" ></span>
+            </a>
+             <ul>
+                 <!--<li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/grade/lists" id="grade-input"><i class="fs-circle"></i><span>成绩列表</span></a></li>-->
+             <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/search/grade" id="grade_search"><i class="fa fa-search" aria-hidden="true"></i><span>成绩查询</span></a></li>
+                 <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/classes/look" id="grade_class"><i class="fa fa-search" aria-hidden="true"></i><span>班级成绩查询</span></a></li>
+
+                 <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/search/unpass" id="unpass_search"><i class="fa fa-search" aria-hidden="true"></i><span>挂科查询</span></a></li>
+
+             </ul>
+              </li>
+             <li ><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/search/honoer" id="base"><i class="fa fa-search" aria-hidden="true"></i><span>获奖信息查询</span></a></li>
+
+             <li ><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/qa/lists" id="qa"><i class="fa fa-question" aria-hidden="true"></i><span>在线答疑</span></a></li>
+
+            <li class="nav-parent">
+                 <a href  ng-click="openSubMenu($event)"  id="毕设课题管理" >
+                <i class="fa fa-server"></i><span>毕设课题管理</span><span class="glyphicon fs-sidebar-item-caret" ng-class="{'glyphicon-menu-down': '毕设课题管理'!=showSubMenu, 'glyphicon-menu-up': '毕设课题管理'==showSubMenu}" ></span>
+            </a>
+             <ul>
+                 {% if user.role_id ==2 %}
+                 <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/title/choice" id="title_choice"><i class="fs-circle"></i><span>选择课题</span></a></li>
+                 <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/title/student" id="title_student"><i class="score_create"></i><span>选中的课题</span></a></li>
+                 {% endif %}
+                 {% if user.role_id ==1 %}
+                 <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/title/look" id="title_look"><i class="score_create"></i><span></span>课题查看</a></li>
+                 <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/title/left" id="title_left"><i class="score_create"></i><span>剩余课题</span></a></li>
+                 {% endif %}
+                 <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/title/filter" id="title_filter"><i class="score_create"></i><span>课题查重</span></a></li>
+
+             </ul>
+              </li>
+              <li class="nav-parent">
+                 <a href  ng-click="openSubMenu($event)" id="后台管理">
+                <i class="fa fa-server"></i><span>后台管理</span><span class="glyphicon fs-sidebar-item-caret" ng-class="{'glyphicon-menu-down': '后台管理'!=showSubMenu, 'glyphicon-menu-up': '后台管理'==showSubMenu}" ></span>
+            </a>
+                 <ul class="children nav-bracket" style="display:none ">
+                     {% if user.role_id == 1%}
+                     <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/news/create" id="news"><i class="fa fa-bell" aria-hidden="true"></i><span>发布消息</span></a></li>
+                     <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/title/lists" id="title_create"><i class="course_create"></i><span>课题创建</span></a></li>
+                     {% endif %}
+                     {% if user.role_id ==2 %}
+                     <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/grade/upload" id="course_list"><i class="course_create"></i><span>班级成绩导入</span></a></li>
+                    <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/cal/lists" id="cal_list"><i class="score_create"></i><span>成绩计算</span></a></li>
+                   <li><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/competition/lists" id="competition"><i class="fs-circle"></i><span>获奖信息添加</span></a></li>
+                    {% endif %}
+                 </ul>
+             </li>
+             <li ><a href="javascript:;" ng-click="loadContentpanel($event)" realvalue="/role/lists" id="b"><i class="fs-circle"></i><span>用户管理</span></a></li>
+
+         </ul>
+
+     </div>
+
+   <div class="rightpanel">
+        <div class="header">
+
+
+                  <div class="current-user"><i class="fa fa-user" aria-hidden="true"></i>欢迎{{user.id}}({{ user.name}})</div>
+
+
+
+   </div>
+       <div class="contentpanel">
+
+          <div load-Content>
+
+          </div>
+      </div>
+
+    </div><!-- contentpanel -->
+   </section>
+   <div id="global_confirm_modal" ng-controller="SelfConfirmModalCtrl"></div>
+</body>
+
+</html>

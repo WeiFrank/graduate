@@ -5,7 +5,7 @@ from application.apps import db
 from sqlalchemy.exc import IntegrityError
 from session import get_session
 from datetime import datetime
-
+import flask_whooshalchemy
 def get_current_time():
     return datetime.now()
 class ORMMethodBase(object):
@@ -59,38 +59,7 @@ class Base(ORMMethodBase):
     deleted = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime)
 
-# class BaseA:
-#     __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
-#     __table_initialized__ = False
-#     # admission_time = db.Column(db.DateTime)
-#     semester = db.Column(db.DateTime)
 
-
-#
-# class Root(Base, db.Model):
-#     __tablename__ = "root"
-#     __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
-#
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(255))
-#     password = db.Column(db.String(255))
-
-
-
-
-# class Class(Base, db.Model):
-#     __tablename__ = "class"
-#     __table_args__ = (db.UniqueConstraint("name", ),
-#                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(255))
-#     # class_ = db.Column(db.String(255))
-#     students = db.relationship('Student', backref=db.backref('class', order_by=id),
-#                         primaryjoin='and_(Class.id == User.class_id,)')
-
-    # @property
-    # def students_num(self):
-    #     return len(self.students)
 class SchoolInfo:
     __table_args__ = {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'}
     __table_initialized__ = False
@@ -110,8 +79,7 @@ class SchoolInfo:
 #     id = db.Column(db.Integer, primary_key=True)
 #     teacher_number = db.Column(db.String(255))
 #     identity = db.Column(db.String(255))
-#
-#
+
 class Student(Base, SchoolInfo, db.Model):
     __tablename__ = "student"
     __table_args__ = (db.UniqueConstraint("student_number", ),
@@ -171,29 +139,37 @@ class XueJiChange(Base, db.Model):
 
 class Course(Base, db.Model):
     __tablename__ = "course"
-    __table_args__ = (db.UniqueConstraint("c_name", ),
+    __table_args__ = (
                       {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-    id = db.Column(db.String(40), primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    c_id = db.Column(db.Integer)
     c_name = db.Column(db.String(255))
     c_score = db.Column(db.Integer)
     owner = db.Column(db.String(255))
-    c_semester = db.Column(db.String(255))
-    c_type = db.Column(db.String(255))
-    grades = db.relationship("Grade", backref=db.backref('course', order_by=id),
-            primaryjoin='and_(Course.id == Grade.course_id,)')
 
 
-class Grade(Base,  db.Model):
+    # grades = db.relationship("Grade", backref=db.backref('course', order_by=id),
+    #         primaryjoin='and_(Course.id == Grade.course_id,)')
+
+
+class Grade(Base, db.Model):
     __tablename__ = "grade"
     __table_args__ = (
                      {'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
     id = db.Column(db.Integer, primary_key=True)
-    sex = db.Column(db.String(255))
-    name = db.Column(db.String(255))
-    score = db.Column(db.String(255))
+    college = db.Column(db.Text(1024))
+    subject = db.Column(db.String(255))
     class_ = db.Column(db.String(255))
-    owner = db.Column(db.String(255))
-    course_id = db.Column(db.ForeignKey('course.id'))
+    number = db.Column(db.String(255))
+    name = db.Column(db.String(255))
+    semester = db.Column(db.String(255))
+    detail = db.Column(db.Text(4096))
+
+    # course_id = db.Column(db.String(255), db.ForeignKey('course.id', ondelete="CASCADE"))
+    # course = db.relationship("Course", backref=db.backref(
+    #     "peoples", lazy="dynamic"), uselist=False)
+
+
 
 
 class GradeUser(Base, db.Model):
@@ -204,7 +180,6 @@ class GradeUser(Base, db.Model):
     studnet_number = db.Column(db.String(255))
     college = db.Column(db.String(255))
     subject = db.Column(db.String(255))
-
     student_class = db.Column(db.String(255))
 
 
@@ -232,30 +207,42 @@ class GradeCourse(Base, db.Model):
 #     people = db.Column(db.String(255))
 
 class Competition(Base,db.Model):
+
     __tablename__ = "competition"
     __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
-    id = db.Column(db.String(100), primary_key=True)
-    team_leader = db.Column(db.String(255))
-    team_member_one = db.Column(db.String(255))
-    team_member_two = db.Column(db.String(255))
+    id = db.Column(db.Integer, primary_key=True)
+    team_members = db.Column(db.String(255))
     title = db.Column(db.String(255))
     competition_type = db.Column(db.String(255))
     level = db.Column(db.String(255))
-    source_date = db.Column(db.DateTime)
-    ent_date = db.Column(db.DateTime)
-    upload_owner = db.Column(db.String(255))
+    class_ = db.Column(db.String(255))
+    name = db.Column(db.String(255))
+    _date = db.Column(db.DateTime, default=get_current_time)
 
-class Hanging(Base,db.Model):
-    __tablename__ = "hanging"
+class  News(Base,db.Model):
+
+    __tablename__ = "news"
     __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
     id = db.Column(db.Integer, primary_key=True)
-    number = db.Column(db.String(255))
-    name = db.Column(db.String(255))
-    class_ = db.Column(db.String(255))
-    course = db.Column(db.String(255))
+    publisher = db.Column(db.String(255))
+    created_at = db.Column(db.DateTime, default=get_current_time)
+    content = db.Column(db.Text(4096))
+    title = db.Column(db.Text(1024))
+
+
+class Title(Base, db.Model):
+    __tablename__ = "titles"
+    __table_args__ = ({'mysql_engine': 'InnoDB', 'mysql_charset': 'utf8'})
+    id = db.Column(db.Integer, primary_key=True)
+    author_id = db.Column(db.String(255))
+    title_ = db.Column(db.Text)
     status = db.Column(db.String(255))
-    description = db.Column(db.String(255))
-    uploader = db.Column(db.String(255))
+    student = db.Column(db.String(255))
+    type = db.Column(db.String(255))
+    success_time = db.Column(db.DateTime)
+    t_from = db.Column(db.String(255))
+    # description = db.Column(db.String(255))
+    # uploader = db.Column(db.String(255))
 
 class LeaveApply(Base, db.Model):
     __tablename__ = "leaveapply"
@@ -339,6 +326,8 @@ DB_TABLE_MAP = {
     'user':User,
     'student':Student,
     'grade':Grade,
+    'competition':Competition,
+    'titles':Title,
 }
 
 

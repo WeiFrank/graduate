@@ -4,7 +4,7 @@ from flask import Blueprint, request,session
 from application.base import BaseManager, render_jinja
 from search import GradeList,Unpass,Honoer
 from calculation import  Clculation
-
+import  random
 import json
 import  os
 import numpy as np
@@ -21,13 +21,13 @@ font = FontProperties(fname = "/usr/share/fonts/truetype/simhei.ttf", size=14)
 
 
 class GuaKe:
-    def __init__(self,a,b,c,d,e):
+    def __init__(self,a,b,c,d,e,name):
         self.a = a
         self.b = b
         self.c = c
         self.d = d
         self.e = e
-
+        self.name = name
     def deal(self):
         plt.rcParams['font.sans-serif'] = ['SimHei']
         plt.rcParams['axes.unicode_minus'] = False
@@ -51,15 +51,15 @@ class GuaKe:
         autolabel(rect1)
         ax.set_ybound(0, 30)
         plt.tight_layout()
-        plt.savefig(os.path.join(dir, "unpass.png"))
+        plt.savefig(os.path.join(dir, self.name))
         # plt.show()
 class Hon:
-    def __init__(self, a, b, c, d):
+    def __init__(self, a, b, c, d,name):
         self.a = a
         self.b = b
         self.c = c
         self.d = d
-
+        self.name = name
 
     def deal(self):
         fig, ax = plt.subplots()
@@ -81,14 +81,15 @@ class Hon:
         autolabel(rect1)
         ax.set_ybound(0, 25)
         plt.tight_layout()
-        plt.savefig(os.path.join(dir, "honoer.png"))
+        plt.savefig(os.path.join(dir, self.name))
         # plt.show()
 class SummaryAll(BaseManager):
     def get(self):
         # print "------------------------"
         return render.summary_all()
     def post(self):
-
+        url_b = ''
+        url_a = ''
         params = request.form
         class_ = params.get("class_")
         semester = params.get("semester")
@@ -128,38 +129,45 @@ class SummaryAll(BaseManager):
             c = len(middle)
             d = len(high)
             e = len(hh)
-            if os.path.exists(os.path.join(dir, "unpass.png")):
-                os.remove(os.path.join(dir, "unpass.png"))
-            guake = GuaKe(a,b,c,d,e)
+            alph_a = random.choice('qwertyuiopasdfghjklzxcvbnm')
+            se_a = [alph_a, "png"]
+            url_a = '.'.join(se_a)
+            print
+            if os.path.exists(os.path.join(dir, url_a)):
+                os.remove(os.path.join(dir, url_a))
+            guake = GuaKe(a,b,c,d,e, url_a)
             guake.deal()
 
 
         obj_hon = Honoer(class_)
-        print "----------------------", obj_hon
+        # print "----------------------", obj_hon
         cs, ps, sh, ss = obj_hon.get_honoer()
 
         a = len(cs)
         b = len(ps)
         c = len(sh)
         d = len(ss)
-        if os.path.exists(os.path.join(dir, "honoer.png")):
-            os.remove(os.path.join(dir, "honoer.png"))
-        h = Hon(a, b, c, d)
+        alph_b = random.choice('qwertyuiopasdfghjklzxcvbnm')
+        se_b = [alph_b, "png"]
+        url_b = '.'.join(se_b)
+        if os.path.exists(os.path.join(dir, url_b)):
+            os.remove(os.path.join(dir, url_b))
+        h = Hon(a, b, c, d, url_b)
         h.deal()
-
-        obj_unpass = Unpass(class_,semester)
-        result_unpass = obj_unpass.get_unpass()
-        if result_unpass:
-            course = []
-            print "9999999999999",result_unpass
-            for k,v in result_unpass.iteritems():
-                if k == 'course_name':
-                    course.append(k)
+        #
+        # obj_unpass = Unpass(class_,semester)
+        # result_unpass = obj_unpass.get_unpass()
+        # if result_unpass:
+        #     course = []
+        #     print "9999999999999",result_unpass
+        #     for k,v in result_unpass.iteritems():
+        #         if k == 'course_name':
+        #             course.append(k)
 
 
         #
 #
-        return render.summary_all()
+        return render.summary_all(url_a="static/img/%s" % url_a, url_b="static/img/%s" % url_b)
 
 
 app = Blueprint('summary_app', __name__, template_folder='templates')

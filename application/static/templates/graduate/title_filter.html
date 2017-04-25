@@ -1,0 +1,35 @@
+<script>
+      $(".t_f").click(function(){
+           var t_name = $(".title_name").val()
+            $.post("title/filter",{
+            "t_name":t_name
+            },function(data){
+              $(".filter").html(data)
+            })
+      })
+</script>
+<div class="filter">
+    <div class="input">
+        <input type="text" placeholder="请输入课题名字" class="title_name">
+        <button class="btn-blue btn t_f">课题查重</button>
+    </div>
+    <div class="rtn-r">
+        {% if result %}
+        <table>
+            <tr>
+                <td>题目</td>
+            <td>作者</td>
+            <td>重复率</td>
+            </tr>
+        </table>
+        <tr>
+          {% for r in result %}
+            <td>{{r.title}}</td>
+            <td>{{r.student}}</td>
+            <td>{{r.rate}}</td>
+        {% endfor %}
+        {% endif %}
+        </tr>
+    </div>
+
+</div>

@@ -1,0 +1,67 @@
+<script>
+
+    $(".search_button").click(function(){
+              var key_name = $(".key_word_name").val()
+              <!--var key_level = $(".key_word_level").val()-->
+              <!--var key_class = $(".key_class_").val()-->
+              $.get("/title/choice",{
+                       "key_name":key_name,
+
+              }, function(data){
+                 $(".contentpanel").html(data)
+});
+ });
+ $(".choice").click(function(){
+      var id = $(this).attr("id")
+      $.post("/title/change",{
+          "id":id,
+          },function(data){
+             var data=eval("("+data+")");
+              if (data.reply.is_success){
+               $('.rtn-tip').text(data.reply.success_msg).slideDown('fast');
+              }
+          })
+ });
+
+
+
+
+</script>
+
+<div class="search_from">
+    <!--<input class="key_class_" type="text" placeholder="class_">-->
+    <!--<input class="key_word_name" type="text" placeholder="name">-->
+    <!--<input class="key_word_level" type="text" placeholder="level">-->
+    <!--<button class="btn btn-blue search_button">搜索导师</button>-->
+     <div class="rtn-tip"></div>
+    <div class="receicve">
+         {% if teacher %}
+        <table class="grade_table">
+        <tr>
+            <td>课题名称</td>
+            <td>课题类型</td>
+            <td>课题状态</td>
+            <td>选中人</td>
+            <td>选中时间</td>
+
+        </tr>
+
+              {% for t in teacher %}
+
+             <tr>
+
+                 <td>{{t.title_}}</td>
+                 <td>{{t.type}}</td>
+                 <td>{{t.status}}</td>
+                 <td>{{t.student}}</td>
+                 <td>{{t.success_time}}</td>
+
+
+             </tr>
+    {% endfor %}
+
+        </table>
+
+   {% endif %}
+
+</div>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="static/css/login.css">
+        <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.form.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui-1.11.4.custom/jquery-ui.min.js" ></script>
+
+    <script type="text/javascript" src="/static/js/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/static/js/angular/angular.js"></script>
+        <script type="text/javascript" src="/static/templates/user/user.js"></script>
+        <!--<script type="text/javascript" src="/static/templates/user/user.js"></script>-->
+        <!--<script type="text/javascript" src="/static/templates/user/teacher.js"></script>-->
+        <!--<script type="text/javascript" src="/static/templates/user/student.js"></script>-->
+
+    <title>登录</title>
+<script>
+$(document).ready(function() {
+   $(".register").click(function() {
+ console.log('rrrrrrrrrrrrrrrrr')
+     $.get("/user/create"
+
+     );
+});
+});
+
+</script>
+</head>
+<body class="page">
+     <div class="login_join">
+         <form action="/login" method="POST" autocomplete="off"><!-- ngIf: error --><!-- ngIf: timeout -->
+              {% if tip %}
+                <div class="username_error">{{ tip }}</div>
+             {% endif %}
+
+            <div class="form-group ">
+                <div class="login_username">
+                    <img src="/static/img/icon_user_1.png"  height="10px" width="10px" style="opacity:1" class="user_login">
+                    <input style="display:none">
+                    <input id="user" type="text" class="login_user" placeholder="用户"   name="username" style="background:transparent !important;">
+                </div>
+                <div class="login_password">
+                    <img src="/static/img/icon_pass_1.png" height="10px" width="10px" style="opacity:1" class="user_login">
+                    <input type="password" class="login_password" id="password" placeholder="密码" name="password" style="background:transparent !important;">
+                </div>
+                <div class="identity_info">
+                    <span>教师</span>
+                    <input type="radio" name="identity" value="teacher"  checked="checked">
+                    <span>学生</span>
+                    <input type="radio" name="identity" value="student" >
+                </div>
+
+            </div>
+            <div class="login_">
+                 <input class="login_button" type="submit" value="登录" />
+
+
+            </div>
+
+         </form>
+         <div class="submit">
+              <form method="get" action="/user/forget">
+   <button>忘记密码</button>
+</form>
+
+             <form method="get" action="/user/create">
+   <button>注册</button>
+</form>
+
+             </div>
+     </div>
+</body>
+</html>

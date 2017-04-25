@@ -11,7 +11,10 @@ from datetime import datetime
 
 
 render = render_jinja('static/templates/search', encoding='utf-8',)
-
+def current_user():
+    user_id = session.get("username")
+    user = models.User.query.filter_by(id=user_id).first()
+    return  user
 class Honoer:
     def __init__(self, class_):
         self.class_ = class_
@@ -104,16 +107,18 @@ class GradeSearch(BaseManager):
         name = params.get('key_name')
         number = params.get("key_number")
         class_ = params.get("key_class")
-        print name , number, s, class_
+        # print name , number, s, class_
+        user_id = session.get("username")
+
         obj = GradeList(class_, name, s, number)
         k, v, n = obj.deal_grade_show()
         if k and v:
 
-            return render.search_grade(grades=k, courses=v)
+            return render.search_grade(grades=k, courses=v,user=current_user())
         elif k:
-            return render.search_grade(course=k)
+            return render.search_grade(course=k, user=current_user())
         else:
-            return  render.search_grade()
+            return  render.search_grade(user=current_user())
 
 
 
@@ -206,9 +211,9 @@ class HonoerList(BaseManager):
         result = obj.query()
         print "hhhhhhhhhhhhhhhh", result
         if result:
-            return render.search_honoer(honoer=result)
+            return render.search_honoer(honoer=result,user=current_user())
         else:
-            return render.search_honoer()
+            return render.search_honoer(user=current_user())
 class UnpassSearch(BaseManager):
     def get(self):
         params = request.args
@@ -221,9 +226,9 @@ class UnpassSearch(BaseManager):
         obj = Unpass(class_, s, name, number)
         L = obj.get_unpass()
         if L:
-            return render.search_unpass(Ls=L)
+            return render.search_unpass(Ls=L, user=current_user())
         else:
-            return  render.search_unpass()
+            return  render.search_unpass(user=current_user())
 app = Blueprint('search_app', __name__, template_folder='templates')
 app.add_url_rule('/grade', view_func=GradeSearch.as_view('grade_search'))
 app.add_url_rule('/unpass', view_func=UnpassSearch.as_view('unpass_search'))

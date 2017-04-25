@@ -39,6 +39,7 @@ def grid_json(page, total, records, rows, id_attr, cells=[]):
         list_rows = []
         for i in rows:
             id_ = getattr(i, id_attr)
+
             cell = []
             for j in cells:
                 value = getattr(i, j, None)
@@ -72,10 +73,15 @@ class Pager:
         #params = {'table': table, 'filter_by': filters, 'mode': 'count'}
         model_object = models.DB_TABLE_MAP.get(table)
         user_id = session.get('username', None)
+        user_name = session.get("name")
         print 'qqqqqqqqqqqq', model_object
         records = model_object.query.count()
         if table in ['course', 'grade']:
             records = model_object.query.filter_by(owner=user_id).count()
+
+        elif table in ['titles']:
+
+            records = model_object.query.filter_by(author_id=user_name).count()
         # if table in ['grade']:
 
         print  'records-------------', records
@@ -92,8 +98,10 @@ class Pager:
         order_by = '%s %s' % (sidx, sord.lower())
         query = model_object.query
         # query = self.get_query(limit, sord, sidx, page, offset, filter_by, filter_)
-        if table in ['course','grade']:
+        if table in ['course', 'grade']:
             query = model_object.query.filter_by(owner=user_id)
+        elif table in ['titles']:
+            query = model_object.query.filter_by(author_id=user_name)
 
 
         if filter_by:

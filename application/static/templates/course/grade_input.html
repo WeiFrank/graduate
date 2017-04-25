@@ -1,0 +1,210 @@
+<script type="text/javascript">
+      var enable_submit=true;
+      function submit_grade_input(){
+
+       if ($("#grade_input_modal").find(".detail").length <= 0) {
+       $(".rtn-tip").text("add course").slideDown('fast');
+        return;
+        }
+
+     var number_inputs = $("#grade_input_modal").find("input[itype=grade_course_number]");
+     var name_inputs = $("#grade_input_modal").find("input[itype=grade_course_name]");
+     var score_inputs = $("#grade_input_modal").find("input[itype=grade_course_result]");
+     var sex_inputs = $("#grade_input_modal").find("input[itype=grade_course_sex]");
+
+
+
+     var course_id=$(".course_number").attr('id');
+      var class_=$("#grade_input_modal").find("input[itype=course_class]");
+      var semester=$("#grade_input_modal").find("input[itype=course_year]");
+      var c_type=$("#grade_input_modal").find("input[itype=course_type]");
+
+
+     var numbers = '';
+     var names = '';
+     var scores = '';
+     var results = '';
+     var sexs = '';
+
+     for (var i = 0; i<number_inputs.length; i++) {
+          var $number_input = $(number_inputs[i]);
+           var numberVal = $.trim($number_input.val());
+          numbers += numberVal+',';
+          };
+
+      for (var i = 0; i < name_inputs.length; i++) {
+          var $name_input = $(name_inputs[i]);
+           var nameVal = $.trim($name_input.val());
+          names += nameVal +',' ;
+          };
+
+       for (var i = 0; i < score_inputs.length; i++) {
+          var $score_input = $(score_inputs[i]);
+           var scoreVal = $.trim($score_input.val());
+          scores += scoreVal+',';
+
+          };
+
+        for (var i = 0; i < sex_inputs.length; i++) {
+          var $sex_input = $(sex_inputs[i]);
+           var sexVal = $.trim($sex_input.val());
+          sexs += sexVal+',';
+          };
+
+         if(enable_submit) {
+            enable_submit = false;
+            var $submitBtn = $('.modal-footer').find('.btn-blue');
+            $submitBtn.html('<i class="fa fa-spinner fa-spin" style="margin:3px 6px;"></i>');
+             $('.rtn-tip').slideUp('fast');
+              $.post("/course/input",{
+                  "cnumber":course_id,
+                  "scores":scores,
+                  "names":names,
+                  "numbers":numbers,
+                  "sexs":sexs,
+                  "semester":$.trim(semester.val()),
+                  "class_":$.trim(class_.val()),
+                   "c_type":$.trim(c_type.val()),
+              },function(data){
+                  var data=eval("("+data+")");
+                     if (data.reply.is_success){
+                       angular.element('#course_create_button').scope().close();
+                       enable_submit = true;
+                   }else{
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+                     $submitBtn.html('ok');
+                     enable_submit = true;
+                   }
+                });
+
+              }
+        }
+
+
+
+
+$(function() {
+  $('#grade_add_btn').on('click', function() {
+    var html = '';
+    var $box = $('#grade_input_modal').find('.content');
+    var htmlArr = ['<div class="detail">',
+         '<div class="detail-number">',
+         '<div class="input-box">',
+         '<input type="text" itype="grade_course_number">',
+         '</div>',
+         '</div>',
+         '<div class="detail-name">',
+         '<div class="input-box">',
+         '<input type="text" itype="grade_course_name">',
+         '</div>',
+         '</div>',
+         '<div class="detail-sex">',
+         '<div class="input-box">',
+         '<input type="text" itype="grade_course_sex">',
+         '</div>',
+         '</div>',
+         '<div class="detail-result">',
+         '<div class="input-box">',
+         '<input type="password" itype="grade_course_result" />',
+         '<a href="javascript:void(0)">删除</a>',
+         '</div>',
+         '</div>',
+         '</div>'
+         ];
+    html += htmlArr.join('');
+    $box.append(html);
+     });
+
+      $("#grade_input_modal").delegate('.detail a', "click", function() {
+         $(this).parent().parent().parent().remove();
+
+       });
+ });
+
+</script>
+
+<div class="modal-header">
+    <h3>成绩录入</h3>
+</div>
+
+<div class="modal-body modal-body-height" id="grade_input_modal">
+    <div class="course-create-box">
+    <div class="rtn-tip"></div>
+            <div class="grader">
+                <div class="grade_number">
+                   <label>课程号</label>
+                    <input style="readonly" id="{{courses.c_name}}" value="{{ courses.c_name }}" class="course_number" type="text">
+                </div>
+                <div class="grade_class">
+                   <label>班级</label>
+                  <input  itype="course_class" type="text">
+                </div>
+                <div class="grade_year">
+                   <label>学年</label>
+                  <input  itype="course_year" type="text">
+                </div>
+                  <div class="grade_type">
+                   <label>课程类型</label>
+                  <input  itype="course_type" type="text">
+                </div>
+
+            </div>
+
+        <div class="split-line"></div>
+
+        <div class="operate-btn">
+           <button type="button" class="btn btn-blue btn-xs" id="grade_add_btn"><i class="fa fa-plus"></i>添加同学</button>
+        </div>
+
+        <div class="key-value">
+
+           <div class="gn">学号</div>
+            <div class="gm">姓名</div>
+             <div class="gm">性别</div>
+            <div class="gs">成绩</div>
+        </div>
+
+        <div class="content">
+            <div class="rtn-tip"></div>
+
+            <div class="detail">
+
+                <div class="detail-number">
+                  <div class="input-box">
+                    <input type="text" itype="grade_course_number">
+                  </div>
+                </div>
+
+                <div class="detail-name">
+                  <div class="input-box">
+                    <input type="text" itype="grade_course_name">
+                  </div>
+                </div>
+                 <div class="detail-sex">
+                  <div class="input-box">
+                    <input type="text" itype="grade_course_sex">
+                  </div>
+                </div>
+                <div class="detail-result">
+                     <div class="input-box">
+                     <input type="text" itype="grade_course_result">
+                         <a href="javascript:void(0)">删除</a>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="error-tip">
+    <p></p><span></span>
+</div>
+
+</div>
+
+
+
+<div class="modal-footer">
+    <button class="btn btn-blue" ng-click="grade()">ok</button>
+    <button class="btn btn-white" ng-click="cancel()">cancel</button>
+</div>

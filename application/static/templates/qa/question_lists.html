@@ -1,0 +1,86 @@
+
+
+<script>
+
+    $(".ask_btn").click(function() {
+     angular.element('.ask_btn').scope().open("qa/qs/add");
+    });
+ var d = new Date();
+
+$(".next").click(function(){
+  console.log("nnnnnnnnnnnnnnnn")
+          page = $(this).attr("id")
+         console.log(page)
+           $.get("/qa/lists",{
+                       "random":d.getTime(),
+                       "page": page,
+              }, function(data){
+                 $(".contentpanel").html(data);
+      });
+})
+
+
+$(".pre").click(function(){
+console.log("pppppppppp")
+page = $(this).attr("id")
+         console.log(page)
+           $.get("/qa/lists",{
+                       "random":d.getTime(),
+                       "page": page,
+              }, function(data){
+                 $(".contentpanel").html(data);
+                 <!--alert(data)-->
+           });
+
+});
+
+</script>
+
+<div class="panel panel-style" ng-controller="QaModalCtrl">
+    <div class="panel-body">
+        <div class="title-tag">
+            <h3>在线答疑</h3>
+        </div>
+    </div>
+    <div class="user-info">
+        <div class="user-name">用户{{ current_user }}</div>
+        <div class="question-counts">提问数{{ q_counts}}</div>
+        <div class="answer-counts">回答数{{ a_counts}}</div>
+        <div class="comment-counts">评论数{{ c_counts}}</div>
+
+            <button class="btn ask_btn">提问</button>
+
+    </div>
+    <div class="question-lists">
+
+    {% for qs in pagination.items %}
+          <hr/>
+        <div class="question_title" id="{{qs.id}}"><a href="/qa/detail?question_id={{qs.id}}" target="_blank">问题:{{ qs.name }}</a></div>
+     <div class="question_user">提问者:{{ qs.author.name}}</div>
+        <div class="question-create">create at {{ qs.create_time}}</div>
+        <div class="answer-counts">{{ qs.answers_count }}个答案</div>
+
+
+    {% endfor %}
+
+
+        </div>
+             <div class="pagination">
+
+
+            {% if pagination.has_prev %}
+            <a href="#" class="pre" id="{{ pagination.prev_num }}" >上一页</a>
+            {% endif %}
+
+            <a href="#">Page {{ pagination.page }} of {{ pagination.pages }}.</a>
+
+
+            {% if pagination.has_next %}
+            <a href="#" class="next" id="{{ pagination.next_num }}">下一页</a>
+            {% endif %}
+
+
+</div>
+    </div>
+
+

@@ -39,10 +39,8 @@ class Login(BaseManager):
                     # dic = {check_user.student_number:check_user.student_number}
                     # session.update(dic)
                     session['username'] = check_user.id
-                    # session['college'] = check_user.college
-                    # session['subject'] = check_user.subject
-                    # session['class_'] = check_user.class_
-                    # session['role'] = check_user.role
+                    session["name"] = check_user.name
+
                     return redirect('/home')
                 else:
                     return render.user_login(tip=json.dumps("密码错误"))
@@ -54,6 +52,7 @@ class Login(BaseManager):
             if check_user:
                 if check_password:
                     session['username'] = check_user.id
+                    session['name'] = check_user.name
                     # session['college'] = check_user.college
                     # session['subject'] = check_user.subject
                     return redirect('/home')

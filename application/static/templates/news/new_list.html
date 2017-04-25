@@ -1,0 +1,77 @@
+
+
+<script>
+
+    $(".ask_btn").click(function() {
+     angular.element('.ask_btn').scope().open("qa/qs/add");
+    });
+ var d = new Date();
+
+$(".next").click(function(){
+  console.log("nnnnnnnnnnnnnnnn")
+          page = $(this).attr("id")
+         console.log(page)
+           $.get("/news/look",{
+                       "random":d.getTime(),
+                       "page": page,
+              }, function(data){
+                 $(".contentpanel").html(data);
+      });
+})
+
+
+$(".pre").click(function(){
+console.log("pppppppppp")
+page = $(this).attr("id")
+         console.log(page)
+           $.get("/news/look",{
+                       "random":d.getTime(),
+                       "page": page,
+              }, function(data){
+                 $(".contentpanel").html(data);
+                 <!--alert(data)-->
+           });
+
+});
+
+</script>
+       <div class="lastest">
+
+            <input type="text" class="search_news"> <button class="btn btn-blue search_button"><i class="fa fa-search" aria-hidden="true"></i>公告搜索</button>
+
+        {% if lasted %}
+        {% for n in lasted %}
+        <div class="title"><a href="/news/detail?nid={{n.id}}" target="_blank">{{n.title}}</a></div>
+    <div class="name">{{n.publisher}}</div>
+    <div class="data">{{n.created_at}}</div>
+        {% endfor %}
+        {% endif %}
+    </div>
+<div class="new_list">
+ {% if pagination %}
+    {% for o in pagination.items %}
+    <div class="title"><a href="/news/detail?nid={{o.id}}" target="_blank">{{o.title}}</a></div>
+    <div class="name">{{o.publisher}}</div>
+    <div class="data">{{o.created_at}}</div>
+    {% endfor %}
+    {% endif %}
+    </div>
+
+
+
+                 <div class="pagination">
+
+            {% if pagination.has_prev %}
+            <a href="#" class="pre" id="{{ pagination.prev_num }}" >上一页</a>
+            {% endif %}
+
+            <a href="#">Page {{ pagination.page }} of {{ pagination.pages }}.</a>
+
+
+            {% if pagination.has_next %}
+            <a href="#" class="next" id="{{ pagination.next_num }}">下一页</a>
+            {% endif %}
+
+
+</div>
+    </div>

@@ -5,14 +5,12 @@ from application.db import models
 from application.base import BaseManager, render_jinja
 from application.utils.query import Pager, success2json,exception2json
 import  jieba
+
 render = render_jinja('static/templates/qa', encoding='utf-8')
 
-from flask import Blueprint,session,render_template,url_for,redirect,request
+from flask import Blueprint,session,render_template,request
 
-qa = Blueprint('qa', __name__,template_folder="static/templates")
 
-#
-# @qa.route("/question/add", methods=["GET", "POST"])
 class QaAdd(BaseManager):
     def get(self):
         return render.question_add()
@@ -57,25 +55,26 @@ class QaAdd(BaseManager):
             return success2json("create question success")
 
 
-# @qa.route("/question/lists", methods=["GET"])
-class QaList(BaseManager):
 
+
+class QaList(BaseManager):
     def get(self):
+        page = request.args.get('page', 1, type=int)  # 从request中获取页码参数
+        print "ppppppppppppp", page
         current_user = session.get("username", None)
         q_counts = models.Question.query.filter_by(author_id=current_user).count()
-
-
         a_counts = models.Answer.query.filter_by(author_id=current_user).count()
-
         c_counts = models.Comment.query.filter_by(author_id=current_user).count()
+        questions = models.Question.query
 
-        questions = models.Question.query.all()
-        print questions, q_counts, a_counts, c_counts
-        if questions:
-            return render.question_lists(questions=questions,current_user=current_user,
+        questions_with_paginate = questions.paginate(page=page, per_page=4)  # 默认每页10条内容
+        # print questions_with_paginate
+        if questions_with_paginate:
+            # print "ppppppppppppp"
+            return render_template("qa/question_lists.html", pagination=questions_with_paginate, current_user=current_user,
                                          q_counts=q_counts, a_counts=a_counts, c_counts=c_counts)
         else:
-            return render.question_lists(current_user=current_user)
+            return render_template("qa/question_lists.html", current_user=current_user)
 
 class QaDetail(BaseManager):
 

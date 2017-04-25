@@ -1,0 +1,47 @@
+<script>
+     $(".action").click(function(){
+      var id = $(this).attr("id")
+      $.post("/title/student",{
+          "id":id,
+          },function(data){
+             var data=eval("("+data+")");
+              if (data.reply.is_success){
+               $('.rtn-tip').text(data.reply.success_msg).slideDown('fast');
+              }
+              else{
+                   console.log(typeof(data));
+                    console.log(data);
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+
+                   }
+          })
+ });
+
+</script>
+<div class="list">
+    <div class="rtn-tip"></div>
+    {% if student %}
+    <table>
+        <tr>
+            <td>课题名称</td>
+        <td>课题类型</td>
+        <td>当前状态</td>
+        <td>指导教师</td>
+            <td>选中时间</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>{{student.title_}}</td>
+            <td>{{student.type}}</td>
+            <td>{{student.status}}</td>
+            <td>{{student.author_id}}</td>
+            <td>{{student.success_time}}</td>
+            <td><button class="action" id="{{student.id}}"><i class="fa fa-trash" aria-hidden="true"></i>删除</button></td>
+        </tr>
+
+    </table>
+   {% else %}
+    <div>{{tip}}</div>
+    {% endif %}
+</div>

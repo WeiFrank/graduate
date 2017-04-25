@@ -1,0 +1,42 @@
+<script>
+     $('.rtn').slideUp('fast');
+    $(".submit").click(function(){
+
+         var title = $(".title").val()
+         var content = $(".content").val()
+         var author = $(".author").val()
+         console.log(title)
+         $.post("/news/create",{
+            "author":author,
+            "title":title,
+            "content":content,
+         },function(data){
+               var data=eval("("+data+")");
+              $('.rtn').text(data.reply.success_msg).slideDown('fast');
+         });
+
+  });
+
+</script>
+<div class="rtn"></div>
+<div class="new_create">
+  <div class="new_title">
+      <label>标题</label>
+      <input type="text" class="title">
+  </div>
+    <div class="new_author">
+        <label>发布人</label>
+        <input type="text" class="author">
+    </div>
+    <div class="new_content">
+        <label>内容</label>
+
+        <textarea class="content" style="resize:none;width:600px;height:200px;">
+
+        </textarea>
+    </div>
+    <div class="submit">
+        <button class="create">创建</button>
+    </div>
+
+</div>

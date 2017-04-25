@@ -3,5 +3,55 @@
     margin-right:auto;
 }
 
+     .page {
+
+        background:url(/static/img/banner.jpg);
+        opacity:0.8;
+     }
+     .join_title {
+        color:white;
+     }
+     .login_join {
+       margin-top:70px;
+       margin-bottom:50px;
+       margin-left:500px;
+
+     }
+     .login_user {
+ border-top-style: none;
+ border-right-style: none;
+ border-left-style: none;
+
+border-style-bottom:solid;
+	border-width:1px;
+        font-size: 13px;
+
+     }
+     .login_password {
+
+       font-size: 13px;
+        border-top-style: none;
+ border-right-style: none;
+ border-left-style: none;
+ margin-top: 6px;
+
+       border-style-bottom:solid;
+	  border-width:1px;
+     }
+     .identity_info {
+         font-size: 13px;
+         padding-left: 25px;
+         padding-top: 13px;
+}
+    .submit button {
+       font-size: 10px;
+       float: left;
+
+    }
+    .login_  input {
+float:left;
+font-size: 10px;
+height:20px;
+    }
 
 

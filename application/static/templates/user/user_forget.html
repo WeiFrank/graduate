@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html lang="en" xmlns="http://www.w3.org/1999/html" ng-app="InformationApp" ng-controller="HomeCtrl"
+       xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-2.1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+   $(".submit").click(function(){
+     $('.rtn-error').slideUp('fast');
+        var username= $(".user_name").val()
+        var usermail = $(".user_mail").val()
+        $.post("/user/forget", {
+            "username":username,
+            "usermail":usermail,
+        },function(data){
+             var data=eval("("+data+")");
+                     if (data.reply.is_success){
+                           $('.rtn-error').text(data.reply.success_msg).slideDown('fast');
+                     }
+        })
+
+   });
+   });
+
+</script>
+</head>
+<body>
+<div class="mail_info">
+    <div class="rtn-error"></div>
+    <div class="username">
+        <span>用户名</span><input type="text" class="user_name">
+    </div>
+    <div class="usermail">
+        <span>邮箱</span><input type="text" class="user_mail">
+    </div>
+    <button class="submit">发送</button>
+</div>
+ </body>
+ </html>

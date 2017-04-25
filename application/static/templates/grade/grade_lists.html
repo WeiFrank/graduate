@@ -1,0 +1,136 @@
+<script type="text/javascript">
+$("#grade_available_tb").jqGrid({
+       url: '/grade/grid',
+       datatype: 'json',
+       mtype: 'GET',
+   colNames: ['学号', '姓名', '性别 ', '成绩', '班级','课程号', '操作'],
+       colModel: [{
+            name: 'id',
+            index: 'id',
+            width: 30,
+            align: 'left',
+
+           },
+           {
+            name: 'name',
+            index: 'name',
+            width: 40,
+            align: 'left',
+           },
+            {
+            name: 'sex',
+            index: 'sex',
+            width: 40,
+            align: 'left',
+           },
+            {
+            name: 'score',
+            index: 'score',
+            width: 40,
+            align: 'left',
+           },
+            {
+            name: 'class_',
+            index: 'class_',
+            width: 40,
+            align: 'left',
+           },
+           {
+            name: 'course_id',
+            index: 'course_id',
+            width: 40,
+            align: 'left',
+           },
+
+           {
+            name: 'service',
+            index: 'service',
+            width: 55,
+            align: 'left',
+            hidden: false,
+            detailHidden: true,
+            formatter: function(cell, option, row) {
+                var html = '';
+                row = row2object(row, option.gid);
+                html += '<button style="margin-left:10px;" title="编辑" class="btn btn-blue" onclick="grade_update(' + row['id'] + ')">编辑</button>';
+                html += '<button style="margin-left:10px;" title="删除" class="btn btn-blue" onclick=grade_delete_confirm(' + row['id'] + ',"' + row['name'] + '")>删除</button>';
+               return html;
+
+                }
+       }],
+
+    page: 1,
+    rowNum: 10,
+    sortname: 'id',
+    sortorder: 'desc',
+    viewrecords: true,
+    multiselect: false,
+    multiboxonly:true,
+    multiselectWidth:'60px',
+    autowidth: true,
+    beforeSelectRow:function(rowid, e) {
+        if($(e.target).is('input')) {
+            return true;
+        }
+        return false;
+    },
+    gridComplete: function() {
+        var gridData = $(this).jqGrid('getRowData');
+        jqgrid_page($(this), gridData);
+        jqgrid_resize($(this));
+    }
+});
+
+
+
+function grade_update(grade_id) {
+   console.log(grade_id)
+    angular.element('#grade_create_button').scope().open("/grade/update?grade_id=" + grade_id);
+
+}
+
+
+function grade_delete(grade_id) {
+    $.post('/grade/delete', {
+            'id': grade_id
+        },
+        function(data) {
+            if (data.reply.is_success) {
+                var data=eval("("+data+")");
+                $("#grade_available_tb").trigger("reloadGrid");
+            } else {
+                error = data.reply.error;
+                SelfAlert(error);
+            }
+        });
+    $('#grade_available_tb').trigger("reloadGrid");
+}
+
+function grade_delete_confirm(grade_id, grade_name) {
+   console.log(grade_name)
+    msg = '确定删除（' + grade_name + '）？';
+    SelfConfirm(msg, grade_delete, grade_id, "删除提示");
+}
+</script>
+
+<div class="panel panel-style">
+    <div class="panel-body">
+        <div class="title-tag">
+            <h3>成绩信息</h3>
+            <p>成绩信息</p>
+        </div>
+
+        <div class="grid-tools">
+            <div class="grid-operate pull-left">
+                <button class="btn btn-blue" style="display:none" type="button" id="grade_create_button" ng-controller="GradeModalCtrl">创建</button>
+                <!-- <button class="btn btn-blue" type="button" id="pool_delete_button">删除</button> -->
+            </div>
+        </div>
+
+        <div id="grid_grade_available" class='grid-body'>
+            <table id="grade_available_tb"></table>
+        </div>
+
+    </div>
+</div>
+

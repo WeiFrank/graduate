@@ -37,3 +37,55 @@ class-grade > input {
 .course_show {
  position:relative;
 }
+
+.question-lists {
+   font-size:12px;
+}
+
+.question-lists > hr {
+    margin-top: 4px;
+    margin-bottom: 7px;
+}
+.answer-counts{
+  font-size:12px;
+}
+.question_user, .question-create {
+  font-size:8px;
+}
+.question-show {
+  font-size:12px;
+}
+.title {
+  font-size:13px;
+margin-left:20px;
+  margin-top:35px;
+}
+.content {
+margin-top:6px;
+margin-left:20px;
+  font-size:13px;
+    background-color: #eff0f1;
+    width: 500px;
+
+}
+.people {
+ margin-top:19px;
+}
+.create_time, .people {
+
+    padding-right: 35px;
+    margin-left: 550px;
+    font-size: 9px;
+    background-color: #eff0f1;
+    text-align: right;
+    width: 250px;
+    height:20px;
+
+}
+.pagination {
+   text-align:center;
+margin-top: 145px;
+   margin-left: 300px;
+   position:fix;
+}
+

@@ -1,0 +1,127 @@
+<script type="text/javascript">
+      var enable_submit=true;
+      function submit_grade_update(){
+
+     var number= $("#grade_input_modal").find("input[itype=grade_course_number]");
+     var name = $("#grade_input_modal").find("input[itype=grade_course_name]");
+     var score = $("#grade_input_modal").find("input[itype=grade_course_result]");
+     var sex = $("#grade_input_modal").find("input[itype=grade_course_sex]");
+
+
+
+
+      var class_=$("#grade_input_modal").find("input[itype=course_class]");
+      var semester=$("#grade_input_modal").find("input[itype=course_year]");
+    console.log(class_.val())
+
+
+         if(enable_submit) {
+            enable_submit = false;
+            var $submitBtn = $('.modal-footer').find('.btn-blue');
+            $submitBtn.html('<i class="fa fa-spinner fa-spin" style="margin:3px 6px;"></i>');
+             $('.rtn-tip').slideUp('fast');
+              $.post("/grade/update",{
+                  "id": {{gradeobj.id}},
+                  "score":$.trim(score.val()),
+                  "name":$.trim(name.val()),
+                  "number":$.trim(number.val()),
+                  "sex":$.trim(sex.val()),
+                  "semester":$.trim(semester.val()),
+                  "class_":$.trim(class_.val())
+              },function(data){
+                  var data=eval("("+data+")");
+                     if (data.reply.is_success){
+                       angular.element('#grade_create_button').scope().close();
+                       enable_submit = true;
+                   }else{
+                     var error = data.reply.error;
+                     $('.rtn-tip').text(error).slideDown('fast');
+                     $submitBtn.html('ok');
+                     enable_submit = true;
+                   }
+                });
+
+              }
+        }
+
+
+
+
+
+
+</script>
+
+<div class="modal-header">
+    <h3>成绩录入</h3>
+</div>
+
+<div class="modal-body modal-body-height" id="grade_input_modal">
+    <div class="course-create-box">
+    <div class="rtn-tip"></div>
+            <div class="grader">
+
+                <div class="grade_class">
+                   <label>班级</label>
+                  <input  itype="course_class" type="text" value="{{gradeobj.class_}}">
+                </div>
+                <div class="grade_year">
+                   <label>学年</label>
+                  <input  itype="course_year" type="text" value="{{gradeobj.semester}}">
+                </div>
+
+            </div>
+
+        <div class="split-line"></div>
+
+
+        <div class="key-value">
+
+           <div class="gn">学号</div>
+            <div class="gm">姓名</div>
+             <div class="gm">性别</div>
+            <div class="gs">成绩</div>
+        </div>
+
+        <div class="content">
+            <div class="rtn-tip"></div>
+
+            <div class="detail">
+
+                <div class="detail-number">
+                  <div class="input-box">
+                    <input type="text" itype="grade_course_number" value="{{gradeobj.id}}">
+                  </div>
+                </div>
+
+                <div class="detail-name">
+                  <div class="input-box">
+                    <input type="text" itype="grade_course_name" value="{{gradeobj.name}}">
+                  </div>
+                </div>
+                 <div class="detail-sex">
+                  <div class="input-box">
+                    <input type="text" itype="grade_course_sex" value="{{gradeobj.sex}}">
+                  </div>
+                </div>
+                <div class="detail-result">
+                     <div class="input-box">
+                     <input type="text" itype="grade_course_result" value="{{gradeobj.score}}"/>
+
+                     </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="error-tip">
+    <p></p><span></span>
+</div>
+
+</div>
+
+
+
+<div class="modal-footer">
+    <button class="btn btn-blue" ng-click="update()">ok</button>
+    <button class="btn btn-white" ng-click="cancel()">cancel</button>
+</div>

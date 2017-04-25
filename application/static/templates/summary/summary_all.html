@@ -1,0 +1,51 @@
+<script>
+    $(".look-one").click(function(){
+        var class_ = $(".class_one").val();
+        var semester = $(".semester_one").val();
+        $.post("/summary/show",{
+          "flag":"unpass",
+          "class_":class_,
+          "semester":semester,
+        },function(data){
+           $(".contentpanel").html(data);
+           <!--alert(data)-->
+        });
+    });
+    <!--var d = new Date();-->
+    <!--console.log(d.getTime())-->
+    <!--$(".unpass_img").attr("src", "/static/img/unpass.png?"+d.getTime());-->
+     <!--$(".honoer_img").attr("src", "/static/img/honoer.png?"+d.getTime());-->
+        <!--$(".look-two").click(function(){-->
+        <!--var class_ = $(".class_two").val();-->
+        <!--var semester = $(".semester_two").val();-->
+        <!--$.post("/summary/show",{-->
+          <!--"flag":"point",-->
+          <!--"class_":class_,-->
+          <!--"semester":semester,-->
+        <!--},);-->
+    <!--});-->
+</script>
+<div class="show-pic">
+    <div class="get">
+        <input type="text" placeholder="class" class="class_one">
+        <input type="text" placeholder="semester" class="semester_one">
+        <button class="look-one">查看</button>
+    </div>
+    <div class="box-one">
+
+    <img src="{{url_a}}" width="340px" height="200px" alt="nothing" class="unpass_img">
+    </div>
+
+    <div class="box-two">
+         <img src="{{url_b}}" width="340px" height="200px" alt="nothing" class="honoer_img">
+    </div>
+
+
+    <div class="box-three, point">
+
+    </div>
+    <div class="box-fore">
+
+    </div>
+
+</div>
